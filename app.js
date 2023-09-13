@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // Endpoints
-
+app.use("/api-docs", require('./src/routes/api-docs'));
 
 //DB
 connectPostgresDB();
