@@ -1,4 +1,15 @@
+require('dotenv').config();
 const { createLogger, format, transports, addColors } = require('winston');
+
+const myCustomColors = {
+  colors: {
+      error: 'red',
+      debug: 'green',
+      info: 'yellow'
+  }
+};
+
+addColors(myCustomColors.colors);
 
 const logger = createLogger({
   
@@ -9,17 +20,21 @@ const logger = createLogger({
     format.printf(info => `[${info.timestamp}] ${info.level} ${info.message}`)
   ),
   transports: [
+    new transports.Console({
+      level: "debug"
+    }),
     new transports.File({ 
         level: 'error',
+        filename: `${__dirname}/../logs/error-api.log`,
         maxsize: 5120000,
         maxFiles: 5,
-        filename: `${__dirname}/../logs/error-api.log`
     }),
     new transports.File({ 
         level: 'info',
+        filename: `${__dirname}/../logs/info-api.log`,
+        handleExceptions: true,
         maxsize: 5120000,
         maxFiles: 5,
-        filename: `${__dirname}/../logs/info-api.log`
     }),
   ],
   exceptionHandlers: [
@@ -28,14 +43,7 @@ const logger = createLogger({
 
 });
 
-const myCustomColors = {
-    colors: {
-        error: 'red',
-        debug: 'green',
-        info: 'yellow'
-    }
-};
 
-addColors(myCustomColors.colors);
+if (process.env.NODE_ENV !== "production") logger.debug("Logging initialized at debut level");
 
 module.exports = logger;
