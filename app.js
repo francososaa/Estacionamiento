@@ -19,5 +19,5 @@ app.use("/api-docs", require('./src/routes/api-docs'));
 connectPostgresDB();
 
 // Starting the server
-app.listen(process.env.PORT, () => logger.info(`Server running on port ${process.env.PORT}`) );
+app.listen(process.env.PORT, () => logger.info(`Server running on port ${process.env.PORT}`));
 

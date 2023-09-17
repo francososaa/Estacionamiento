@@ -1,4 +1,3 @@
-require('dotenv').config();
 const { createLogger, format, transports, addColors } = require('winston');
 
 const myCustomColors = {
@@ -42,8 +41,5 @@ const logger = createLogger({
   ]
 
 });
-
-
-if (process.env.NODE_ENV !== "production") logger.debug("Logging initialized at debut level");
 
 module.exports = logger;

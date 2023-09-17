@@ -1,6 +1,8 @@
 /* eslint-disable no-undef */
 require('dotenv').config();
-const { Sequelize } = require('sequelize');
+const logger  = require('../utils/logger');
+const Sequelize  = require('sequelize');
+const { DataTypes }  = require('sequelize');
 
 const sequelize = new Sequelize(
   process.env.DB_DATABASE,
@@ -15,15 +17,89 @@ const sequelize = new Sequelize(
 
 const db = {}
 
-db.sequelize = sequelize
+db.sequelize = sequelize;
+db.Sequelize = Sequelize;
+
+db.building_capacity = require('../models/building_capacity.model')(sequelize, DataTypes);
+db.collection = require('../models/collection.models')(sequelize, DataTypes);
+db.reservation = require('../models/reservation.model')(sequelize, DataTypes);
+db.reservation_person_data = require('../models/reservation_person_data.model')(sequelize, DataTypes);
+db.user = require('../models/user.model')(sequelize, DataTypes);
+db.vehicle = require('../models/vehicle.model')(sequelize, DataTypes);
+db.vehicle_price = require('../models/vehicle_price.model')(sequelize, DataTypes);
+db.vehicle_type = require('../models/vehicle_type.model')(sequelize, DataTypes);
+
+// RELATIONS
+
+db.vehicle_type.hasMany(db.vehicle, {
+  foreignKey: "vehicleTypeId",
+  as: "vehicles",
+});
+
+db.vehicle_type.hasMany(db.building_capacity, {
+  foreignKey: "vehicleTypeId",
+  as: "buildingCapacities",
+});
+
+db.vehicle.belongsTo(db.vehicle_type, {
+  foreignKey: "vehicleTypeId",
+  as: "vehicleType",
+});
+
+db.vehicle.hasMany(db.reservation, {
+  foreignKey: "vehicleId",
+  as: "reservations",
+});
+
+db.building_capacity.belongsTo(db.vehicle_type, {
+  foreignKey: "vehicleTypeId",
+  as: "vehicleType",
+});
+
+db.reservation.belongsTo(db.vehicle, {
+  foreignKey: "vehicleId",
+  as: "vehicle",
+});
+
+db.reservation.belongsTo(db.reservation_person_data, {
+  foreignKey: "reservationPersonDataId",
+  as: "reservationPersonDataId",
+});
+
+db.reservation_person_data.hasMany(db.reservation, {
+  foreignKey: "reservationPersonDataId",
+  as: "reservations",
+});
+
+db.user.hasMany(db.vehicle, {
+  foreignKey: "userId",
+  as: "userId",
+});
+
+db.reservation_person_data.belongsTo(db.user, {
+  foreignKey: "userId",
+  as: "userId",
+});
+
+db.collection.belongsTo(db.vehicle_type, {
+  foreignKey: "vehicleTypeId",
+  as: "vehicleTypeId",
+});
+
+db.vehicle_price.hasMany(db.vehicle_type, {
+  foreignKey: "vehiclePriceId",
+  as: "",
+});
+
+
 
 const connectPostgresDB = async () => {
   try {
-    await db.sequelize.authenticate()
-    await db.sequelize.sync({ force: true })
-    console.log(('Connected to database successfully'))
+    await db.sequelize.authenticate();
+    await db.sequelize.sync();
+    logger.info('DB Connected');
   } catch (error) {
-    console.log('Could not connect to database')
+    logger.error(`DB Connection Error: ${error}`);
   }
 }
 
