@@ -1,7 +1,0 @@
-include:
-  # Npm pipeline
-- project: 'gitlab/global-ci-templates'
-  file: 'npm/.gitlab-ci.yml'
-  ref: 'main'
-  # User variables
-- local: '.ci-variables.yml'
