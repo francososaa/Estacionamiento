@@ -1,1 +1,4 @@
 [2023-09-23 20:44:07] [31merror[39m DB Connection Error: SequelizeConnectionRefusedError: connect ECONNREFUSED ::1:8080
+[2023-09-24 15:02:06] [31merror[39m DB Connection Error: SequelizeDatabaseError: type "now" does not exist
+[2023-09-24 15:02:14] [31merror[39m DB Connection Error: SequelizeDatabaseError: type "now" does not exist
+[2023-09-24 15:02:42] [31merror[39m DB Connection Error: SequelizeDatabaseError: type "now" does not exist

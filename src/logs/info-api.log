@@ -82,3 +82,199 @@ SyntaxError: Unexpected identifier
 [2023-09-20 17:05:02] [33minfo[39m DB Connected
 [2023-09-23 20:44:07] [33minfo[39m Server running on port 8081
 [2023-09-23 20:44:07] [31merror[39m DB Connection Error: SequelizeConnectionRefusedError: connect ECONNREFUSED ::1:8080
+[2023-09-24 15:00:16] [31merror[39m uncaughtException: Cannot find module '../models/collection.models'
+Require stack:
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\db\dataBase.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js
+Error: Cannot find module '../models/collection.models'
+Require stack:
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\db\dataBase.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)
+    at Module._load (node:internal/modules/cjs/loader:922:27)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\db\dataBase.js:24:17)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+[2023-09-24 15:00:52] [31merror[39m uncaughtException: Naming collision between attribute 'vehicleTypeId' and association 'vehicleTypeId' on model collection_of_the_day. To remedy this, change either foreignKey or as in your association definition
+Error: Naming collision between attribute 'vehicleTypeId' and association 'vehicleTypeId' on model collection_of_the_day. To remedy this, change either foreignKey or as in your association definition
+    at Object.checkNamingCollision (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\associations\helpers.js:4:11)
+    at BelongsTo._injectAttributes (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\associations\belongs-to.js:86:13)
+    at collection_of_the_day.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\associations\mixin.js:72:17)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\db\dataBase.js:82:15)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+[2023-09-24 15:02:06] [33minfo[39m Server running on port 8081
+[2023-09-24 15:02:06] [31merror[39m DB Connection Error: SequelizeDatabaseError: type "now" does not exist
+[2023-09-24 15:02:12] [31merror[39m uncaughtException: Unexpected identifier
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\db\dataBase.js:89
+  Naming collision between attribute 'vehicleTypeId' and association 'vehicleTypeId' on model collection_of_the_day. To remedy this, change either foreignKey or as in your association definition
+         ^^^^^^^^^
+
+SyntaxError: Unexpected identifier
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:5:31)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-09-24 15:02:14] [33minfo[39m Server running on port 8081
+[2023-09-24 15:02:14] [31merror[39m DB Connection Error: SequelizeDatabaseError: type "now" does not exist
+[2023-09-24 15:02:42] [33minfo[39m Server running on port 8081
+[2023-09-24 15:02:42] [31merror[39m DB Connection Error: SequelizeDatabaseError: type "now" does not exist
+[2023-09-24 15:02:48] [33minfo[39m Server running on port 8081
+[2023-09-24 15:02:48] [33minfo[39m DB Connected
+[2023-09-24 15:05:08] [33minfo[39m Server running on port 8081
+[2023-09-24 15:05:08] [33minfo[39m DB Connected
+[2023-09-24 15:05:09] [33minfo[39m Server running on port 8081
+[2023-09-24 15:05:09] [33minfo[39m DB Connected
+[2023-09-24 15:06:56] [33minfo[39m Server running on port 8081
+[2023-09-24 15:06:56] [33minfo[39m DB Connected
+[2023-09-24 15:07:18] [33minfo[39m Server running on port 8081
+[2023-09-24 15:07:18] [33minfo[39m DB Connected
+[2023-09-24 15:08:01] [33minfo[39m Server running on port 8081
+[2023-09-24 15:08:01] [33minfo[39m DB Connected
+[2023-09-24 15:08:55] [31merror[39m uncaughtException: Cannot read properties of undefined (reading 'hasMany')
+TypeError: Cannot read properties of undefined (reading 'hasMany')
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\db\dataBase.js:86:30)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:5:31)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+[2023-09-24 15:09:00] [33minfo[39m Server running on port 8081
+[2023-09-24 15:09:00] [33minfo[39m DB Connected
+[2023-09-24 15:09:02] [33minfo[39m Server running on port 8081
+[2023-09-24 15:09:02] [33minfo[39m DB Connected
+[2023-09-24 15:09:20] [33minfo[39m Server running on port 8081
+[2023-09-24 15:09:20] [33minfo[39m DB Connected
+[2023-09-24 15:10:54] [33minfo[39m Server running on port 8081
+[2023-09-24 15:10:54] [33minfo[39m DB Connected
+[2023-09-24 15:10:58] [33minfo[39m Server running on port 8081
+[2023-09-24 15:10:58] [33minfo[39m DB Connected
+[2023-09-24 15:11:03] [31merror[39m uncaughtException: vehicle_price.hasMany called with something that's not a subclass of Sequelize.Model
+Error: vehicle_price.hasMany called with something that's not a subclass of Sequelize.Model
+    at vehicle_price.hasMany (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\associations\mixin.js:13:13)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\db\dataBase.js:86:18)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:5:31)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-09-24 15:11:05] [33minfo[39m Server running on port 8081
+[2023-09-24 15:11:05] [33minfo[39m DB Connected
+[2023-09-24 15:11:17] [33minfo[39m Server running on port 8081
+[2023-09-24 15:11:17] [33minfo[39m DB Connected
+[2023-09-24 15:12:00] [33minfo[39m Server running on port 8081
+[2023-09-24 15:12:00] [33minfo[39m DB Connected
+[2023-09-24 15:14:37] [33minfo[39m Server running on port 8081
+[2023-09-24 15:14:37] [33minfo[39m DB Connected
+[2023-09-24 15:16:25] [33minfo[39m Server running on port 8081
+[2023-09-24 15:16:25] [33minfo[39m DB Connected
+[2023-09-24 15:17:07] [31merror[39m uncaughtException: Unexpected token '.'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\db\dataBase.js:86
+db.vehicle_price.hasMany(db..vehicle_price, {
+                            ^
+
+SyntaxError: Unexpected token '.'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:5:31)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-09-24 15:17:09] [33minfo[39m Server running on port 8081
+[2023-09-24 15:17:09] [33minfo[39m DB Connected
+[2023-09-24 15:17:13] [31merror[39m uncaughtException: Cannot read properties of undefined (reading 'hasMany')
+TypeError: Cannot read properties of undefined (reading 'hasMany')
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\db\dataBase.js:86:13)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:5:31)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+[2023-09-24 15:17:14] [33minfo[39m Server running on port 8081
+[2023-09-24 15:17:15] [33minfo[39m DB Connected
+[2023-09-24 15:17:29] [33minfo[39m Server running on port 8081
+[2023-09-24 15:17:29] [33minfo[39m DB Connected
+[2023-09-24 15:17:58] [31merror[39m uncaughtException: as is not defined
+ReferenceError: as is not defined
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\db\dataBase.js:88:3)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:5:31)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+[2023-09-24 15:18:00] [33minfo[39m Server running on port 8081
+[2023-09-24 15:18:00] [33minfo[39m DB Connected
+[2023-09-24 15:18:02] [33minfo[39m Server running on port 8081
+[2023-09-24 15:18:02] [33minfo[39m DB Connected
+[2023-09-24 15:18:04] [31merror[39m uncaughtException: You have used the alias vehicles in two separate associations. Aliased associations must have unique aliases.
+SequelizeAssociationError: You have used the alias vehicles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\associations\base.js:13:13)
+    at new HasMany (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\associations\has-many.js:28:5)
+    at vehicle_type.hasMany (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\associations\mixin.js:22:25)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\db\dataBase.js:86:17)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+[2023-09-24 15:18:09] [33minfo[39m Server running on port 8081
+[2023-09-24 15:18:09] [33minfo[39m DB Connected
+[2023-09-24 15:18:15] [33minfo[39m Server running on port 8081
+[2023-09-24 15:18:15] [33minfo[39m DB Connected
+[2023-09-24 15:18:18] [33minfo[39m Server running on port 8081
+[2023-09-24 15:18:18] [33minfo[39m DB Connected
+[2023-09-24 15:18:19] [33minfo[39m Server running on port 8081
+[2023-09-24 15:18:19] [33minfo[39m DB Connected
+[2023-09-24 15:18:23] [33minfo[39m Server running on port 8081
+[2023-09-24 15:18:23] [33minfo[39m DB Connected
+[2023-09-24 15:18:26] [33minfo[39m Server running on port 8081
+[2023-09-24 15:18:26] [33minfo[39m DB Connected
+[2023-09-24 15:18:27] [33minfo[39m Server running on port 8081
+[2023-09-24 15:18:28] [33minfo[39m DB Connected
+[2023-09-24 15:18:30] [33minfo[39m Server running on port 8081
+[2023-09-24 15:18:30] [33minfo[39m DB Connected
+[2023-09-24 15:18:34] [33minfo[39m Server running on port 8081
+[2023-09-24 15:18:34] [33minfo[39m DB Connected
+[2023-09-24 15:18:37] [33minfo[39m Server running on port 8081
+[2023-09-24 15:18:37] [33minfo[39m DB Connected
+[2023-09-24 15:18:40] [33minfo[39m Server running on port 8081
+[2023-09-24 15:18:40] [33minfo[39m DB Connected
+[2023-09-24 15:18:43] [33minfo[39m Server running on port 8081
+[2023-09-24 15:18:43] [33minfo[39m DB Connected
+[2023-09-24 15:19:30] [33minfo[39m Server running on port 8081
+[2023-09-24 15:19:30] [33minfo[39m DB Connected

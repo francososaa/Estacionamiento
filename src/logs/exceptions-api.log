@@ -74,3 +74,125 @@ SyntaxError: Unexpected identifier
     at require (node:internal/modules/cjs/helpers:119:18)
     at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:16:22)
     at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-09-24 15:00:16] [31merror[39m uncaughtException: Cannot find module '../models/collection.models'
+Require stack:
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\db\dataBase.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js
+Error: Cannot find module '../models/collection.models'
+Require stack:
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\db\dataBase.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)
+    at Module._load (node:internal/modules/cjs/loader:922:27)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\db\dataBase.js:24:17)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+[2023-09-24 15:00:52] [31merror[39m uncaughtException: Naming collision between attribute 'vehicleTypeId' and association 'vehicleTypeId' on model collection_of_the_day. To remedy this, change either foreignKey or as in your association definition
+Error: Naming collision between attribute 'vehicleTypeId' and association 'vehicleTypeId' on model collection_of_the_day. To remedy this, change either foreignKey or as in your association definition
+    at Object.checkNamingCollision (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\associations\helpers.js:4:11)
+    at BelongsTo._injectAttributes (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\associations\belongs-to.js:86:13)
+    at collection_of_the_day.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\associations\mixin.js:72:17)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\db\dataBase.js:82:15)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+[2023-09-24 15:02:12] [31merror[39m uncaughtException: Unexpected identifier
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\db\dataBase.js:89
+  Naming collision between attribute 'vehicleTypeId' and association 'vehicleTypeId' on model collection_of_the_day. To remedy this, change either foreignKey or as in your association definition
+         ^^^^^^^^^
+
+SyntaxError: Unexpected identifier
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:5:31)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-09-24 15:08:55] [31merror[39m uncaughtException: Cannot read properties of undefined (reading 'hasMany')
+TypeError: Cannot read properties of undefined (reading 'hasMany')
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\db\dataBase.js:86:30)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:5:31)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+[2023-09-24 15:11:03] [31merror[39m uncaughtException: vehicle_price.hasMany called with something that's not a subclass of Sequelize.Model
+Error: vehicle_price.hasMany called with something that's not a subclass of Sequelize.Model
+    at vehicle_price.hasMany (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\associations\mixin.js:13:13)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\db\dataBase.js:86:18)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:5:31)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-09-24 15:17:07] [31merror[39m uncaughtException: Unexpected token '.'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\db\dataBase.js:86
+db.vehicle_price.hasMany(db..vehicle_price, {
+                            ^
+
+SyntaxError: Unexpected token '.'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:5:31)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-09-24 15:17:13] [31merror[39m uncaughtException: Cannot read properties of undefined (reading 'hasMany')
+TypeError: Cannot read properties of undefined (reading 'hasMany')
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\db\dataBase.js:86:13)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:5:31)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+[2023-09-24 15:17:58] [31merror[39m uncaughtException: as is not defined
+ReferenceError: as is not defined
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\db\dataBase.js:88:3)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:5:31)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+[2023-09-24 15:18:04] [31merror[39m uncaughtException: You have used the alias vehicles in two separate associations. Aliased associations must have unique aliases.
+SequelizeAssociationError: You have used the alias vehicles in two separate associations. Aliased associations must have unique aliases.
+    at new Association (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\associations\base.js:13:13)
+    at new HasMany (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\associations\has-many.js:28:5)
+    at vehicle_type.hasMany (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\associations\mixin.js:22:25)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\db\dataBase.js:86:17)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)

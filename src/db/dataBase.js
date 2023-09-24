@@ -21,12 +21,12 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 db.building_capacity = require('../models/building_capacity.model')(sequelize, DataTypes);
-// db.collection = require('../models/collection.models')(sequelize, DataTypes);
+db.collection = require('../models/collection.model')(sequelize, DataTypes);
 db.reservation = require('../models/reservation.model')(sequelize, DataTypes);
 db.reservation_person_data = require('../models/reservation_person_data.model')(sequelize, DataTypes);
 db.user = require('../models/user.model')(sequelize, DataTypes);
 db.vehicle = require('../models/vehicle.model')(sequelize, DataTypes);
-// db.vehicle_price = require('../models/vehicle_price.model')(sequelize, DataTypes);
+db.vehicle_price = require('../models/vehicle_price.model')(sequelize, DataTypes);
 db.vehicle_type = require('../models/vehicle_type.model')(sequelize, DataTypes);
 
 // RELATIONS
@@ -73,21 +73,23 @@ db.reservation_person_data.hasMany(db.reservation, {
 
 db.user.hasMany(db.vehicle, {
   foreignKey: "userId",
+  as: "vehicle,"
 });
 
 db.reservation_person_data.belongsTo(db.user, {
   foreignKey: "userId",
+  as: "users",
 });
 
-// db.collection.belongsTo(db.vehicle_type, {
-//   foreignKey: "vehicleTypeId",
-//   as: "vehicleTypeId",
-// });
+db.collection.belongsTo(db.vehicle_type, {
+  foreignKey: "vehicleTypeId",
+  as: "vehicleType",
+});
 
-// db.vehicle_price.hasMany(db.vehicle_type, {
-//   foreignKey: "vehiclePriceId",
-//   as: "",
-// });
+db.vehicle_type.hasMany(db.vehicle_price, {
+  foreignKey: "vehicleTypeId",
+  as: "vehiclesPrices",
+});
 
 
 
