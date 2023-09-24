@@ -4,4 +4,4 @@
 **/.git
 **/docker-compose*
 **/Dockerfile*
-
+**/src/logs

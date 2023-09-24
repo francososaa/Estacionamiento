@@ -1,0 +1,564 @@
+basePath: /
+definitions:
+  Reservation:
+    description: ""
+    properties:
+      reservationId:
+        type: string
+        description: "uuid"
+      state: 
+        type: string
+        description: ""
+      date: 
+       type: string
+       format: date-time
+       description: ""
+      vehicleId: 
+        type: string
+        description: "uuid"
+      reservationPersonDataId:
+        type: string
+        description: "uuid"
+    type: object
+  ReservationRequestInputDto:
+    description: ""
+    properties:
+      vehicleId:
+        type: string
+        description: "uuid"
+      date:
+        type: string
+        format: date
+        description: ""
+      type:
+        type: string
+        description: ""
+      legajo:
+        type: string
+        description: ""
+      reservationPersonData:
+        $ref: '#/definitions/ReservationPersonDataDto'
+      vehicle:
+        $ref: '#/definitions/VehicleDto'
+  ReservationPersonDataDto:
+    description: ""
+    properties:
+      dni:
+        type: string
+        description: ""
+      firstname: 
+        type: string
+        description: ""
+      lastname: 
+       type: string
+       description: ""
+      legajo: 
+        type: string
+        description: ""
+  VehicleDto:
+    description: ""
+    properties:
+      vehicleId:
+        type: string
+        description: "uuid"
+      licence: 
+        type: string
+        description: ""
+      model: 
+       type: string
+       description: ""
+      isActive:
+        type: boolena
+        description: ""
+      vehicleTypeId: 
+        type: integer
+        description: ""
+      userId:
+        type: string
+        description: "uuid"
+    type: object
+    ErrorDto:
+      description: ""
+      properties:
+        code:
+          type: string
+          description: ""
+      type: object
+      required:
+        - code
+        - message
+info:
+  tittle: estacionamiento
+  version: 0.0.1
+paths:
+  '/api/v1/authenticate':
+    post:
+      operationId: Add Authenticate
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: 'Returns a reservation.'
+          schema:
+            $ref: '#/definitions/Reservation'
+        '400':
+          description: 'Bad Request.'
+          schema:
+            $ref: '#/definitions/ErrorDto'
+        '500':
+          description: 'An internal error.'
+          schema:
+            $ref: '#/definitions/ErrorDto'
+      description: ""
+      tags:
+        - Authenticate
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: ReservationRequestInputDto
+          description: ""
+          schema: '#/definitions/ReservationRequestInputDto'
+  '/api/v1/authenticate/{legajo}':
+    get:
+      operationId: Get Parameter
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: 'Returns an Authentication'
+          schema:
+            $ref: '#/definitions/Reservation'
+        '500':
+          description: 'An internal error in the service.'
+          schema:
+            $ref: '#/definitions/ErrorDto'
+      description: ""
+      tags:
+        - Authenticate
+      consumes:
+        - application/json
+      parameters:
+        - in: path
+          name: legajo
+          type: string
+          required: true
+          description: ""
+  '/api/v1/vehicleType':
+    get:
+      operationId: Get Vehicle Type
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: 'Returns vehicle type'
+          schema:
+            $ref: '#/definitions/Reservation'
+        '500':
+          description: 'An internal error in the service.'
+          schema:
+            $ref: '#/definitions/ErrorDto'
+      description: ""
+      tags:
+        - Vehicle Type
+      consumes:
+        - application/json
+  '/api/v1/buildingCapacity':
+    get:
+      operationId: Get Building Capacity
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: 'Returns a building capacity'
+          schema:
+            $ref: '#/definitions/Reservation'
+        '400':
+          description: 'Bad Request'
+          schema:
+            $ref: '#/definitions/Reservation'
+        '500':
+          description: 'An internal error.'
+          schema:
+            $ref: '#/definitions/ErrorDto'
+      description: ""
+      tags:
+        - Building Capacity
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: ReservationRequestInputDto
+          description: ""
+          schema: '#/definitions/ReservationRequestInputDto'
+    put:
+      operationId: Add Building Capacity
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: 'Returns a building capacity'
+          schema:
+            $ref: '#/definitions/Reservation'
+        '400':
+          description: 'Bad Request'
+          schema:
+            $ref: '#/definitions/Reservation'
+        '500':
+          description: 'An internal error.'
+          schema:
+            $ref: '#/definitions/ErrorDto'
+      description: ""
+      tags:
+        - Building Capacity
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: ReservationRequestInputDto
+          description: ""
+          schema: '#/definitions/ReservationRequestInputDto'
+  '/api/v1/reservation/{id}':
+    get:
+      operationId: Get Reservation
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: 'Returns an reservation.'
+          schema:
+            $ref: '#/definitions/Reservation'
+        '500':
+          description: 'An internal error in the service.'
+          schema:
+            $ref: '#/definitions/ErrorDto'
+      description: ""
+      tags:
+        - Reservation
+      consumes:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          type: string
+          required: true
+          description: "uuid"
+  '/api/v1/reservation/{id}/vehicle/{vehicleId}':
+    put:
+      operationId: Get Reservation
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: 'Returns an reservation.'
+          schema:
+            $ref: '#/definitions/Reservation'
+        '500':
+          description: 'An internal error in the service.'
+          schema:
+            $ref: '#/definitions/ErrorDto'
+      description: ""
+      tags:
+        - Reservation
+      consumes:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          type: string
+          required: true
+          description: "uuid"
+        - in: path
+          name: vehicleId
+          type: string
+          required: true
+          description: "uuid"
+  '/api/v1/reservation/{id}/cancelled':
+    put:
+      operationId: Get Reservation
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: 'Returns an reservation.'
+          schema:
+            $ref: '#/definitions/Reservation'
+        '500':
+          description: 'An internal error in the service.'
+          schema:
+            $ref: '#/definitions/ErrorDto'
+      description: ""
+      tags:
+        - Reservation
+      consumes:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          type: string
+          required: true
+          description: "uuid"
+  '/api/v1/reservation':
+    get:
+      operationId: Get Reservation
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: 'Returns an reservation.'
+          schema:
+            $ref: '#/definitions/Reservation'
+        '500':
+          description: 'An internal error in the service.'
+          schema:
+            $ref: '#/definitions/ErrorDto'
+      description: ""
+      tags:
+        - Reservation
+      consumes:
+        - application/json
+    post:
+      operationId: Add Reservation
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: 'Returns an reservation.'
+          schema:
+            $ref: '#/definitions/Reservation'
+        '400':
+          description: 'Bad request.'
+          schema:
+            $ref: '#/definitions/ErrorDto'
+        '500':
+          description: 'An internal error in the service.'
+          schema:
+            $ref: '#/definitions/ErrorDto'
+      description: ""
+      tags:
+        - Reservation
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: ReservationRequestInputDto
+          description: ""
+          schema:
+            $ref: '#/definitions/ReservationRequestInputDto'
+  '/api/v1/reservation/list':
+    get:
+      operationId: Get Reservations
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: 'Returns an reservation.'
+          schema:
+            $ref: '#/definitions/Reservation'
+        '500':
+          description: 'An internal error in the service.'
+          schema:
+            $ref: '#/definitions/ErrorDto'
+      description: ""
+      tags:
+        - Reservation
+      consumes:
+        - application/json
+  '/api/v1/reservation/{id}/state':
+    put:
+      operationId: Get Reservations
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: 'Returns an reservation.'
+          schema:
+            $ref: '#/definitions/Reservation'
+        '500':
+          description: 'An internal error in the service.'
+          schema:
+            $ref: '#/definitions/ErrorDto'
+      description: ""
+      tags:
+        - Reservation
+      consumes:
+        - application/json
+      parameters:
+        -in: path
+         name: id
+         type: string
+         required: true
+         description: "uuid"
+  '/api/v1/reservation/legajo/{legajo}/availability':
+    get:
+      operationId: Get Reservations
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: 'Returns an reservation.'
+          schema:
+            $ref: '#/definitions/Reservation'
+        '500':
+          description: 'An internal error in the service.'
+          schema:
+            $ref: '#/definitions/ErrorDto'
+      description: ""
+      tags:
+        - Reservation
+      consumes:
+        - application/json
+      parameters:
+        -in: path
+         name: legajo
+         type: string
+         required: true
+         description: ""
+  '/api/v1/vehicle':
+    get:
+      operationId: Get Vehicle
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: 'Returns an vehicle.'
+          schema:
+            $ref: '#/definitions/Reservation'
+        '500':
+          description: 'An internal error in the service.'
+          schema:
+            $ref: '#/definitions/ErrorDto'
+      description: ""
+      tags:
+        - Vehicle
+      consumes:
+        - application/json
+    post:
+      operationId: Add Vehicle
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: 'Returns an vehicle.'
+          schema:
+            $ref: '#/definitions/Reservation'
+        '400':
+          description: 'Bad request.'
+          schema:
+            $ref: '#/definitions/ErrorDto'
+        '500':
+          description: 'An internal error in the service.'
+          schema:
+            $ref: '#/definitions/ErrorDto'
+      description: ""
+      tags:
+        - Vehicle
+      consumes:
+        - application/json
+      parameters:
+        -in: body
+          name: ReservationRequestInputDto
+          description: ""
+          schema: 
+           $ref: '#/definitions/ReservationRequestInputDto'
+  '/api/v1/vehicle/licence/{licence}':
+    get:
+      operationId: Get Vehicle by licence
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: 'Returns vehicle.'
+          schema:
+            $ref: '#/definitions/Reservation'
+        '500':
+          description: 'An internal error in the service.'
+          schema:
+            $ref: '#/definitions/ErrorDto'
+      description: ""
+      tags:
+        - Vehicle
+      consumes:
+        - application/json
+      parameters:
+        -in: path
+          name: licente
+          type: string
+          required: true
+          description: ""
+  '/api/v1/vehicle/{id}':
+    put:
+      operationId: Get Vehicle
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: 'Returns an vehicle.'
+          schema:
+            $ref: '#/definitions/Reservation'
+        '500':
+          description: 'An internal error in the service.'
+          schema:
+            $ref: '#/definitions/ErrorDto'
+      description: ""
+      tags:
+        - Vehicle
+      consumes:
+        - application/json
+      parameters:
+        -in: path
+          name: id
+          type: string
+          required: true
+          description: "uuid"
+    get:
+      operationId: Get Vehicle
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: 'Returns an vehicle.'
+          schema:
+            $ref: '#/definitions/Reservation'
+        '500':
+          description: 'An internal error in the service.'
+          schema:
+            $ref: '#/definitions/ErrorDto'
+      description: ""
+      tags:
+        - Vehicle
+      consumes:
+        - application/json
+      parameters:
+        -in: path
+          name: id
+          type: string
+          required: true
+          description: "uuid"
+  '/api/v1/vehicle/{id}/cancelled':
+    put:
+      operationId: Get Vehicle
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: 'Returns an vehicle.'
+          schema:
+            $ref: '#/definitions/Reservation'
+        '500':
+          description: 'An internal error in the service.'
+          schema:
+            $ref: '#/definitions/ErrorDto'
+      description: ""
+      tags:
+        - Vehicle
+      consumes:
+        - application/json
+      parameters:
+        -in: path
+          name: id
+          type: string
+          required: true
+          description: "uuid"
+swagger: '2.0'
+securityDefinitions: {}

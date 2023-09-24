@@ -36,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
             field: "is_active",
         },
         createdAt: {
-            type: DataTypes.NOW,
+            type: DataTypes.DATE,
             allowNull: false,
             field: "created_at",
         },

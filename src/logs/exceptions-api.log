@@ -1,260 +1,76 @@
-[2023-09-13 19:10:22] [31merror[39m uncaughtException: Router.use() requires a middleware function but got a Object
-TypeError: Router.use() requires a middleware function but got a Object
-    at Function.use (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\index.js:469:13)
-    at Function.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\application.js:227:21)
-    at Array.forEach (<anonymous>)
-    at Function.use (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\application.js:224:7)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:16:5)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
-[2023-09-13 19:11:13] [31merror[39m uncaughtException: Router.use() requires a middleware function but got a Object
-TypeError: Router.use() requires a middleware function but got a Object
-    at Function.use (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\index.js:469:13)
-    at Function.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\application.js:227:21)
-    at Array.forEach (<anonymous>)
-    at Function.use (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\application.js:224:7)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:16:5)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
-[2023-09-13 19:11:15] [31merror[39m uncaughtException: Router.use() requires a middleware function but got a Object
-TypeError: Router.use() requires a middleware function but got a Object
-    at Function.use (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\index.js:469:13)
-    at Function.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\application.js:227:21)
-    at Array.forEach (<anonymous>)
-    at Function.use (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\application.js:224:7)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:16:5)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
-[2023-09-13 19:11:18] [31merror[39m uncaughtException: Router.use() requires a middleware function but got a Object
-TypeError: Router.use() requires a middleware function but got a Object
-    at Function.use (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\index.js:469:13)
-    at Function.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\application.js:227:21)
-    at Array.forEach (<anonymous>)
-    at Function.use (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\application.js:224:7)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:16:5)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
-[2023-09-13 19:11:20] [31merror[39m uncaughtException: Router.use() requires a middleware function but got a Object
-TypeError: Router.use() requires a middleware function but got a Object
-    at Function.use (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\index.js:469:13)
-    at Function.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\application.js:227:21)
-    at Array.forEach (<anonymous>)
-    at Function.use (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\application.js:224:7)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:16:5)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
-[2023-09-13 19:11:35] [31merror[39m uncaughtException: Router.use() requires a middleware function but got a Object
-TypeError: Router.use() requires a middleware function but got a Object
-    at Function.use (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\index.js:469:13)
-    at Function.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\application.js:227:21)
-    at Array.forEach (<anonymous>)
-    at Function.use (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\application.js:224:7)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:16:5)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
-[2023-09-13 19:15:24] [31merror[39m uncaughtException: Cannot find module './src/routes/api-'
+[2023-09-20 16:58:47] [31merror[39m uncaughtException: Cannot find module '../models/user'
 Require stack:
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js
 - C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js
-Error: Cannot find module './src/routes/api-'
+Error: Cannot find module '../models/user'
 Require stack:
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js
 - C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js
     at Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)
     at Module._load (node:internal/modules/cjs/loader:922:27)
     at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:110:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:17:22)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js:4:14)
     at Module._compile (node:internal/modules/cjs/loader:1256:14)
     at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
     at Module.load (node:internal/modules/cjs/loader:1119:32)
     at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
-[2023-09-13 19:15:26] [31merror[39m uncaughtException: Cannot find module './src/routes/api'
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+[2023-09-20 16:59:21] [31merror[39m uncaughtException: Cannot find module '../'
 Require stack:
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js
 - C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js
-Error: Cannot find module './src/routes/api'
+Error: Cannot find module '../'
 Require stack:
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js
 - C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js
     at Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)
     at Module._load (node:internal/modules/cjs/loader:922:27)
     at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:110:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:17:22)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js:4:14)
     at Module._compile (node:internal/modules/cjs/loader:1256:14)
     at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
     at Module.load (node:internal/modules/cjs/loader:1119:32)
     at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
-[2023-09-13 19:15:32] [31merror[39m uncaughtException: Cannot find module './src/routes/api'
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+[2023-09-20 16:59:25] [31merror[39m uncaughtException: Cannot find module '../models/'
 Require stack:
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js
 - C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js
-Error: Cannot find module './src/routes/api'
+Error: Cannot find module '../models/'
 Require stack:
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js
 - C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js
     at Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)
     at Module._load (node:internal/modules/cjs/loader:922:27)
     at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:110:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:17:14)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js:4:14)
     at Module._compile (node:internal/modules/cjs/loader:1256:14)
     at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
     at Module.load (node:internal/modules/cjs/loader:1119:32)
     at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
-[2023-09-13 19:15:36] [31merror[39m uncaughtException: Cannot find module './src/routes/api'
-Require stack:
-- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js
-Error: Cannot find module './src/routes/api'
-Require stack:
-- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js
-    at Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)
-    at Module._load (node:internal/modules/cjs/loader:922:27)
     at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:110:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:17:25)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
-[2023-09-13 19:15:42] [31merror[39m uncaughtException: Cannot find module './src/routes/reservation'
-Require stack:
-- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js
-Error: Cannot find module './src/routes/reservation'
-Require stack:
-- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js
-    at Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)
-    at Module._load (node:internal/modules/cjs/loader:922:27)
-    at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:110:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:17:25)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
-[2023-09-13 19:15:53] [31merror[39m uncaughtException: Router.use() requires a middleware function but got a Object
-TypeError: Router.use() requires a middleware function but got a Object
-    at Function.use (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\index.js:469:13)
-    at Function.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\application.js:227:21)
-    at Array.forEach (<anonymous>)
-    at Function.use (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\application.js:224:7)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:17:5)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
-[2023-09-13 19:16:23] [31merror[39m uncaughtException: Router.use() requires a middleware function but got a Object
-TypeError: Router.use() requires a middleware function but got a Object
-    at Function.use (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\index.js:469:13)
-    at Function.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\application.js:227:21)
-    at Array.forEach (<anonymous>)
-    at Function.use (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\application.js:224:7)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:17:5)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
-[2023-09-13 19:16:25] [31merror[39m uncaughtException: Router.use() requires a middleware function but got a Object
-TypeError: Router.use() requires a middleware function but got a Object
-    at Function.use (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\index.js:469:13)
-    at Function.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\application.js:227:21)
-    at Array.forEach (<anonymous>)
-    at Function.use (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\application.js:224:7)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:17:5)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
-[2023-09-13 19:16:26] [31merror[39m uncaughtException: Router.use() requires a middleware function but got a Object
-TypeError: Router.use() requires a middleware function but got a Object
-    at Function.use (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\index.js:469:13)
-    at Function.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\application.js:227:21)
-    at Array.forEach (<anonymous>)
-    at Function.use (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\application.js:224:7)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:17:5)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
-[2023-09-13 19:16:45] [31merror[39m uncaughtException: Router.use() requires a middleware function but got a Object
-TypeError: Router.use() requires a middleware function but got a Object
-    at Function.use (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\index.js:469:13)
-    at Function.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\application.js:227:21)
-    at Array.forEach (<anonymous>)
-    at Function.use (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\application.js:224:7)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:17:5)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
-[2023-09-13 19:17:15] [31merror[39m uncaughtException: Router.use() requires a middleware function but got a Object
-TypeError: Router.use() requires a middleware function but got a Object
-    at Function.use (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\index.js:469:13)
-    at Function.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\application.js:227:21)
-    at Array.forEach (<anonymous>)
-    at Function.use (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\application.js:224:7)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:17:5)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
-[2023-09-20 15:28:47] [31merror[39m uncaughtException: Naming collision between attribute 'reservationPersonDataId' and association 'reservationPersonDataId' on model reservation. To remedy this, change either foreignKey or as in your association definition
-Error: Naming collision between attribute 'reservationPersonDataId' and association 'reservationPersonDataId' on model reservation. To remedy this, change either foreignKey or as in your association definition
-    at Object.checkNamingCollision (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\associations\helpers.js:4:11)
-    at BelongsTo._injectAttributes (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\associations\belongs-to.js:86:13)
-    at reservation.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\associations\mixin.js:72:17)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\db\dataBase.js:64:16)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-09-20 17:04:57] [31merror[39m uncaughtException: Unexpected identifier
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\api-docs.js:25
+    apis: ["./src/routes/authenticate"]
+    ^^^^
+
+SyntaxError: Unexpected identifier
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
     at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
     at Module.load (node:internal/modules/cjs/loader:1119:32)
     at Module._load (node:internal/modules/cjs/loader:960:12)
     at Module.require (node:internal/modules/cjs/loader:1143:19)
     at require (node:internal/modules/cjs/helpers:119:18)
-[2023-09-20 15:29:38] [31merror[39m uncaughtException: Naming collision between attribute 'reservationPersonDataId' and association 'reservationPersonDataId' on model reservation. To remedy this, change either foreignKey or as in your association definition
-Error: Naming collision between attribute 'reservationPersonDataId' and association 'reservationPersonDataId' on model reservation. To remedy this, change either foreignKey or as in your association definition
-    at Object.checkNamingCollision (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\associations\helpers.js:4:11)
-    at BelongsTo._injectAttributes (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\associations\belongs-to.js:86:13)
-    at reservation.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\associations\mixin.js:72:17)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\db\dataBase.js:64:16)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:16:22)
     at Module._compile (node:internal/modules/cjs/loader:1256:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:119:18)
-[2023-09-20 15:30:30] [31merror[39m uncaughtException: Naming collision between attribute 'reservationPersonDataId' and association 'reservationPersonDataId' on model reservation. To remedy this, change either foreignKey or as in your association definition
-Error: Naming collision between attribute 'reservationPersonDataId' and association 'reservationPersonDataId' on model reservation. To remedy this, change either foreignKey or as in your association definition
-    at Object.checkNamingCollision (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\associations\helpers.js:4:11)
-    at BelongsTo._injectAttributes (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\associations\belongs-to.js:86:13)
-    at reservation.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\associations\mixin.js:72:17)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\db\dataBase.js:64:16)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:119:18)

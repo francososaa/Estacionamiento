@@ -63,7 +63,7 @@ db.reservation.belongsTo(db.vehicle, {
 
 db.reservation.belongsTo(db.reservation_person_data, {
   foreignKey: "reservationPersonDataId",
-  as: "reservationPersonDataId",
+  as: "reservationPersonData",
 });
 
 db.reservation_person_data.hasMany(db.reservation, {
@@ -73,12 +73,10 @@ db.reservation_person_data.hasMany(db.reservation, {
 
 db.user.hasMany(db.vehicle, {
   foreignKey: "userId",
-  as: "userId",
 });
 
 db.reservation_person_data.belongsTo(db.user, {
   foreignKey: "userId",
-  as: "userId",
 });
 
 // db.collection.belongsTo(db.vehicle_type, {
