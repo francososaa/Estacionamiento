@@ -44,6 +44,11 @@ module.exports = (sequelize, DataTypes) => {
             type: "TIMESTAMP",
             field: "updated_at",
         },
+        roleId: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            field: "role_id",
+        },
     },
     {
         tableName: "user",

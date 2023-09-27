@@ -1,9 +1,10 @@
 const { Router } = require('express');
-const { login, authRegister } = require('../controllers/auth-controller');
+const authenticate = require('../controllers/auth-controller');
+const {validarJWT} = require('../middlewares/validar-jwt');
 const router = Router();
 
-
-router.post('/login', login );
-router.post('/register', authRegister );
+router.post('/register', authenticate.authRegister );
+router.post('/login', authenticate.login );
+router.get('/logout', validarJWT, authenticate.logout );
 
 module.exports = router;

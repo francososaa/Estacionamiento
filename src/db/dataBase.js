@@ -1,8 +1,9 @@
 /* eslint-disable no-undef */
 require('dotenv').config();
-const logger  = require('../utils/logger');
-const Sequelize  = require('sequelize');
-const { DataTypes }  = require('sequelize');
+const logger = require('../utils/logger');
+const Sequelize = require('sequelize');
+const { DataTypes } = require('sequelize');
+
 
 const sequelize = new Sequelize(
   process.env.DB_DATABASE,
@@ -24,6 +25,7 @@ db.building_capacity = require('../models/building_capacity.model')(sequelize, D
 db.collection = require('../models/collection.model')(sequelize, DataTypes);
 db.reservation = require('../models/reservation.model')(sequelize, DataTypes);
 db.reservation_person_data = require('../models/reservation_person_data.model')(sequelize, DataTypes);
+db.role = require('../models/role.model')(sequelize, DataTypes);
 db.user = require('../models/user.model')(sequelize, DataTypes);
 db.vehicle = require('../models/vehicle.model')(sequelize, DataTypes);
 db.vehicle_price = require('../models/vehicle_price.model')(sequelize, DataTypes);
@@ -73,7 +75,12 @@ db.reservation_person_data.hasMany(db.reservation, {
 
 db.user.hasMany(db.vehicle, {
   foreignKey: "userId",
-  as: "vehicle,"
+  as: "vehicle",
+});
+
+db.role.hasMany(db.user, {
+  foreignKey: "roleId",
+  as: "role",
 });
 
 db.reservation_person_data.belongsTo(db.user, {
@@ -96,7 +103,41 @@ db.vehicle_type.hasMany(db.vehicle_price, {
 const connectPostgresDB = async () => {
   try {
     await db.sequelize.authenticate();
-    await db.sequelize.sync();
+    await db.sequelize.sync({force:false});
+
+    await db.role.bulkCreate(
+          [
+              { name: "admin" },
+              { name: "user" },
+              { name: "employee" },
+          ],
+          {
+              ignoreDuplicates: true,
+          }
+      );
+    
+    await db.vehicle_type.bulkCreate(
+        [
+            { description: "auto" },
+            { description: "camioneta" },
+            { description: "moto" },
+        ],
+        {
+            ignoreDuplicates: true,
+        }
+    );
+
+    await db.vehicle_price.bulkCreate(
+      [
+        { vehiclePrice: 700 , vehicleTypeId: 1 },
+        { vehiclePrice: 1800 , vehicleTypeId: 2 },
+        { vehiclePrice: 400 , vehicleTypeId: 3 },
+      ],
+      {
+          ignoreDuplicates: true,
+      }
+    )
+
     logger.info('DB Connected');
   } catch (error) {
     logger.error(`DB Connection Error: ${error}`);
