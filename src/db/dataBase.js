@@ -103,7 +103,7 @@ db.vehicle_type.hasMany(db.vehicle_price, {
 const connectPostgresDB = async () => {
   try {
     await db.sequelize.authenticate();
-    await db.sequelize.sync({force:false});
+    await db.sequelize.sync();
 
     await db.role.bulkCreate(
           [
