@@ -1,10 +1,10 @@
 module.exports = (sequelize, DataTypes) => {
     const VehiclePrice = sequelize.define("vehicle_price", {
         vehiclePriceId: {
-            type: DataTypes.UUID,
+            type: DataTypes.INTEGER,
             allowNull:  false,
             primaryKey: true,
-            defaultValue: DataTypes.UUIDV4,
+            autoIncrement: true,
             field: "vehicle_price_id",
         },
         vehiclePrice: {

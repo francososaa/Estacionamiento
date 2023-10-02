@@ -24,7 +24,6 @@ db.Sequelize = Sequelize;
 db.building_capacity = require('../models/building_capacity.model')(sequelize, DataTypes);
 db.collection = require('../models/collection.model')(sequelize, DataTypes);
 db.reservation = require('../models/reservation.model')(sequelize, DataTypes);
-db.reservation_person_data = require('../models/reservation_person_data.model')(sequelize, DataTypes);
 db.role = require('../models/role.model')(sequelize, DataTypes);
 db.user = require('../models/user.model')(sequelize, DataTypes);
 db.vehicle = require('../models/vehicle.model')(sequelize, DataTypes);
@@ -53,6 +52,11 @@ db.vehicle.hasMany(db.reservation, {
   as: "reservations",
 });
 
+db.vehicle.belongsTo(db.user, {
+  foreignKey: "userId",
+  as: "user",
+});
+
 db.building_capacity.belongsTo(db.vehicle_type, {
   foreignKey: "vehicleTypeId",
   as: "vehicleType",
@@ -63,13 +67,13 @@ db.reservation.belongsTo(db.vehicle, {
   as: "vehicle",
 });
 
-db.reservation.belongsTo(db.reservation_person_data, {
-  foreignKey: "reservationPersonDataId",
-  as: "reservationPersonData",
+db.reservation.belongsTo(db.user, {
+  foreignKey: "userId",
+  as: "user",
 });
 
-db.reservation_person_data.hasMany(db.reservation, {
-  foreignKey: "reservationPersonDataId",
+db.user.hasMany(db.reservation, {
+  foreignKey: "userId",
   as: "reservations",
 });
 
@@ -83,11 +87,6 @@ db.role.hasMany(db.user, {
   as: "role",
 });
 
-db.reservation_person_data.belongsTo(db.user, {
-  foreignKey: "userId",
-  as: "users",
-});
-
 db.collection.belongsTo(db.vehicle_type, {
   foreignKey: "vehicleTypeId",
   as: "vehicleType",
@@ -98,45 +97,11 @@ db.vehicle_type.hasMany(db.vehicle_price, {
   as: "vehiclesPrices",
 });
 
-
-
 const connectPostgresDB = async () => {
   try {
     await db.sequelize.authenticate();
-    await db.sequelize.sync({force:false});
-
-    await db.role.bulkCreate(
-          [
-              { name: "admin" },
-              { name: "user" },
-              { name: "employee" },
-          ],
-          {
-              ignoreDuplicates: true,
-          }
-      );
-    
-    await db.vehicle_type.bulkCreate(
-        [
-            { description: "auto" },
-            { description: "camioneta" },
-            { description: "moto" },
-        ],
-        {
-            ignoreDuplicates: true,
-        }
-    );
-
-    await db.vehicle_price.bulkCreate(
-      [
-        { vehiclePrice: 700 , vehicleTypeId: 1 },
-        { vehiclePrice: 1800 , vehicleTypeId: 2 },
-        { vehiclePrice: 400 , vehicleTypeId: 3 },
-      ],
-      {
-          ignoreDuplicates: true,
-      }
-    )
+    // await db.sequelize.sync({alter:true});
+    await db.sequelize.sync();
 
     logger.info('DB Connected');
   } catch (error) {

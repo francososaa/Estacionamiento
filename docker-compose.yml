@@ -1,15 +1,15 @@
 version: '3.8'  
 services:  
-  dbpostgres:  
+  postgresDB:  
     container_name: estacionamiento-nodejs  
     image: postgres  
     volumes:
        - estacionamiento-nodejs-db:/var/lib/postgresql  
     restart: always  
     environment: 
-      POSTGRES_USER: root  
-      POSTGRES_PASSWORD: root  
-      POSTGRES_DB: Estacionamiento  
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD:  ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${DB_DATABASE}
     ports:  
       - "8080:5432"  
       

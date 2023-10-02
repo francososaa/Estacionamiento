@@ -7,9 +7,10 @@ module.exports = (sequelize, DataTypes) => {
             defaultValue: DataTypes.UUIDV4,
             field: "vehicle_id",
         },
-        licence: {
+        license: {
             type: DataTypes.STRING,
             allowNull: false,
+            unique: true,
         },
         model: {
             type: DataTypes.STRING,
