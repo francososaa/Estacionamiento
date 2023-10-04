@@ -29,10 +29,10 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             field: "vehicle_id",
         },
-        reservationPersonDataId: {
+        userId: {
             type: DataTypes.UUID,
             allowNull: false,
-            field: "reservation_person_data_id",
+            field: "user_id",
         },
     },
     {

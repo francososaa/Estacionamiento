@@ -1,241 +1,35 @@
-[2023-09-27 13:57:39] [31merror[39m uncaughtException: Route.put() requires a callback function but got a [object Object]
-Error: Route.put() requires a callback function but got a [object Object]
-    at Route.<computed> [as put] (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\route.js:211:15)
-    at proto.<computed> [as put] (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\index.js:521:19)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:8:8)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:17:33)
-[2023-09-27 13:59:02] [31merror[39m uncaughtException: Route.put() requires a callback function but got a [object Object]
-Error: Route.put() requires a callback function but got a [object Object]
-    at Route.<computed> [as put] (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\route.js:211:15)
-    at proto.<computed> [as put] (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\index.js:521:19)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:8:8)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:17:33)
-[2023-09-27 13:59:05] [31merror[39m uncaughtException: Route.put() requires a callback function but got a [object Object]
-Error: Route.put() requires a callback function but got a [object Object]
-    at Route.<computed> [as put] (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\route.js:211:15)
-    at proto.<computed> [as put] (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\index.js:521:19)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:8:8)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:17:33)
-[2023-09-27 13:59:11] [31merror[39m uncaughtException: Route.put() requires a callback function but got a [object Object]
-Error: Route.put() requires a callback function but got a [object Object]
-    at Route.<computed> [as put] (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\route.js:211:15)
-    at proto.<computed> [as put] (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\index.js:521:19)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:8:8)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:17:33)
-[2023-09-27 13:59:16] [31merror[39m uncaughtException: Route.put() requires a callback function but got a [object Object]
-Error: Route.put() requires a callback function but got a [object Object]
-    at Route.<computed> [as put] (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\route.js:211:15)
-    at proto.<computed> [as put] (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\index.js:521:19)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:8:8)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:17:33)
-[2023-09-27 13:59:23] [31merror[39m uncaughtException: Route.put() requires a callback function but got a [object Object]
-Error: Route.put() requires a callback function but got a [object Object]
-    at Route.<computed> [as put] (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\route.js:211:15)
-    at proto.<computed> [as put] (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\index.js:521:19)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:8:8)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:17:33)
-[2023-09-27 13:59:38] [31merror[39m uncaughtException: Unexpected token '?'
-C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js:45
-            ? res.send({ msg: 'You have been Logged Out' });
-            ^
-
-SyntaxError: Unexpected token '?'
-    at internalCompileFunction (node:internal/vm:73:18)
-    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
-    at Module._compile (node:internal/modules/cjs/loader:1220:27)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:2:22)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-[2023-09-27 13:59:43] [31merror[39m uncaughtException: Unexpected token '?'
-C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js:45
-            ? res.send({ msg: 'You have been Logged Out' })
-            ^
-
-SyntaxError: Unexpected token '?'
-    at internalCompileFunction (node:internal/vm:73:18)
-    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
-    at Module._compile (node:internal/modules/cjs/loader:1220:27)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:2:22)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-[2023-09-27 13:59:45] [31merror[39m uncaughtException: Unexpected token '?'
-C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js:45
-            ? res.send({ msg: 'You have been Logged Out' })
-            ^
-
-SyntaxError: Unexpected token '?'
-    at internalCompileFunction (node:internal/vm:73:18)
-    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
-    at Module._compile (node:internal/modules/cjs/loader:1220:27)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:2:22)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-[2023-09-27 13:59:48] [31merror[39m uncaughtException: Unexpected token '?'
-C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js:45
-            ? res.send({ msg: 'You have been Logged Out' })
-            ^
-
-SyntaxError: Unexpected token '?'
-    at internalCompileFunction (node:internal/vm:73:18)
-    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
-    at Module._compile (node:internal/modules/cjs/loader:1220:27)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:2:22)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-[2023-09-27 13:59:52] [31merror[39m uncaughtException: Unexpected token '?'
-C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js:45
-            ? res.send({ msg: 'You have been Logged Out' })
-            ^
-
-SyntaxError: Unexpected token '?'
-    at internalCompileFunction (node:internal/vm:73:18)
-    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
-    at Module._compile (node:internal/modules/cjs/loader:1220:27)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:2:22)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-[2023-09-27 13:59:54] [31merror[39m uncaughtException: Unexpected token '?'
-C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js:45
-            ? res.send({ msg: 'You have been Logged Out' })
-            ^
-
-SyntaxError: Unexpected token '?'
-    at internalCompileFunction (node:internal/vm:73:18)
-    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
-    at Module._compile (node:internal/modules/cjs/loader:1220:27)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:2:22)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-[2023-09-27 14:00:06] [31merror[39m uncaughtException: Unexpected token '?'
-C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js:44
-        if (logout) ? res.send({ msg: 'You have been Logged Out' })
-                    ^
-
-SyntaxError: Unexpected token '?'
-    at internalCompileFunction (node:internal/vm:73:18)
-    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
-    at Module._compile (node:internal/modules/cjs/loader:1220:27)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:2:22)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-[2023-09-27 14:00:10] [31merror[39m uncaughtException: Unexpected token '?'
-C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js:44
-        if (logout) ? res.send({ msg: 'You have been Logged Out' }) : res.send({ msg: 'Error' });
-                    ^
-
-SyntaxError: Unexpected token '?'
-    at internalCompileFunction (node:internal/vm:73:18)
-    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
-    at Module._compile (node:internal/modules/cjs/loader:1220:27)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:2:22)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-[2023-09-27 14:00:42] [31merror[39m uncaughtException: Route.put() requires a callback function but got a [object Object]
-Error: Route.put() requires a callback function but got a [object Object]
-    at Route.<computed> [as put] (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\route.js:211:15)
-    at proto.<computed> [as put] (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\index.js:521:19)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:8:8)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:17:33)
-[2023-09-27 14:01:29] [31merror[39m uncaughtException: Route.get() requires a callback function but got a [object Object]
-Error: Route.get() requires a callback function but got a [object Object]
-    at Route.<computed> [as get] (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\route.js:211:15)
-    at proto.<computed> [as get] (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\index.js:521:19)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:8:8)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:17:33)
-[2023-09-27 14:02:36] [33minfo[39m Server running on port 8081
-[2023-09-27 14:02:36] [33minfo[39m DB Connected
-[2023-09-27 14:03:06] [33minfo[39m Server running on port 8081
-[2023-09-27 14:03:06] [33minfo[39m DB Connected
-[2023-09-27 14:03:07] [33minfo[39m Server running on port 8081
-[2023-09-27 14:03:07] [33minfo[39m DB Connected
-[2023-09-27 14:03:11] [33minfo[39m Server running on port 8081
-[2023-09-27 14:03:11] [33minfo[39m DB Connected
-[2023-09-27 14:03:25] [33minfo[39m Server running on port 8081
-[2023-09-27 14:03:25] [33minfo[39m DB Connected
-[2023-09-27 14:03:26] [31merror[39m uncaughtException: missing ) after argument list
-C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js:48
-            res.send.status(({ msg: 'Error' });
-                                             ^
+[2023-10-02 17:31:49] [33minfo[39m Server running on port 8081
+[2023-10-02 17:31:49] [33minfo[39m DB Connected
+[2023-10-02 17:32:42] [33minfo[39m Server running on port 8081
+[2023-10-02 17:32:42] [33minfo[39m DB Connected
+[2023-10-02 17:35:30] [33minfo[39m Server running on port 8081
+[2023-10-02 17:35:30] [33minfo[39m DB Connected
+[2023-10-02 17:39:37] [33minfo[39m Server running on port 8081
+[2023-10-02 17:39:37] [33minfo[39m DB Connected
+[2023-10-02 17:39:40] [33minfo[39m Server running on port 8081
+[2023-10-02 17:39:40] [33minfo[39m DB Connected
+[2023-10-02 17:39:43] [33minfo[39m Server running on port 8081
+[2023-10-02 17:39:43] [33minfo[39m DB Connected
+[2023-10-02 17:39:44] [33minfo[39m Server running on port 8081
+[2023-10-02 17:39:44] [33minfo[39m DB Connected
+[2023-10-02 17:49:09] [33minfo[39m Server running on port 8081
+[2023-10-02 17:49:09] [33minfo[39m DB Connected
+[2023-10-02 17:49:26] [33minfo[39m Server running on port 8081
+[2023-10-02 17:49:26] [33minfo[39m DB Connected
+[2023-10-02 17:49:35] [33minfo[39m Server running on port 8081
+[2023-10-02 17:49:35] [33minfo[39m DB Connected
+[2023-10-02 17:49:42] [33minfo[39m Server running on port 8081
+[2023-10-02 17:49:42] [33minfo[39m DB Connected
+[2023-10-02 17:49:43] [33minfo[39m Server running on port 8081
+[2023-10-02 17:49:43] [33minfo[39m DB Connected
+[2023-10-02 17:49:45] [33minfo[39m Server running on port 8081
+[2023-10-02 17:49:45] [33minfo[39m DB Connected
+[2023-10-02 17:49:47] [33minfo[39m Server running on port 8081
+[2023-10-02 17:49:48] [33minfo[39m DB Connected
+[2023-10-02 17:49:49] [31merror[39m uncaughtException: missing ) after argument list
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js:19
+    return res.send({ message: "Sucess", vehicles };)
+                                                  ^
 
 SyntaxError: missing ) after argument list
     at internalCompileFunction (node:internal/vm:73:18)
@@ -246,22 +40,107 @@ SyntaxError: missing ) after argument list
     at Module._load (node:internal/modules/cjs/loader:960:12)
     at Module.require (node:internal/modules/cjs/loader:1143:19)
     at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:2:22)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\vehicle.js:3:20)
     at Module._compile (node:internal/modules/cjs/loader:1256:14)
-[2023-09-27 14:03:27] [33minfo[39m Server running on port 8081
-[2023-09-27 14:03:27] [33minfo[39m DB Connected
-[2023-09-27 14:03:31] [33minfo[39m Server running on port 8081
-[2023-09-27 14:03:31] [33minfo[39m DB Connected
-[2023-09-27 14:03:41] [33minfo[39m Server running on port 8081
-[2023-09-27 14:03:41] [33minfo[39m DB Connected
-[2023-09-27 14:04:03] [33minfo[39m Server running on port 8081
-[2023-09-27 14:04:03] [33minfo[39m DB Connected
-[2023-09-27 14:04:06] [33minfo[39m Server running on port 8081
-[2023-09-27 14:04:06] [33minfo[39m DB Connected
-[2023-09-27 14:04:11] [31merror[39m uncaughtException: missing ) after argument list
-C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js:46
-            res.status(send({ msg: 'You have been Logged Out' });
-                                                               ^
+[2023-10-02 17:49:51] [33minfo[39m Server running on port 8081
+[2023-10-02 17:49:51] [33minfo[39m DB Connected
+[2023-10-02 17:50:02] [33minfo[39m Server running on port 8081
+[2023-10-02 17:50:02] [33minfo[39m DB Connected
+[2023-10-02 17:50:04] [33minfo[39m Server running on port 8081
+[2023-10-02 17:50:04] [33minfo[39m DB Connected
+[2023-10-02 17:50:06] [33minfo[39m Server running on port 8081
+[2023-10-02 17:50:06] [33minfo[39m DB Connected
+[2023-10-02 17:50:10] [33minfo[39m Server running on port 8081
+[2023-10-02 17:50:10] [33minfo[39m DB Connected
+[2023-10-02 17:50:33] [33minfo[39m Server running on port 8081
+[2023-10-02 17:50:33] [33minfo[39m DB Connected
+[2023-10-02 17:50:34] [33minfo[39m Server running on port 8081
+[2023-10-02 17:50:34] [33minfo[39m DB Connected
+[2023-10-02 17:57:23] [33minfo[39m Server running on port 8081
+[2023-10-02 17:57:23] [33minfo[39m DB Connected
+[2023-10-02 17:57:28] [31merror[39m uncaughtException: user is not associated to vehicle!
+SequelizeEagerLoadingError: user is not associated to vehicle!
+    at vehicle._getIncludedAssociation (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\model.js:565:13)
+    at vehicle._validateIncludedElement (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\model.js:502:53)
+    at C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\model.js:421:37
+    at Array.map (<anonymous>)
+    at vehicle._validateIncludedElements (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\model.js:417:39)
+    at vehicle.findAll (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\model.js:1124:12)
+    at async RepositoryVehicle.findAll (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\repository\vehicle.repository.js:24:16)
+    at async ServiceVehicle.allVehicles (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:8:16)
+    at async getAllVehicle (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js:18:22)
+[2023-10-02 17:58:15] [33minfo[39m Server running on port 8081
+[2023-10-02 17:58:15] [33minfo[39m DB Connected
+[2023-10-02 17:58:17] [31merror[39m uncaughtException: Cannot read properties of undefined (reading 'getTableName')
+TypeError: Cannot read properties of undefined (reading 'getTableName')
+    at PostgresQueryGenerator.generateThroughJoin (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1376:40)
+    at PostgresQueryGenerator.generateInclude (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1188:24)
+    at PostgresQueryGenerator.selectQuery (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\dialects\abstract\query-generator.js:888:34)
+    at PostgresQueryInterface.select (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:59)
+    at vehicle.findAll (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\model.js:1140:47)
+    at async RepositoryVehicle.findAll (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\repository\vehicle.repository.js:24:16)
+    at async ServiceVehicle.allVehicles (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:8:16)
+    at async getAllVehicle (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js:18:22)
+[2023-10-02 17:58:33] [33minfo[39m Server running on port 8081
+[2023-10-02 17:58:33] [33minfo[39m DB Connected
+[2023-10-02 17:58:35] [31merror[39m uncaughtException: vehicle_type is associated to vehicle using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+SequelizeEagerLoadingError: vehicle_type is associated to vehicle using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+    at vehicle._getIncludedAssociation (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\model.js:576:13)
+    at vehicle._validateIncludedElement (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\model.js:502:53)
+    at C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\model.js:421:37
+    at Array.map (<anonymous>)
+    at vehicle._validateIncludedElements (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\model.js:417:39)
+    at vehicle.findAll (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\model.js:1124:12)
+    at async RepositoryVehicle.findAll (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\repository\vehicle.repository.js:24:16)
+    at async ServiceVehicle.allVehicles (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:8:16)
+    at async getAllVehicle (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js:18:22)
+[2023-10-02 17:58:51] [33minfo[39m Server running on port 8081
+[2023-10-02 17:58:51] [33minfo[39m DB Connected
+[2023-10-02 17:58:55] [33minfo[39m Server running on port 8081
+[2023-10-02 17:58:55] [33minfo[39m DB Connected
+[2023-10-02 17:59:15] [33minfo[39m Server running on port 8081
+[2023-10-02 17:59:15] [33minfo[39m DB Connected
+[2023-10-02 17:59:17] [33minfo[39m Server running on port 8081
+[2023-10-02 17:59:17] [33minfo[39m DB Connected
+[2023-10-02 17:59:19] [33minfo[39m Server running on port 8081
+[2023-10-02 17:59:19] [33minfo[39m DB Connected
+[2023-10-02 17:59:23] [33minfo[39m Server running on port 8081
+[2023-10-02 17:59:23] [33minfo[39m DB Connected
+[2023-10-02 17:59:48] [33minfo[39m Server running on port 8081
+[2023-10-02 17:59:48] [33minfo[39m DB Connected
+[2023-10-02 18:00:24] [33minfo[39m Server running on port 8081
+[2023-10-02 18:00:24] [33minfo[39m DB Connected
+[2023-10-02 18:00:25] [33minfo[39m Server running on port 8081
+[2023-10-02 18:00:25] [33minfo[39m DB Connected
+[2023-10-02 18:00:26] [31merror[39m uncaughtException: user is not associated to vehicle!
+SequelizeEagerLoadingError: user is not associated to vehicle!
+    at vehicle._getIncludedAssociation (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\model.js:565:13)
+    at vehicle._validateIncludedElement (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\model.js:502:53)
+    at C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\model.js:421:37
+    at Array.map (<anonymous>)
+    at vehicle._validateIncludedElements (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\model.js:417:39)
+    at vehicle.findAll (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\model.js:1124:12)
+    at async RepositoryVehicle.findAll (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\repository\vehicle.repository.js:24:16)
+    at async ServiceVehicle.allVehicles (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:8:16)
+    at async getAllVehicle (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js:18:22)
+[2023-10-02 18:01:01] [33minfo[39m Server running on port 8081
+[2023-10-02 18:01:01] [33minfo[39m DB Connected
+[2023-10-02 18:03:05] [33minfo[39m Server running on port 8081
+[2023-10-02 18:03:05] [33minfo[39m DB Connected
+[2023-10-02 18:04:57] [33minfo[39m Server running on port 8081
+[2023-10-02 18:04:57] [33minfo[39m DB Connected
+[2023-10-02 18:06:06] [33minfo[39m Server running on port 8081
+[2023-10-02 18:06:06] [33minfo[39m DB Connected
+[2023-10-02 18:06:29] [33minfo[39m Server running on port 8081
+[2023-10-02 18:06:29] [33minfo[39m DB Connected
+[2023-10-02 18:06:35] [33minfo[39m Server running on port 8081
+[2023-10-02 18:06:35] [33minfo[39m DB Connected
+[2023-10-02 18:06:39] [33minfo[39m Server running on port 8081
+[2023-10-02 18:06:39] [33minfo[39m DB Connected
+[2023-10-02 18:06:44] [31merror[39m uncaughtException: missing ) after argument list
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\repository\vehicle.repository.js:27
+            include: [
+            ^^^^^^^
 
 SyntaxError: missing ) after argument list
     at internalCompileFunction (node:internal/vm:73:18)
@@ -272,12 +151,1035 @@ SyntaxError: missing ) after argument list
     at Module._load (node:internal/modules/cjs/loader:960:12)
     at Module.require (node:internal/modules/cjs/loader:1143:19)
     at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:2:22)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:1:20)
     at Module._compile (node:internal/modules/cjs/loader:1256:14)
-[2023-09-27 14:04:13] [31merror[39m uncaughtException: Unexpected identifier
-C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js:46
-            res.status(200)send({ msg: 'You have been Logged Out' });
-                           ^^^^
+[2023-10-02 18:06:46] [33minfo[39m Server running on port 8081
+[2023-10-02 18:06:46] [33minfo[39m DB Connected
+[2023-10-02 18:06:50] [33minfo[39m Server running on port 8081
+[2023-10-02 18:06:50] [33minfo[39m DB Connected
+[2023-10-02 18:07:00] [33minfo[39m Server running on port 8081
+[2023-10-02 18:07:00] [33minfo[39m DB Connected
+[2023-10-02 18:07:02] [31merror[39m uncaughtException: Unexpected string
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\repository\vehicle.repository.js:26
+            attributes: ["vehicleId""model","license",],
+                                    ^^^^^^^
+
+SyntaxError: Unexpected string
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:1:20)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-02 18:07:04] [33minfo[39m Server running on port 8081
+[2023-10-02 18:07:04] [33minfo[39m DB Connected
+[2023-10-02 18:07:06] [33minfo[39m Server running on port 8081
+[2023-10-02 18:07:07] [33minfo[39m DB Connected
+[2023-10-02 18:07:08] [31merror[39m uncaughtException: Unexpected string
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\repository\vehicle.repository.js:26
+            attributes: ["vehicleId","license""model",,],
+                                              ^^^^^^^
+
+SyntaxError: Unexpected string
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:1:20)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-02 18:07:10] [33minfo[39m Server running on port 8081
+[2023-10-02 18:07:10] [33minfo[39m DB Connected
+[2023-10-02 18:07:12] [33minfo[39m Server running on port 8081
+[2023-10-02 18:07:12] [33minfo[39m DB Connected
+[2023-10-02 18:07:27] [33minfo[39m Server running on port 8081
+[2023-10-02 18:07:27] [33minfo[39m DB Connected
+[2023-10-02 18:07:46] [33minfo[39m Server running on port 8081
+[2023-10-02 18:07:46] [33minfo[39m DB Connected
+[2023-10-02 18:07:50] [33minfo[39m Server running on port 8081
+[2023-10-02 18:07:50] [33minfo[39m DB Connected
+[2023-10-02 18:20:36] [33minfo[39m Server running on port 8081
+[2023-10-02 18:20:36] [33minfo[39m DB Connected
+[2023-10-02 18:24:40] [31merror[39m uncaughtException: Missing initializer in const declaration
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js:36
+    const vehicle
+          ^^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\vehicle.js:4:18)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-02 18:24:46] [31merror[39m uncaughtException: Unexpected token '}'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js:37
+};
+^
+
+SyntaxError: Unexpected token '}'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\vehicle.js:4:18)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-02 18:24:50] [33minfo[39m Server running on port 8081
+[2023-10-02 18:24:50] [33minfo[39m DB Connected
+[2023-10-02 18:24:52] [33minfo[39m Server running on port 8081
+[2023-10-02 18:24:52] [33minfo[39m DB Connected
+[2023-10-02 18:24:57] [33minfo[39m Server running on port 8081
+[2023-10-02 18:24:57] [33minfo[39m DB Connected
+[2023-10-02 18:24:59] [31merror[39m uncaughtException: Unexpected token ')'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js:36
+    const vehicle = await vehicleService.findVehicleById(req.);
+                                                             ^
+
+SyntaxError: Unexpected token ')'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\vehicle.js:4:18)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-02 18:25:03] [33minfo[39m Server running on port 8081
+[2023-10-02 18:25:03] [33minfo[39m DB Connected
+[2023-10-02 18:25:34] [33minfo[39m Server running on port 8081
+[2023-10-02 18:25:34] [33minfo[39m DB Connected
+[2023-10-02 18:25:45] [33minfo[39m Server running on port 8081
+[2023-10-02 18:25:45] [33minfo[39m DB Connected
+[2023-10-02 18:25:49] [33minfo[39m Server running on port 8081
+[2023-10-02 18:25:49] [33minfo[39m DB Connected
+[2023-10-02 18:25:51] [33minfo[39m Server running on port 8081
+[2023-10-02 18:25:51] [33minfo[39m DB Connected
+[2023-10-02 18:25:56] [33minfo[39m Server running on port 8081
+[2023-10-02 18:25:56] [33minfo[39m DB Connected
+[2023-10-02 18:27:31] [33minfo[39m Server running on port 8081
+[2023-10-02 18:27:31] [33minfo[39m DB Connected
+[2023-10-02 18:29:11] [33minfo[39m Server running on port 8081
+[2023-10-02 18:29:11] [33minfo[39m DB Connected
+[2023-10-02 18:30:47] [31merror[39m uncaughtException: Missing initializer in const declaration
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js:28
+    const vehicle
+          ^^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\vehicle.js:4:18)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-02 18:30:58] [33minfo[39m Server running on port 8081
+[2023-10-02 18:30:58] [33minfo[39m DB Connected
+[2023-10-02 18:31:00] [33minfo[39m Server running on port 8081
+[2023-10-02 18:31:00] [33minfo[39m DB Connected
+[2023-10-02 18:31:02] [33minfo[39m Server running on port 8081
+[2023-10-02 18:31:02] [33minfo[39m DB Connected
+[2023-10-04 11:03:35] [33minfo[39m Server running on port 8081
+[2023-10-04 11:03:35] [33minfo[39m DB Connected
+[2023-10-04 11:08:37] [33minfo[39m Server running on port 8081
+[2023-10-04 11:08:37] [33minfo[39m DB Connected
+[2023-10-04 11:08:40] [33minfo[39m Server running on port 8081
+[2023-10-04 11:08:40] [33minfo[39m DB Connected
+[2023-10-04 11:16:06] [33minfo[39m Server running on port 8081
+[2023-10-04 11:16:06] [33minfo[39m DB Connected
+[2023-10-04 11:20:08] [31merror[39m Error al crear la reserva
+[2023-10-04 11:20:24] [31merror[39m Error al crear la reserva
+[2023-10-04 11:20:43] [31merror[39m Error al crear la reserva
+[2023-10-04 11:21:30] [31merror[39m Error al crear la reserva
+[2023-10-04 11:22:56] [33minfo[39m Server running on port 8081
+[2023-10-04 11:22:57] [33minfo[39m DB Connected
+[2023-10-04 11:23:02] [33minfo[39m Server running on port 8081
+[2023-10-04 11:23:02] [33minfo[39m DB Connected
+[2023-10-04 11:24:27] [31merror[39m Error al crear la reserva
+[2023-10-04 11:27:47] [33minfo[39m Server running on port 8081
+[2023-10-04 11:27:47] [33minfo[39m DB Connected
+[2023-10-04 11:27:52] [33minfo[39m Server running on port 8081
+[2023-10-04 11:27:52] [33minfo[39m DB Connected
+[2023-10-04 11:27:56] [33minfo[39m Server running on port 8081
+[2023-10-04 11:27:56] [33minfo[39m DB Connected
+[2023-10-04 11:29:06] [33minfo[39m Server running on port 8081
+[2023-10-04 11:29:06] [33minfo[39m DB Connected
+[2023-10-04 11:29:10] [33minfo[39m Server running on port 8081
+[2023-10-04 11:29:10] [33minfo[39m DB Connected
+[2023-10-04 11:29:18] [33minfo[39m Server running on port 8081
+[2023-10-04 11:29:18] [33minfo[39m DB Connected
+[2023-10-04 11:29:24] [33minfo[39m Server running on port 8081
+[2023-10-04 11:29:24] [33minfo[39m DB Connected
+[2023-10-04 11:29:29] [33minfo[39m Server running on port 8081
+[2023-10-04 11:29:29] [33minfo[39m DB Connected
+[2023-10-04 11:29:34] [31merror[39m uncaughtException: Identifier 'vehicle' has already been declared
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:47
+                    const vehicle = await vehicleRepository.changeStatus(vehicleId, transaction);
+                          ^
+
+SyntaxError: Identifier 'vehicle' has already been declared
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js:1:24)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 11:29:35] [33minfo[39m Server running on port 8081
+[2023-10-04 11:29:35] [33minfo[39m DB Connected
+[2023-10-04 11:29:39] [33minfo[39m Server running on port 8081
+[2023-10-04 11:29:39] [33minfo[39m DB Connected
+[2023-10-04 11:32:21] [33minfo[39m Server running on port 8081
+[2023-10-04 11:32:21] [33minfo[39m DB Connected
+[2023-10-04 11:32:24] [33minfo[39m Server running on port 8081
+[2023-10-04 11:32:24] [33minfo[39m DB Connected
+[2023-10-04 11:32:32] [33minfo[39m Server running on port 8081
+[2023-10-04 11:32:32] [33minfo[39m DB Connected
+[2023-10-04 11:32:34] [33minfo[39m Server running on port 8081
+[2023-10-04 11:32:34] [33minfo[39m DB Connected
+[2023-10-04 11:32:42] [33minfo[39m Server running on port 8081
+[2023-10-04 11:32:42] [33minfo[39m DB Connected
+[2023-10-04 11:32:45] [33minfo[39m Server running on port 8081
+[2023-10-04 11:32:45] [33minfo[39m DB Connected
+[2023-10-04 11:32:46] [33minfo[39m Server running on port 8081
+[2023-10-04 11:32:46] [33minfo[39m DB Connected
+[2023-10-04 11:32:52] [33minfo[39m Server running on port 8081
+[2023-10-04 11:32:53] [33minfo[39m DB Connected
+[2023-10-04 11:33:09] [33minfo[39m Server running on port 8081
+[2023-10-04 11:33:10] [33minfo[39m DB Connected
+[2023-10-04 11:33:24] [33minfo[39m Server running on port 8081
+[2023-10-04 11:33:24] [33minfo[39m DB Connected
+[2023-10-04 11:33:32] [33minfo[39m Server running on port 8081
+[2023-10-04 11:33:32] [33minfo[39m DB Connected
+[2023-10-04 11:33:36] [33minfo[39m Server running on port 8081
+[2023-10-04 11:33:36] [33minfo[39m DB Connected
+[2023-10-04 11:33:44] [33minfo[39m Server running on port 8081
+[2023-10-04 11:33:45] [33minfo[39m DB Connected
+[2023-10-04 11:33:47] [33minfo[39m Server running on port 8081
+[2023-10-04 11:33:47] [33minfo[39m DB Connected
+[2023-10-04 11:33:50] [33minfo[39m Server running on port 8081
+[2023-10-04 11:33:50] [33minfo[39m DB Connected
+[2023-10-04 11:33:53] [33minfo[39m Server running on port 8081
+[2023-10-04 11:33:53] [33minfo[39m DB Connected
+[2023-10-04 11:34:12] [33minfo[39m Server running on port 8081
+[2023-10-04 11:34:12] [33minfo[39m DB Connected
+[2023-10-04 11:34:16] [33minfo[39m Server running on port 8081
+[2023-10-04 11:34:16] [33minfo[39m DB Connected
+[2023-10-04 11:34:18] [33minfo[39m Server running on port 8081
+[2023-10-04 11:34:18] [33minfo[39m DB Connected
+[2023-10-04 11:35:37] [33minfo[39m Server running on port 8081
+[2023-10-04 11:35:37] [33minfo[39m DB Connected
+[2023-10-04 11:36:25] [33minfo[39m Server running on port 8081
+[2023-10-04 11:36:25] [33minfo[39m DB Connected
+[2023-10-04 11:36:31] [33minfo[39m Server running on port 8081
+[2023-10-04 11:36:31] [33minfo[39m DB Connected
+[2023-10-04 11:37:00] [33minfo[39m Server running on port 8081
+[2023-10-04 11:37:00] [33minfo[39m DB Connected
+[2023-10-04 11:37:42] [33minfo[39m Server running on port 8081
+[2023-10-04 11:37:42] [33minfo[39m DB Connected
+[2023-10-04 11:38:28] [31merror[39m uncaughtException: RepositoryReservation is not defined
+ReferenceError: RepositoryReservation is not defined
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\repository\reservation.repository.js:41:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:1:20)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+[2023-10-04 11:38:31] [31merror[39m uncaughtException: RepositoryReservation is not defined
+ReferenceError: RepositoryReservation is not defined
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\repository\reservation.repository.js:41:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:1:20)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+[2023-10-04 11:38:36] [33minfo[39m Server running on port 8081
+[2023-10-04 11:38:36] [33minfo[39m DB Connected
+[2023-10-04 11:39:17] [33minfo[39m Server running on port 8081
+[2023-10-04 11:39:17] [33minfo[39m DB Connected
+[2023-10-04 11:39:25] [33minfo[39m Server running on port 8081
+[2023-10-04 11:39:25] [33minfo[39m DB Connected
+[2023-10-04 11:39:27] [33minfo[39m Server running on port 8081
+[2023-10-04 11:39:27] [33minfo[39m DB Connected
+[2023-10-04 11:39:33] [33minfo[39m Server running on port 8081
+[2023-10-04 11:39:33] [33minfo[39m DB Connected
+[2023-10-04 11:39:35] [33minfo[39m Server running on port 8081
+[2023-10-04 11:39:35] [33minfo[39m DB Connected
+[2023-10-04 11:41:22] [33minfo[39m Server running on port 8081
+[2023-10-04 11:41:22] [33minfo[39m DB Connected
+[2023-10-04 11:42:08] [33minfo[39m Server running on port 8081
+[2023-10-04 11:42:08] [33minfo[39m DB Connected
+[2023-10-04 11:42:48] [33minfo[39m Server running on port 8081
+[2023-10-04 11:42:48] [33minfo[39m DB Connected
+[2023-10-04 11:44:16] [31merror[39m uncaughtException: Missing initializer in const declaration
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:13
+        for (const reservation on reservations) {
+                   ^^^^^^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:4:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 11:44:20] [31merror[39m uncaughtException: Missing initializer in const declaration
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:13
+        for (const reservation n reservations) {
+                   ^^^^^^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:4:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 11:44:21] [33minfo[39m Server running on port 8081
+[2023-10-04 11:44:21] [33minfo[39m DB Connected
+[2023-10-04 11:44:24] [31merror[39m uncaughtException: Missing initializer in const declaration
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:13
+        for (const reservation[] in reservations) {
+                   ^^^^^^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:4:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 11:44:27] [31merror[39m uncaughtException: Missing initializer in const declaration
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:13
+        for (const reservation[9] in reservations) {
+                   ^^^^^^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:4:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 11:44:29] [31merror[39m uncaughtException: Missing initializer in const declaration
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:13
+        for (const reservation[1] in reservations) {
+                   ^^^^^^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:4:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 11:44:31] [33minfo[39m Server running on port 8081
+[2023-10-04 11:44:31] [33minfo[39m DB Connected
+[2023-10-04 11:44:36] [31merror[39m uncaughtException: Missing initializer in const declaration
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:13
+        for (const reservation.dataValues in reservations) {
+                   ^^^^^^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:4:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 11:44:44] [33minfo[39m Server running on port 8081
+[2023-10-04 11:44:44] [33minfo[39m DB Connected
+[2023-10-04 11:45:53] [33minfo[39m Server running on port 8081
+[2023-10-04 11:45:53] [33minfo[39m DB Connected
+[2023-10-04 11:46:56] [33minfo[39m Server running on port 8081
+[2023-10-04 11:46:56] [33minfo[39m DB Connected
+[2023-10-04 11:47:00] [33minfo[39m Server running on port 8081
+[2023-10-04 11:47:00] [33minfo[39m DB Connected
+[2023-10-04 11:47:07] [33minfo[39m Server running on port 8081
+[2023-10-04 11:47:07] [33minfo[39m DB Connected
+[2023-10-04 11:47:24] [33minfo[39m Server running on port 8081
+[2023-10-04 11:47:24] [33minfo[39m DB Connected
+[2023-10-04 11:47:26] [33minfo[39m Server running on port 8081
+[2023-10-04 11:47:26] [33minfo[39m DB Connected
+[2023-10-04 11:47:31] [33minfo[39m Server running on port 8081
+[2023-10-04 11:47:31] [33minfo[39m DB Connected
+[2023-10-04 11:47:44] [33minfo[39m Server running on port 8081
+[2023-10-04 11:47:44] [33minfo[39m DB Connected
+[2023-10-04 11:47:48] [33minfo[39m Server running on port 8081
+[2023-10-04 11:47:48] [33minfo[39m DB Connected
+[2023-10-04 11:47:50] [33minfo[39m Server running on port 8081
+[2023-10-04 11:47:50] [33minfo[39m DB Connected
+[2023-10-04 11:48:00] [33minfo[39m Server running on port 8081
+[2023-10-04 11:48:00] [33minfo[39m DB Connected
+[2023-10-04 11:48:06] [33minfo[39m Server running on port 8081
+[2023-10-04 11:48:06] [33minfo[39m DB Connected
+[2023-10-04 11:49:52] [33minfo[39m Server running on port 8081
+[2023-10-04 11:49:52] [33minfo[39m DB Connected
+[2023-10-04 11:49:55] [33minfo[39m Server running on port 8081
+[2023-10-04 11:49:55] [33minfo[39m DB Connected
+[2023-10-04 11:50:04] [33minfo[39m Server running on port 8081
+[2023-10-04 11:50:04] [33minfo[39m DB Connected
+[2023-10-04 11:50:06] [33minfo[39m Server running on port 8081
+[2023-10-04 11:50:06] [33minfo[39m DB Connected
+[2023-10-04 11:50:12] [33minfo[39m Server running on port 8081
+[2023-10-04 11:50:12] [33minfo[39m DB Connected
+[2023-10-04 11:50:28] [33minfo[39m Server running on port 8081
+[2023-10-04 11:50:28] [33minfo[39m DB Connected
+[2023-10-04 11:51:14] [31merror[39m uncaughtException: Unexpected token 'for'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:14
+        for (const reservation of reservations) {
+        ^^^
+
+SyntaxError: Unexpected token 'for'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:4:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 11:51:15] [31merror[39m uncaughtException: Unexpected token 'for'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:14
+        for (const reservation of reservations) {
+        ^^^
+
+SyntaxError: Unexpected token 'for'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:4:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 11:51:19] [31merror[39m uncaughtException: Unexpected token 'delete'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:13
+        const delete
+              ^^^^^^
+
+SyntaxError: Unexpected token 'delete'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:4:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 11:51:23] [31merror[39m uncaughtException: Missing initializer in const declaration
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:13
+        const deleteReservation
+              ^^^^^^^^^^^^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:4:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 11:51:25] [31merror[39m uncaughtException: Unexpected token ')'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:13
+        const deleteReservation = ()
+                                   ^
+
+SyntaxError: Unexpected token ')'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:4:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 11:51:27] [33minfo[39m Server running on port 8081
+[2023-10-04 11:51:27] [33minfo[39m DB Connected
+[2023-10-04 11:51:30] [33minfo[39m Server running on port 8081
+[2023-10-04 11:51:30] [33minfo[39m DB Connected
+[2023-10-04 11:51:33] [31merror[39m uncaughtException: Unexpected token 'for'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:14
+        for (const reservation of reservations) {
+        ^^^
+
+SyntaxError: Unexpected token 'for'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:4:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 11:51:35] [33minfo[39m Server running on port 8081
+[2023-10-04 11:51:35] [33minfo[39m DB Connected
+[2023-10-04 11:51:39] [33minfo[39m Server running on port 8081
+[2023-10-04 11:51:39] [33minfo[39m DB Connected
+[2023-10-04 11:51:40] [33minfo[39m Server running on port 8081
+[2023-10-04 11:51:40] [33minfo[39m DB Connected
+[2023-10-04 11:51:46] [33minfo[39m Server running on port 8081
+[2023-10-04 11:51:46] [33minfo[39m DB Connected
+[2023-10-04 11:51:50] [33minfo[39m Server running on port 8081
+[2023-10-04 11:51:50] [33minfo[39m DB Connected
+[2023-10-04 11:51:59] [33minfo[39m Server running on port 8081
+[2023-10-04 11:51:59] [33minfo[39m DB Connected
+[2023-10-04 11:52:01] [33minfo[39m Server running on port 8081
+[2023-10-04 11:52:01] [33minfo[39m DB Connected
+[2023-10-04 11:52:26] [33minfo[39m Server running on port 8081
+[2023-10-04 11:52:26] [33minfo[39m DB Connected
+[2023-10-04 11:52:34] [31merror[39m uncaughtException: missing ) after argument list
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:13
+        const deleteReserv = (reservations) => reservations.map( reservation => await repository.deleteReservation(reservation.date, reservation.vehicleId););
+                                                                                ^^^^^
+
+SyntaxError: missing ) after argument list
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:4:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 11:52:38] [31merror[39m uncaughtException: missing ) after argument list
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:13
+        const deleteReserv = (reservations) => reservations.map( reservation => await repository.deleteReservation(reservation.date, reservation.vehicleId));
+                                                                                ^^^^^
+
+SyntaxError: missing ) after argument list
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:4:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 11:52:49] [33minfo[39m Server running on port 8081
+[2023-10-04 11:52:49] [33minfo[39m DB Connected
+[2023-10-04 11:53:42] [33minfo[39m Server running on port 8081
+[2023-10-04 11:53:42] [33minfo[39m DB Connected
+[2023-10-04 11:53:51] [33minfo[39m Server running on port 8081
+[2023-10-04 11:53:51] [33minfo[39m DB Connected
+[2023-10-04 11:54:03] [33minfo[39m Server running on port 8081
+[2023-10-04 11:54:03] [33minfo[39m DB Connected
+[2023-10-04 11:54:26] [33minfo[39m Server running on port 8081
+[2023-10-04 11:54:26] [33minfo[39m DB Connected
+[2023-10-04 11:54:42] [33minfo[39m Server running on port 8081
+[2023-10-04 11:54:42] [33minfo[39m DB Connected
+[2023-10-04 11:55:20] [31merror[39m uncaughtException: Unexpected token 'return'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\repository\reservation.repository.js:27
+        return await db.reservation.destroy({ where: {[Op.and]: [{ date: date }, { reservationId: reservationId }]} });
+        ^^^^^^
+
+SyntaxError: Unexpected token 'return'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:1:20)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 11:55:27] [31merror[39m uncaughtException: Missing initializer in const declaration
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\repository\reservation.repository.js:26
+        const nowDAte
+              ^^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:1:20)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 11:55:29] [31merror[39m uncaughtException: Missing initializer in const declaration
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\repository\reservation.repository.js:26
+        const nowDAte 
+              ^^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:1:20)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 11:55:34] [33minfo[39m Server running on port 8081
+[2023-10-04 11:55:34] [33minfo[39m DB Connected
+[2023-10-04 11:55:36] [33minfo[39m Server running on port 8081
+[2023-10-04 11:55:36] [33minfo[39m DB Connected
+[2023-10-04 11:55:53] [33minfo[39m Server running on port 8081
+[2023-10-04 11:55:53] [33minfo[39m DB Connected
+[2023-10-04 11:55:56] [33minfo[39m Server running on port 8081
+[2023-10-04 11:55:56] [33minfo[39m DB Connected
+[2023-10-04 11:56:16] [33minfo[39m Server running on port 8081
+[2023-10-04 11:56:16] [33minfo[39m DB Connected
+[2023-10-04 11:56:19] [33minfo[39m Server running on port 8081
+[2023-10-04 11:56:20] [33minfo[39m DB Connected
+[2023-10-04 11:56:20] [33minfo[39m Server running on port 8081
+[2023-10-04 11:56:21] [33minfo[39m DB Connected
+[2023-10-04 11:56:28] [31merror[39m uncaughtException: Unexpected token ')'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:14
+            if()
+               ^
+
+SyntaxError: Unexpected token ')'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:4:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 11:56:31] [33minfo[39m Server running on port 8081
+[2023-10-04 11:56:31] [33minfo[39m DB Connected
+[2023-10-04 11:56:33] [33minfo[39m Server running on port 8081
+[2023-10-04 11:56:34] [33minfo[39m DB Connected
+[2023-10-04 11:56:35] [33minfo[39m Server running on port 8081
+[2023-10-04 11:56:35] [33minfo[39m DB Connected
+[2023-10-04 11:56:40] [31merror[39m uncaughtException: Unexpected token ')'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:14
+        if()
+           ^
+
+SyntaxError: Unexpected token ')'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:4:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 11:56:41] [33minfo[39m Server running on port 8081
+[2023-10-04 11:56:41] [33minfo[39m DB Connected
+[2023-10-04 11:56:42] [33minfo[39m Server running on port 8081
+[2023-10-04 11:56:42] [33minfo[39m DB Connected
+[2023-10-04 11:56:44] [33minfo[39m Server running on port 8081
+[2023-10-04 11:56:44] [33minfo[39m DB Connected
+[2023-10-04 11:56:46] [31merror[39m uncaughtException: Unexpected token ')'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:14
+        if(nowDAte >)
+                    ^
+
+SyntaxError: Unexpected token ')'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:4:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 11:56:48] [33minfo[39m Server running on port 8081
+[2023-10-04 11:56:49] [33minfo[39m DB Connected
+[2023-10-04 11:56:51] [31merror[39m uncaughtException: Unexpected token ')'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:14
+        if(nowDAte >=)
+                     ^
+
+SyntaxError: Unexpected token ')'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:4:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 11:56:52] [31merror[39m uncaughtException: Unexpected token ')'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:14
+        if(nowDAte >= )
+                      ^
+
+SyntaxError: Unexpected token ')'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:4:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 11:57:56] [33minfo[39m Server running on port 8081
+[2023-10-04 11:57:57] [33minfo[39m DB Connected
+[2023-10-04 11:58:35] [31merror[39m uncaughtException: Unexpected token 'class'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:3
+class ReservationService {
+^^^^^
+
+SyntaxError: Unexpected token 'class'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:4:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 11:58:42] [31merror[39m uncaughtException: Cannot find module '../'
+Require stack:
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\vehicle.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js
+Error: Cannot find module '../'
+Require stack:
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\vehicle.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)
+    at Module._load (node:internal/modules/cjs/loader:922:27)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:2:20)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+[2023-10-04 11:58:44] [31merror[39m uncaughtException: Cannot find module '../utils/'
+Require stack:
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\vehicle.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js
+Error: Cannot find module '../utils/'
+Require stack:
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\vehicle.js
+- C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)
+    at Module._load (node:internal/modules/cjs/loader:922:27)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:2:20)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+[2023-10-04 11:58:46] [33minfo[39m Server running on port 8081
+[2023-10-04 11:58:46] [33minfo[39m DB Connected
+[2023-10-04 11:58:47] [33minfo[39m Server running on port 8081
+[2023-10-04 11:58:48] [33minfo[39m DB Connected
+[2023-10-04 11:58:50] [33minfo[39m Server running on port 8081
+[2023-10-04 11:58:50] [33minfo[39m DB Connected
+[2023-10-04 11:58:54] [31merror[39m uncaughtException: Unexpected token 'for'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:16
+        for (const reservation of reservations) {
+        ^^^
+
+SyntaxError: Unexpected token 'for'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:4:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 11:58:55] [33minfo[39m Server running on port 8081
+[2023-10-04 11:58:55] [33minfo[39m DB Connected
+[2023-10-04 11:58:57] [33minfo[39m Server running on port 8081
+[2023-10-04 11:58:57] [33minfo[39m DB Connected
+[2023-10-04 11:59:00] [33minfo[39m Server running on port 8081
+[2023-10-04 11:59:00] [33minfo[39m DB Connected
+[2023-10-04 11:59:14] [33minfo[39m Server running on port 8081
+[2023-10-04 11:59:14] [33minfo[39m DB Connected
+[2023-10-04 11:59:17] [33minfo[39m Server running on port 8081
+[2023-10-04 11:59:17] [33minfo[39m DB Connected
+[2023-10-04 11:59:26] [33minfo[39m Server running on port 8081
+[2023-10-04 11:59:27] [33minfo[39m DB Connected
+[2023-10-04 11:59:39] [33minfo[39m Server running on port 8081
+[2023-10-04 11:59:39] [33minfo[39m DB Connected
+[2023-10-04 12:01:48] [33minfo[39m Server running on port 8081
+[2023-10-04 12:01:48] [33minfo[39m DB Connected
+[2023-10-04 12:01:52] [33minfo[39m Server running on port 8081
+[2023-10-04 12:01:52] [33minfo[39m DB Connected
+[2023-10-04 12:01:54] [33minfo[39m Server running on port 8081
+[2023-10-04 12:01:54] [33minfo[39m DB Connected
+[2023-10-04 12:02:34] [31merror[39m uncaughtException: Missing initializer in const declaration
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:2
+const forma{tDate = require('../utils/dateUtil');
+      ^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:4:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 12:02:35] [33minfo[39m Server running on port 8081
+[2023-10-04 12:02:35] [33minfo[39m DB Connected
+[2023-10-04 12:02:39] [33minfo[39m Server running on port 8081
+[2023-10-04 12:02:39] [33minfo[39m DB Connected
+[2023-10-04 12:04:27] [33minfo[39m Server running on port 8081
+[2023-10-04 12:04:27] [33minfo[39m DB Connected
+[2023-10-04 12:04:55] [33minfo[39m Server running on port 8081
+[2023-10-04 12:04:55] [33minfo[39m DB Connected
+[2023-10-04 12:04:58] [33minfo[39m Server running on port 8081
+[2023-10-04 12:04:58] [33minfo[39m DB Connected
+[2023-10-04 12:05:03] [33minfo[39m Server running on port 8081
+[2023-10-04 12:05:03] [33minfo[39m DB Connected
+[2023-10-04 12:08:26] [33minfo[39m Server running on port 8081
+[2023-10-04 12:08:26] [33minfo[39m DB Connected
+[2023-10-04 12:08:29] [33minfo[39m Server running on port 8081
+[2023-10-04 12:08:29] [33minfo[39m DB Connected
+[2023-10-04 12:08:32] [33minfo[39m Server running on port 8081
+[2023-10-04 12:08:32] [33minfo[39m DB Connected
+[2023-10-04 12:08:35] [33minfo[39m Server running on port 8081
+[2023-10-04 12:08:35] [33minfo[39m DB Connected
+[2023-10-04 12:10:47] [33minfo[39m Server running on port 8081
+[2023-10-04 12:10:48] [33minfo[39m DB Connected
+[2023-10-04 12:10:58] [33minfo[39m Server running on port 8081
+[2023-10-04 12:10:58] [33minfo[39m DB Connected
+[2023-10-04 12:11:08] [33minfo[39m Server running on port 8081
+[2023-10-04 12:11:08] [33minfo[39m DB Connected
+[2023-10-04 12:11:17] [33minfo[39m Server running on port 8081
+[2023-10-04 12:11:17] [33minfo[39m DB Connected
+[2023-10-04 12:12:17] [33minfo[39m Server running on port 8081
+[2023-10-04 12:12:17] [33minfo[39m DB Connected
+[2023-10-04 12:12:19] [33minfo[39m Server running on port 8081
+[2023-10-04 12:12:19] [33minfo[39m DB Connected
+[2023-10-04 12:15:53] [33minfo[39m Server running on port 8081
+[2023-10-04 12:15:53] [33minfo[39m DB Connected
+[2023-10-04 12:16:33] [33minfo[39m Server running on port 8081
+[2023-10-04 12:16:33] [33minfo[39m DB Connected
+[2023-10-04 12:19:07] [33minfo[39m Server running on port 8081
+[2023-10-04 12:19:07] [33minfo[39m DB Connected
+[2023-10-04 12:41:47] [33minfo[39m Server running on port 8081
+[2023-10-04 12:41:47] [33minfo[39m DB Connected
+[2023-10-04 12:42:19] [33minfo[39m Server running on port 8081
+[2023-10-04 12:42:19] [33minfo[39m DB Connected
+[2023-10-04 12:42:39] [33minfo[39m Server running on port 8081
+[2023-10-04 12:42:39] [33minfo[39m DB Connected
+[2023-10-04 13:09:41] [33minfo[39m Server running on port 8081
+[2023-10-04 13:09:41] [33minfo[39m DB Connected
+[2023-10-04 13:10:24] [33minfo[39m Server running on port 8081
+[2023-10-04 13:10:24] [33minfo[39m DB Connected
+[2023-10-04 13:10:48] [33minfo[39m Server running on port 8081
+[2023-10-04 13:10:48] [33minfo[39m DB Connected
+[2023-10-04 13:11:38] [31merror[39m uncaughtException: Identifier 'vehicleRepository' has already been declared
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:3
+const vehicleRepository = require('../repository/vehicle.repository');
+      ^
+
+SyntaxError: Identifier 'vehicleRepository' has already been declared
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js:1:24)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 13:11:45] [31merror[39m uncaughtException: Identifier 'vehicleRepository' has already been declared
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:3
+const vehicleRepository = require('../repository/vehicle.repository');
+      ^
+
+SyntaxError: Identifier 'vehicleRepository' has already been declared
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js:1:24)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 13:11:48] [31merror[39m uncaughtException: Identifier 'vehicleRepository' has already been declared
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:3
+const vehicleRepository = require('../repository/vehicle.repository');
+      ^
+
+SyntaxError: Identifier 'vehicleRepository' has already been declared
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js:1:24)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 13:11:50] [31merror[39m uncaughtException: Identifier 'vehicleRepository' has already been declared
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:3
+const vehicleRepository = require('../repository/vehicle.repository');
+      ^
+
+SyntaxError: Identifier 'vehicleRepository' has already been declared
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js:1:24)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 13:11:53] [31merror[39m uncaughtException: Identifier 'vehicleRepository' has already been declared
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:3
+const vehicleRepository = require('../repository/vehicle.repository');
+      ^
+
+SyntaxError: Identifier 'vehicleRepository' has already been declared
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js:1:24)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 13:11:56] [31merror[39m uncaughtException: Identifier 'vehicleRepository' has already been declared
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:3
+const vehicleRepository = require('../repository/vehicle.repository');
+      ^
+
+SyntaxError: Identifier 'vehicleRepository' has already been declared
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js:1:24)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 13:12:23] [33minfo[39m Server running on port 8081
+[2023-10-04 13:12:23] [33minfo[39m DB Connected
+[2023-10-04 13:12:29] [33minfo[39m Server running on port 8081
+[2023-10-04 13:12:29] [33minfo[39m DB Connected
+[2023-10-04 13:18:34] [33minfo[39m Server running on port 8081
+[2023-10-04 13:18:34] [33minfo[39m DB Connected
+[2023-10-04 13:19:36] [33minfo[39m Server running on port 8081
+[2023-10-04 13:19:36] [33minfo[39m DB Connected
+[2023-10-04 13:19:39] [33minfo[39m Server running on port 8081
+[2023-10-04 13:19:39] [33minfo[39m DB Connected
+[2023-10-04 13:20:11] [31merror[39m uncaughtException: Unexpected identifier
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:24
+    async findAllReservationForVehicle(vehicleId){
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 SyntaxError: Unexpected identifier
     at internalCompileFunction (node:internal/vm:73:18)
@@ -288,16 +1190,133 @@ SyntaxError: Unexpected identifier
     at Module._load (node:internal/modules/cjs/loader:960:12)
     at Module.require (node:internal/modules/cjs/loader:1143:19)
     at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:2:22)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:3:28)
     at Module._compile (node:internal/modules/cjs/loader:1256:14)
-[2023-09-27 14:04:14] [33minfo[39m Server running on port 8081
-[2023-09-27 14:04:14] [33minfo[39m DB Connected
-[2023-09-27 14:04:31] [33minfo[39m Server running on port 8081
-[2023-09-27 14:04:31] [33minfo[39m DB Connected
-[2023-09-27 14:04:34] [31merror[39m uncaughtException: Unexpected token ')'
-C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js:50
-    });
-     ^
+[2023-10-04 13:20:12] [31merror[39m uncaughtException: Unexpected identifier
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:25
+    async findAllReservationForVehicle(vehicleId){
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+SyntaxError: Unexpected identifier
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:3:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 13:20:15] [33minfo[39m Server running on port 8081
+[2023-10-04 13:20:15] [33minfo[39m DB Connected
+[2023-10-04 13:20:19] [33minfo[39m Server running on port 8081
+[2023-10-04 13:20:19] [33minfo[39m DB Connected
+[2023-10-04 13:20:23] [33minfo[39m Server running on port 8081
+[2023-10-04 13:20:23] [33minfo[39m DB Connected
+[2023-10-04 13:21:27] [33minfo[39m Server running on port 8081
+[2023-10-04 13:21:27] [33minfo[39m DB Connected
+[2023-10-04 13:21:29] [33minfo[39m Server running on port 8081
+[2023-10-04 13:21:29] [33minfo[39m DB Connected
+[2023-10-04 13:21:35] [33minfo[39m Server running on port 8081
+[2023-10-04 13:21:35] [33minfo[39m DB Connected
+[2023-10-04 13:21:40] [33minfo[39m Server running on port 8081
+[2023-10-04 13:21:40] [33minfo[39m DB Connected
+[2023-10-04 13:21:45] [33minfo[39m Server running on port 8081
+[2023-10-04 13:21:45] [33minfo[39m DB Connected
+[2023-10-04 13:21:53] [33minfo[39m Server running on port 8081
+[2023-10-04 13:21:53] [33minfo[39m DB Connected
+[2023-10-04 13:21:59] [31merror[39m uncaughtException: Unexpected token '.'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\building_capacity.service.js:19
+        let buildingCapacity = await .findByDateAndVehicleType(date, vehicleTypeId);
+                                     ^
+
+SyntaxError: Unexpected token '.'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\building_capacity.js:1:33)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 13:22:00] [31merror[39m uncaughtException: Unexpected token '.'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\building_capacity.service.js:14
+        return .findByDateAndVehicleType(date, vehicleTypeId) ? true : false
+               ^
+
+SyntaxError: Unexpected token '.'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\building_capacity.js:1:33)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 13:22:04] [33minfo[39m Server running on port 8081
+[2023-10-04 13:22:04] [33minfo[39m DB Connected
+[2023-10-04 13:25:31] [33minfo[39m Server running on port 8081
+[2023-10-04 13:25:31] [33minfo[39m DB Connected
+[2023-10-04 13:27:09] [33minfo[39m Server running on port 8081
+[2023-10-04 13:27:09] [33minfo[39m DB Connected
+[2023-10-04 13:28:10] [33minfo[39m Server running on port 8081
+[2023-10-04 13:28:10] [33minfo[39m DB Connected
+[2023-10-04 13:29:31] [31merror[39m Error al crear la reserva
+[2023-10-04 13:33:12] [31merror[39m uncaughtException: missing ) after argument list
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\repository\vehicle.repository.js:20
+        return await db.vehicle.findByPk(vehicleId});
+                                         ^^^^^^^^^
+
+SyntaxError: missing ) after argument list
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:2:27)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 13:33:14] [33minfo[39m Server running on port 8081
+[2023-10-04 13:33:14] [33minfo[39m DB Connected
+[2023-10-04 13:37:37] [33minfo[39m Server running on port 8081
+[2023-10-04 13:37:37] [33minfo[39m DB Connected
+[2023-10-04 13:37:38] [33minfo[39m Server running on port 8081
+[2023-10-04 13:37:38] [33minfo[39m DB Connected
+[2023-10-04 13:37:49] [33minfo[39m Server running on port 8081
+[2023-10-04 13:37:49] [33minfo[39m DB Connected
+[2023-10-04 13:38:17] [33minfo[39m Server running on port 8081
+[2023-10-04 13:38:17] [33minfo[39m DB Connected
+[2023-10-04 13:38:25] [33minfo[39m Server running on port 8081
+[2023-10-04 13:38:25] [33minfo[39m DB Connected
+[2023-10-04 13:38:32] [33minfo[39m Server running on port 8081
+[2023-10-04 13:38:32] [33minfo[39m DB Connected
+[2023-10-04 13:39:23] [33minfo[39m Server running on port 8081
+[2023-10-04 13:39:23] [33minfo[39m DB Connected
+[2023-10-04 13:39:46] [33minfo[39m Server running on port 8081
+[2023-10-04 13:39:46] [33minfo[39m DB Connected
+[2023-10-04 13:40:22] [33minfo[39m Server running on port 8081
+[2023-10-04 13:40:23] [33minfo[39m DB Connected
+[2023-10-04 13:40:30] [33minfo[39m Server running on port 8081
+[2023-10-04 13:40:30] [33minfo[39m DB Connected
+[2023-10-04 13:40:53] [33minfo[39m Server running on port 8081
+[2023-10-04 13:40:53] [33minfo[39m DB Connected
+[2023-10-04 13:40:59] [33minfo[39m Server running on port 8081
+[2023-10-04 13:40:59] [33minfo[39m DB Connected
+[2023-10-04 13:41:01] [33minfo[39m Server running on port 8081
+[2023-10-04 13:41:01] [33minfo[39m DB Connected
+[2023-10-04 13:41:06] [33minfo[39m Server running on port 8081
+[2023-10-04 13:41:06] [33minfo[39m DB Connected
+[2023-10-04 13:44:36] [31merror[39m uncaughtException: Unexpected token ')'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\building_capacity.service.js:60
+        if()
+           ^
 
 SyntaxError: Unexpected token ')'
     at internalCompileFunction (node:internal/vm:73:18)
@@ -308,12 +1327,12 @@ SyntaxError: Unexpected token ')'
     at Module._load (node:internal/modules/cjs/loader:960:12)
     at Module.require (node:internal/modules/cjs/loader:1143:19)
     at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:2:22)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\building_capacity.js:1:33)
     at Module._compile (node:internal/modules/cjs/loader:1256:14)
-[2023-09-27 14:04:37] [31merror[39m uncaughtException: Unexpected token ')'
-C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js:49
-    });
-     ^
+[2023-10-04 13:44:39] [31merror[39m uncaughtException: Unexpected token ')'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\building_capacity.service.js:60
+        if(buildingCapacity.)
+                            ^
 
 SyntaxError: Unexpected token ')'
     at internalCompileFunction (node:internal/vm:73:18)
@@ -324,12 +1343,28 @@ SyntaxError: Unexpected token ')'
     at Module._load (node:internal/modules/cjs/loader:960:12)
     at Module.require (node:internal/modules/cjs/loader:1143:19)
     at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:2:22)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\building_capacity.js:1:33)
     at Module._compile (node:internal/modules/cjs/loader:1256:14)
-[2023-09-27 14:04:38] [31merror[39m uncaughtException: Unexpected token ')'
-C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js:50
-    });
-     ^
+[2023-10-04 13:44:57] [31merror[39m uncaughtException: Unexpected token '}'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\building_capacity.service.js:61
+    };
+    ^
+
+SyntaxError: Unexpected token '}'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\building_capacity.js:1:33)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 13:45:03] [31merror[39m uncaughtException: Unexpected token ')'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\building_capacity.service.js:60
+        if(buildingCapacity.isCompleteOverallCapacity ===)
+                                                         ^
 
 SyntaxError: Unexpected token ')'
     at internalCompileFunction (node:internal/vm:73:18)
@@ -340,14 +1375,14 @@ SyntaxError: Unexpected token ')'
     at Module._load (node:internal/modules/cjs/loader:960:12)
     at Module.require (node:internal/modules/cjs/loader:1143:19)
     at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:2:22)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\building_capacity.js:1:33)
     at Module._compile (node:internal/modules/cjs/loader:1256:14)
-[2023-09-27 14:04:43] [31merror[39m uncaughtException: Unexpected token ')'
-C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js:49
-    });
-     ^
+[2023-10-04 13:45:07] [31merror[39m uncaughtException: Unexpected token '}'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\building_capacity.service.js:61
+    };
+    ^
 
-SyntaxError: Unexpected token ')'
+SyntaxError: Unexpected token '}'
     at internalCompileFunction (node:internal/vm:73:18)
     at wrapSafe (node:internal/modules/cjs/loader:1178:20)
     at Module._compile (node:internal/modules/cjs/loader:1220:27)
@@ -356,127 +1391,418 @@ SyntaxError: Unexpected token ')'
     at Module._load (node:internal/modules/cjs/loader:960:12)
     at Module.require (node:internal/modules/cjs/loader:1143:19)
     at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:2:22)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\building_capacity.js:1:33)
     at Module._compile (node:internal/modules/cjs/loader:1256:14)
-[2023-09-27 14:04:48] [31merror[39m uncaughtException: Unexpected token ')'
-C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js:49
-    });
-     ^
-
-SyntaxError: Unexpected token ')'
-    at internalCompileFunction (node:internal/vm:73:18)
-    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
-    at Module._compile (node:internal/modules/cjs/loader:1220:27)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:2:22)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-[2023-09-27 14:04:50] [31merror[39m uncaughtException: Unexpected token ')'
-C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js:50
-    });
-     ^
-
-SyntaxError: Unexpected token ')'
-    at internalCompileFunction (node:internal/vm:73:18)
-    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
-    at Module._compile (node:internal/modules/cjs/loader:1220:27)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:2:22)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-[2023-09-27 14:04:53] [33minfo[39m Server running on port 8081
-[2023-09-27 14:04:53] [33minfo[39m DB Connected
-[2023-09-27 14:04:57] [33minfo[39m Server running on port 8081
-[2023-09-27 14:04:57] [33minfo[39m DB Connected
-[2023-09-27 14:05:01] [33minfo[39m Server running on port 8081
-[2023-09-27 14:05:01] [33minfo[39m DB Connected
-[2023-09-27 14:08:51] [31merror[39m uncaughtException: listen EADDRINUSE: address already in use :::8081
-Error: listen EADDRINUSE: address already in use :::8081
-    at Server.setupListenHandle [as _listen2] (node:net:1817:16)
-    at listenInCluster (node:net:1865:12)
-    at Server.listen (node:net:1953:7)
-    at Function.listen (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\application.js:635:24)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\app.js:23:5)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:86:12)
-[2023-09-27 14:08:56] [33minfo[39m Server running on port 8081
-[2023-09-27 14:08:57] [33minfo[39m DB Connected
-[2023-09-27 14:13:05] [31merror[39m uncaughtException: Unexpected token ')'
-C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js:27
-        const token = await generarJWT( user.);
-                                             ^
-
-SyntaxError: Unexpected token ')'
-    at internalCompileFunction (node:internal/vm:73:18)
-    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
-    at Module._compile (node:internal/modules/cjs/loader:1220:27)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
-    at Module.load (node:internal/modules/cjs/loader:1119:32)
-    at Module._load (node:internal/modules/cjs/loader:960:12)
-    at Module.require (node:internal/modules/cjs/loader:1143:19)
-    at require (node:internal/modules/cjs/helpers:119:18)
-    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\authenticate.js:2:22)
-    at Module._compile (node:internal/modules/cjs/loader:1256:14)
-[2023-09-27 14:13:10] [33minfo[39m Server running on port 8081
-[2023-09-27 14:13:10] [33minfo[39m DB Connected
-[2023-09-27 14:13:11] [33minfo[39m Server running on port 8081
-[2023-09-27 14:13:11] [33minfo[39m DB Connected
-[2023-09-27 14:13:23] [33minfo[39m Server running on port 8081
-[2023-09-27 14:13:23] [33minfo[39m DB Connected
-[2023-09-27 14:13:47] [33minfo[39m Server running on port 8081
-[2023-09-27 14:13:47] [33minfo[39m DB Connected
-[2023-09-27 14:15:16] [33minfo[39m Server running on port 8081
-[2023-09-27 14:15:16] [33minfo[39m DB Connected
-[2023-09-27 14:15:18] [33minfo[39m Server running on port 8081
-[2023-09-27 14:15:18] [33minfo[39m DB Connected
-[2023-09-27 14:15:23] [33minfo[39m Server running on port 8081
-[2023-09-27 14:15:23] [33minfo[39m DB Connected
-[2023-09-27 14:15:41] [33minfo[39m Server running on port 8081
-[2023-09-27 14:15:41] [33minfo[39m DB Connected
-[2023-09-27 14:15:45] [33minfo[39m Server running on port 8081
-[2023-09-27 14:15:45] [33minfo[39m DB Connected
-[2023-09-27 14:16:37] [33minfo[39m Server running on port 8081
-[2023-09-27 14:16:37] [33minfo[39m DB Connected
-[2023-09-27 14:16:59] [33minfo[39m Server running on port 8081
-[2023-09-27 14:16:59] [33minfo[39m DB Connected
-[2023-09-27 14:18:23] [33minfo[39m Server running on port 8081
-[2023-09-27 14:18:23] [33minfo[39m DB Connected
-[2023-09-27 14:19:19] [33minfo[39m Server running on port 8081
-[2023-09-27 14:19:19] [33minfo[39m DB Connected
-[2023-09-27 14:20:01] [31merror[39m uncaughtException: jwt is not defined
-ReferenceError: jwt is not defined
-    at logout (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js:45:5)
-    at Layer.handle [as handle_request] (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\layer.js:95:5)
-    at next (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\route.js:144:13)
-    at validarJWT (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\middlewares\validar-jwt.js:19:5)
+[2023-10-04 13:45:17] [33minfo[39m Server running on port 8081
+[2023-10-04 13:45:18] [33minfo[39m DB Connected
+[2023-10-04 13:45:20] [33minfo[39m Server running on port 8081
+[2023-10-04 13:45:21] [33minfo[39m DB Connected
+[2023-10-04 13:45:35] [33minfo[39m Server running on port 8081
+[2023-10-04 13:45:35] [33minfo[39m DB Connected
+[2023-10-04 13:45:38] [33minfo[39m Server running on port 8081
+[2023-10-04 13:45:38] [33minfo[39m DB Connected
+[2023-10-04 13:48:15] [31merror[39m uncaughtException: invalid input syntax for type date: "Invalid date"
+Error
+    at Query.run (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\sequelize.js:315:28
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-[2023-09-27 14:20:43] [33minfo[39m Server running on port 8081
-[2023-09-27 14:20:43] [33minfo[39m DB Connected
-[2023-09-27 14:21:52] [33minfo[39m Server running on port 8081
-[2023-09-27 14:21:52] [33minfo[39m DB Connected
-[2023-09-27 14:21:54] [33minfo[39m Server running on port 8081
-[2023-09-27 14:21:54] [33minfo[39m DB Connected
-[2023-09-27 14:21:56] [33minfo[39m Server running on port 8081
-[2023-09-27 14:21:56] [33minfo[39m DB Connected
-[2023-09-27 14:21:59] [33minfo[39m Server running on port 8081
-[2023-09-27 14:21:59] [33minfo[39m DB Connected
-[2023-09-27 14:22:11] [33minfo[39m Server running on port 8081
-[2023-09-27 14:22:12] [33minfo[39m DB Connected
-[2023-09-27 14:22:17] [33minfo[39m Server running on port 8081
-[2023-09-27 14:22:17] [33minfo[39m DB Connected
-[2023-09-27 14:23:18] [31merror[39m uncaughtException: jwt is not defined
-ReferenceError: jwt is not defined
-    at logout (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\auth-controller.js:46:5)
-    at Layer.handle [as handle_request] (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\layer.js:95:5)
-    at next (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\express\lib\router\route.js:144:13)
-    at validarJWT (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\middlewares\validar-jwt.js:19:5)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PostgresQueryInterface.select (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async building_capacity.findAll (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\model.js:1140:21)
+    at async building_capacity.findOne (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\node_modules\sequelize\lib\model.js:1240:12)
+    at async BuildingCapacityRepository.findByDateAndVehicleType (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\repository\building_capacity.repository.js:14:16)
+    at async BuildingCapacityService.validaDateAndType (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\building_capacity.service.js:51:16)
+    at async newCapacity (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\building_capacity.js:6:24)
+[2023-10-04 13:48:31] [33minfo[39m Server running on port 8081
+[2023-10-04 13:48:31] [33minfo[39m DB Connected
+[2023-10-04 13:55:07] [33minfo[39m Server running on port 8081
+[2023-10-04 13:55:07] [33minfo[39m DB Connected
+[2023-10-04 13:56:38] [31merror[39m uncaughtException: Unexpected token '<'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\reservation.service.js:18
+            if( date =< reservation.date ) {
+                      ^
+
+SyntaxError: Unexpected token '<'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:3:28)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 13:56:40] [33minfo[39m Server running on port 8081
+[2023-10-04 13:56:40] [33minfo[39m DB Connected
+[2023-10-04 13:56:41] [33minfo[39m Server running on port 8081
+[2023-10-04 13:56:42] [33minfo[39m DB Connected
+[2023-10-04 13:57:37] [33minfo[39m Server running on port 8081
+[2023-10-04 13:57:37] [33minfo[39m DB Connected
+[2023-10-04 14:10:12] [33minfo[39m Server running on port 8081
+[2023-10-04 14:10:12] [33minfo[39m DB Connected
+[2023-10-04 14:10:21] [31merror[39m uncaughtException: Unexpected token ')'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\building_capacity.service.js:16
+        if(capacity.)
+                    ^
+
+SyntaxError: Unexpected token ')'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\building_capacity.js:1:33)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 14:10:33] [31merror[39m uncaughtException: Unexpected token '}'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\building_capacity.service.js:17
+    };
+    ^
+
+SyntaxError: Unexpected token '}'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\building_capacity.js:1:33)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 14:10:37] [33minfo[39m Server running on port 8081
+[2023-10-04 14:10:37] [33minfo[39m DB Connected
+[2023-10-04 14:10:39] [33minfo[39m Server running on port 8081
+[2023-10-04 14:10:39] [33minfo[39m DB Connected
+[2023-10-04 14:10:46] [31merror[39m uncaughtException: Unexpected token ':'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\building_capacity.service.js:16
+        if(capacity.isCompleteOverallCapacity) return false : true
+                                                            ^
+
+SyntaxError: Unexpected token ':'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\building_capacity.js:1:33)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 14:10:51] [31merror[39m uncaughtException: Unexpected token '?'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\building_capacity.service.js:16
+        if(capacity.isCompleteOverallCapacity) ? false : true
+                                               ^
+
+SyntaxError: Unexpected token '?'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\building_capacity.js:1:33)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 14:10:54] [33minfo[39m Server running on port 8081
+[2023-10-04 14:10:54] [33minfo[39m DB Connected
+[2023-10-04 14:11:00] [31merror[39m uncaughtException: Unexpected token 'if'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\building_capacity.service.js:16
+        const existeCapacity = if(capacity.isCompleteOverallCapacity) ? false : true
+                               ^^
+
+SyntaxError: Unexpected token 'if'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\building_capacity.js:1:33)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 14:11:01] [33minfo[39m Server running on port 8081
+[2023-10-04 14:11:01] [33minfo[39m DB Connected
+[2023-10-04 14:11:11] [31merror[39m uncaughtException: Unexpected token 'const'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\building_capacity.service.js:16
+        return const existeCapacity = (capacity.isCompleteOverallCapacity) ? false : true
+               ^^^^^
+
+SyntaxError: Unexpected token 'const'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\building_capacity.js:1:33)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 14:11:14] [33minfo[39m Server running on port 8081
+[2023-10-04 14:11:14] [33minfo[39m DB Connected
+[2023-10-04 14:11:49] [33minfo[39m Server running on port 8081
+[2023-10-04 14:11:49] [33minfo[39m DB Connected
+[2023-10-04 14:12:13] [33minfo[39m Server running on port 8081
+[2023-10-04 14:12:13] [33minfo[39m DB Connected
+[2023-10-04 14:13:08] [33minfo[39m Server running on port 8081
+[2023-10-04 14:13:08] [33minfo[39m DB Connected
+[2023-10-04 14:13:58] [33minfo[39m Server running on port 8081
+[2023-10-04 14:13:58] [33minfo[39m DB Connected
+[2023-10-04 14:14:01] [33minfo[39m Server running on port 8081
+[2023-10-04 14:14:01] [33minfo[39m DB Connected
+[2023-10-04 14:14:55] [33minfo[39m Server running on port 8081
+[2023-10-04 14:14:55] [33minfo[39m DB Connected
+[2023-10-04 14:15:19] [33minfo[39m Server running on port 8081
+[2023-10-04 14:15:19] [33minfo[39m DB Connected
+[2023-10-04 14:16:50] [33minfo[39m Server running on port 8081
+[2023-10-04 14:16:50] [33minfo[39m DB Connected
+[2023-10-04 14:16:55] [33minfo[39m Server running on port 8081
+[2023-10-04 14:16:55] [33minfo[39m DB Connected
+[2023-10-04 14:17:03] [33minfo[39m Server running on port 8081
+[2023-10-04 14:17:03] [33minfo[39m DB Connected
+[2023-10-04 14:17:08] [33minfo[39m Server running on port 8081
+[2023-10-04 14:17:08] [33minfo[39m DB Connected
+[2023-10-04 14:17:26] [33minfo[39m Server running on port 8081
+[2023-10-04 14:17:26] [33minfo[39m DB Connected
+[2023-10-04 14:51:03] [33minfo[39m Server running on port 8081
+[2023-10-04 14:51:03] [33minfo[39m DB Connected
+[2023-10-04 14:52:38] [33minfo[39m Server running on port 8081
+[2023-10-04 14:52:38] [33minfo[39m DB Connected
+[2023-10-04 14:53:11] [33minfo[39m Server running on port 8081
+[2023-10-04 14:53:11] [33minfo[39m DB Connected
+[2023-10-04 14:54:17] [33minfo[39m Server running on port 8081
+[2023-10-04 14:54:17] [33minfo[39m DB Connected
+[2023-10-04 15:01:52] [33minfo[39m Server running on port 8081
+[2023-10-04 15:01:52] [33minfo[39m DB Connected
+[2023-10-04 15:02:01] [33minfo[39m Server running on port 8081
+[2023-10-04 15:02:01] [33minfo[39m DB Connected
+[2023-10-04 15:05:20] [33minfo[39m Server running on port 8081
+[2023-10-04 15:05:20] [33minfo[39m DB Connected
+[2023-10-04 15:09:45] [33minfo[39m Server running on port 8081
+[2023-10-04 15:09:45] [33minfo[39m DB Connected
+[2023-10-04 15:09:51] [31merror[39m uncaughtException: Identifier 'vehicle' has already been declared
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:47
+            const vehicle = await vehicleService.findVehicleById(vehicleId);
+                  ^
+
+SyntaxError: Identifier 'vehicle' has already been declared
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js:1:24)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 15:09:55] [33minfo[39m Server running on port 8081
+[2023-10-04 15:09:55] [33minfo[39m DB Connected
+[2023-10-04 15:09:59] [33minfo[39m Server running on port 8081
+[2023-10-04 15:09:59] [33minfo[39m DB Connected
+[2023-10-04 15:10:07] [33minfo[39m Server running on port 8081
+[2023-10-04 15:10:07] [33minfo[39m DB Connected
+[2023-10-04 15:10:12] [33minfo[39m Server running on port 8081
+[2023-10-04 15:10:12] [33minfo[39m DB Connected
+[2023-10-04 15:10:14] [33minfo[39m Server running on port 8081
+[2023-10-04 15:10:14] [33minfo[39m DB Connected
+[2023-10-04 15:10:17] [33minfo[39m Server running on port 8081
+[2023-10-04 15:10:17] [33minfo[39m DB Connected
+[2023-10-04 15:10:19] [33minfo[39m Server running on port 8081
+[2023-10-04 15:10:19] [33minfo[39m DB Connected
+[2023-10-04 15:10:25] [33minfo[39m Server running on port 8081
+[2023-10-04 15:10:25] [33minfo[39m DB Connected
+[2023-10-04 15:10:39] [33minfo[39m Server running on port 8081
+[2023-10-04 15:10:40] [33minfo[39m DB Connected
+[2023-10-04 15:10:44] [31merror[39m uncaughtException: Identifier 'vehicle' has already been declared
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:47
+                const vehicle = await vehicleService.findVehicleById(vehicleId);
+                      ^
+
+SyntaxError: Identifier 'vehicle' has already been declared
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js:1:24)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 15:10:46] [33minfo[39m Server running on port 8081
+[2023-10-04 15:10:46] [33minfo[39m DB Connected
+[2023-10-04 15:10:57] [33minfo[39m Server running on port 8081
+[2023-10-04 15:10:57] [33minfo[39m DB Connected
+[2023-10-04 15:11:03] [33minfo[39m Server running on port 8081
+[2023-10-04 15:11:03] [33minfo[39m DB Connected
+[2023-10-04 15:11:09] [33minfo[39m Server running on port 8081
+[2023-10-04 15:11:09] [33minfo[39m DB Connected
+[2023-10-04 15:11:31] [33minfo[39m Server running on port 8081
+[2023-10-04 15:11:31] [33minfo[39m DB Connected
+[2023-10-04 15:13:26] [31merror[39m uncaughtException: Identifier 'vehicle' has already been declared
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js:41
+    const vehicle = await vehicleService.updateById(data, vehicleId);
+          ^
+
+SyntaxError: Identifier 'vehicle' has already been declared
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\vehicle.js:4:18)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 15:13:37] [33minfo[39m Server running on port 8081
+[2023-10-04 15:13:37] [33minfo[39m DB Connected
+[2023-10-04 15:13:46] [31merror[39m uncaughtException: Unexpected reserved word
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js:41
+    const await vehicleService.updateById(data, vehicleId);
+          ^^^^^
+
+SyntaxError: Unexpected reserved word
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\vehicle.js:4:18)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 15:13:51] [31merror[39m uncaughtException: Missing initializer in const declaration
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js:41
+    const vehicleUpdateawait vehicleService.updateById(data, vehicleId);
+          ^^^^^^^^^^^^^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\vehicle.js:4:18)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 15:13:53] [31merror[39m uncaughtException: Missing initializer in const declaration
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js:41
+    const vehicleUpdateawait vehicleService.updateById(data, vehicleId);
+          ^^^^^^^^^^^^^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\vehicle.js:4:18)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 15:13:56] [31merror[39m uncaughtException: Missing initializer in const declaration
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js:41
+    const vehicleUpdateawait vehicleService.updateById(data, vehicleId);
+          ^^^^^^^^^^^^^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\vehicle.js:4:18)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 15:13:57] [31merror[39m uncaughtException: Missing initializer in const declaration
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js:41
+    const vehicleUpdateawait vehicleService.updateById(data, vehicleId);
+          ^^^^^^^^^^^^^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\vehicle.js:4:18)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 15:14:01] [33minfo[39m Server running on port 8081
+[2023-10-04 15:14:01] [33minfo[39m DB Connected
+[2023-10-04 15:15:02] [31merror[39m uncaughtException: Unexpected token ')'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\repository\vehicle.repository.js:35
+        return await db.vehicle.update(data, { where: { vehicleId: id });
+                                                                       ^
+
+SyntaxError: Unexpected token ')'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\services\vehicle.service.js:2:27)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 15:15:05] [33minfo[39m Server running on port 8081
+[2023-10-04 15:15:05] [33minfo[39m DB Connected
+[2023-10-04 15:15:08] [33minfo[39m Server running on port 8081
+[2023-10-04 15:15:08] [33minfo[39m DB Connected
+[2023-10-04 15:15:18] [33minfo[39m Server running on port 8081
+[2023-10-04 15:15:18] [33minfo[39m DB Connected
+[2023-10-04 15:15:22] [33minfo[39m Server running on port 8081
+[2023-10-04 15:15:22] [33minfo[39m DB Connected
+[2023-10-04 15:15:24] [33minfo[39m Server running on port 8081
+[2023-10-04 15:15:24] [33minfo[39m DB Connected
+[2023-10-04 15:15:32] [33minfo[39m Server running on port 8081
+[2023-10-04 15:15:32] [33minfo[39m DB Connected
+[2023-10-04 15:15:52] [33minfo[39m Server running on port 8081
+[2023-10-04 15:15:52] [33minfo[39m DB Connected
+[2023-10-04 15:16:06] [33minfo[39m Server running on port 8081
+[2023-10-04 15:16:06] [33minfo[39m DB Connected
+[2023-10-04 15:17:11] [33minfo[39m Server running on port 8081
+[2023-10-04 15:17:11] [33minfo[39m DB Connected
+[2023-10-04 15:17:13] [33minfo[39m Server running on port 8081
+[2023-10-04 15:17:13] [33minfo[39m DB Connected
+[2023-10-04 15:17:33] [33minfo[39m Server running on port 8081
+[2023-10-04 15:17:33] [33minfo[39m DB Connected
+[2023-10-04 15:17:44] [31merror[39m uncaughtException: Unexpected token '}'
+C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\controllers\vehicle.js:43
+    return res.send({ message: "Success", vehicle:  });
+                                                    ^
+
+SyntaxError: Unexpected token '}'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:119:18)
+    at Object.<anonymous> (C:\Users\soosa\OneDrive\Escritorio\Estacionamiento\src\routes\vehicle.js:4:18)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+[2023-10-04 15:17:46] [33minfo[39m Server running on port 8081
+[2023-10-04 15:17:46] [33minfo[39m DB Connected
+[2023-10-04 15:20:03] [33minfo[39m Server running on port 8081
+[2023-10-04 15:20:04] [33minfo[39m DB Connected
+[2023-10-04 15:20:30] [33minfo[39m Server running on port 8081
+[2023-10-04 15:20:30] [33minfo[39m DB Connected
