@@ -20,7 +20,8 @@ const getAllVehicle = async (req, res) => {
 };
 
 const getVehicleByLicense = async (req, res) => {
-    const vehicles = await vehicleService.allVehicles();
+    const license = req.params.license;
+    const vehicles = await vehicleService.findVehicleByLicense(license);
     return res.send({ message: "Success", vehicles });
 };
 
@@ -34,22 +35,24 @@ const update = async (req, res) => {
     const vehicleId = req.params.id;
     const data = req.body;
 
-    // const vehicle = await vehicleService.findVehicleById(vehicleId);
-    // if( !vehicle ) return res.status(500).send({ message: "Vehiculo inexistente" });
+    const vehicle = await vehicleService.findVehicleById(vehicleId);
+    if( !vehicle ) return res.status(500).send({ message: "Vehiculo inexistente" });
 
-    const vehicle = await vehicleService.updateById(data, vehicleId);
-    if( vehicle === -1 ) return res.status(500).send({ message: "No se pudo actualizar el vehiculo" });
+    const vehicleUpdate = await vehicleService.updateById(data, vehicleId);
 
-    return res.send({ message: "Success", vehicle });
+    return res.send({ message: "Success", vehicle: vehicleUpdate });
 };
 
 const cancel = async (req, res) => {
     const vehicleId = req.params.id;
 
-    const cancelled = await vehicleService.cancelVehicle(vehicleId);
+    const vehicle = await this.findVehicleById(vehicleId);
+    if( !vehicle ) return res.status(500).send({ message: "Vehiculo inexistente" });
+
+    const cancelled = await vehicleService.cancelVehicle(vehicle);
     if( cancelled === -1 ) return res.status(500).send({ message: "No se pudo cancelar el vehiculo" });
 
-    return res.send({ message: "Success", cancel: cancelled });
+    return res.send({ message: "Success" });
 };
 
 

@@ -1,10 +1,10 @@
 const serviceBuildingCapacity = require('../services/building_capacity.service');
 
-const addCapacity = async (req, res) => {
+const newCapacity = async (req, res) => {
 
     const dataCapacity = req.body;
     const validaDate = await serviceBuildingCapacity.validaDateAndType(dataCapacity);
-    if ( validaDate ) return res.status(500).send({ message: "Ya existe la capacidad para esa fecha y vehiculo"});
+    if ( validaDate ) return res.status(500).send({ message: "Ya existe la capacidad para esa fecha y vehiculo" });
 
     try{
         const createCapacity = await serviceBuildingCapacity.create(dataCapacity);
@@ -15,5 +15,5 @@ const addCapacity = async (req, res) => {
 };
 
 module.exports = {
-    addCapacity,
+    newCapacity,
 };

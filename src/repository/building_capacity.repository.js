@@ -2,7 +2,7 @@ const { Op } = require('sequelize');
 const { db } = require('../db/dataBase');
 
 
-class RepositoryBuildingCapacity {
+class BuildingCapacityRepository {
     
     constructor() {};
     
@@ -10,14 +10,14 @@ class RepositoryBuildingCapacity {
         return await db.building_capacity.create(dataCapacity);
     };
 
-    async findByDateAndvehicleType(date, vehicleTypeId){
+    async findByDateAndVehicleType(date, vehicleTypeId){
         return await db.building_capacity.findOne({
             where: { 
-                [Op.and]: [{ date : date }, { vehicleTypeId: vehicleTypeId }]
+                [Op.and]: [{ date: date }, { vehicleTypeId: vehicleTypeId }]
             }
         });
     }
 
 };
 
-module.exports = new RepositoryBuildingCapacity();
+module.exports = new BuildingCapacityRepository();

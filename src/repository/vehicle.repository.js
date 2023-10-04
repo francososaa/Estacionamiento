@@ -2,7 +2,7 @@ const { Op } = require('sequelize');
 const { db } = require('../db/dataBase');
 
 
-class RepositoryVehicle {
+class VehicleRepository {
     
     constructor() {};
     
@@ -31,33 +31,19 @@ class RepositoryVehicle {
         });
     };
 
-    async updateById(data, id, transaction){
-        return await db.vehicle.update(data, { where: { vehicleId: id }, transaction });
+    async updateById(data, id){
+        return await db.vehicle.update(data, { where: { vehicleId: id }});
     };
 
-    async changeStatus(vehicleId, transaction){
-        return  await db.vehicle.update(
+    async changeStatus(vehicleId){
+        return await db.vehicle.update(
             { isActive: false },
-            {
-                where: { vehicleId: vehicleId },
-                transaction
-            }
+            { where: { vehicleId: vehicleId } }
         );
-
-        // const [, [updatedVehicle]] = await db.vehicle.update(
-        //     { isActive: false },
-        //     {
-        //         where: { vehicleId: vehicleId },
-        //         // returning: true,
-        //         transaction
-        //     }
-        // );
-
-        // return updatedVehicle;
     };
 
 
 
 };
 
-module.exports = new RepositoryVehicle();
+module.exports = new VehicleRepository();

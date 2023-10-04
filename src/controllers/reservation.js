@@ -21,11 +21,11 @@ const createReservation = async(req,res) => {
 
         // Valido que haya lugar disponible antes de guardar la reserva
         const overallCapacity = await buildingCapacityService.isCompleteOverallCapacity(reservation.date, reservation.vehicle.vehicleTypeId);
-        if( overallCapacity.isCompleteOverallCapacity ) return res.status(400).send({ message: "No hay lugar disponible para la fecha seleccionada." });
+        if( overallCapacity ) return res.status(400).send({ message: "No hay lugar disponible para la fecha seleccionada." });
         
         // Obtengo la building capacity modificada
-        const buildingCapacity = await buildingCapacityService.updateCapacity(reservation.date, reservation.vehicle.vehicleTypeId);
-        if ( !buildingCapacity ) return res.status(400).send({ message : "No hay disponibilidad" });
+        await buildingCapacityService.updateCapacity(reservation.date, reservation.vehicle.vehicleTypeId);
+        // if ( !buildingCapacity ) return res.status(400).send({ message : "No hay lugar disponible para la fecha seleccionada." });
 
         // Realizo la reserva
         reservation.state = "CREATED";

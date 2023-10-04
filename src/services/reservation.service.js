@@ -1,22 +1,29 @@
-const repository = require('../repository/reservation.repository');
+const {formatDate} = require('../utils/dateUtil');
+const reservationRepository = require('../repository/reservation.repository');
+const buildingCapacityService = require('./building_capacity.service');
+
 
 class ReservationService {
     
     constructor() {};
     
     async create (dataReservation){
-        return await repository.create(dataReservation);
+        return await reservationRepository.create(dataReservation);
     };
     
-    async cancelAllReservationsByVehicle(transaction, reservations){
-
+    async cancelAllReservationsByVehicle(reservations, vehicle){
+        const date = formatDate(new Date());
         
-        // return await repository.deleteReservation(transaction, reservations);
+        for (const reservation of reservations) {
+            if( date <= reservation.date ) {
+                await reservationRepository.deleteReservation(reservation.date, reservation.vehicleId);
+                await buildingCapacityService.decreaseCapacity(reservation.date, vehicle.vehicleTypeId);
+            }
+        };
     };
 
-    async findAllReservationForVehicle(vehicle){
-        return await repository.findAllRerservationByPk(vehicle.vehicleId);
-        
+    async findAllReservationForVehicle(vehicleId){
+        return await reservationRepository.findAllRerservationByPk(vehicleId);
     };
 
 

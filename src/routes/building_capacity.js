@@ -1,8 +1,8 @@
 const { Router } = require('express');
+const router = Router();
 const { validarJWT } = require('../middlewares/validar-jwt');
 const controller = require('../controllers/building_capacity');
-const router = Router();
 
-router.post('/createCapacity', controller.addCapacity);
+router.post('/', controller.newCapacity);
 
 module.exports = router;

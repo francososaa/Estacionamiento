@@ -11,28 +11,22 @@ class BuildingCapacityService {
     };
 
     async isCompleteOverallCapacity(date, vehicleTypeId){
-        return repository.findByDateAndvehicleType(date, vehicleTypeId) ? true : false
+        const buildingCapacity = await repository.findByDateAndVehicleType(date, vehicleTypeId);
+
+        return buildingCapacity.isCompleteOverallCapacity;
     };
 
     async updateCapacity(date, vehicleTypeId){
 
-        let buildingCapacity = await repository.findByDateAndvehicleType(date, vehicleTypeId);
-
-        // Valido que haya lugar disponible
-        if( buildingCapacity.overallCapacity <= buildingCapacity.overallCapacityOccupied ) {
-            buildingCapacity.isCompleteOverallCapacity = true;
-            await buildingCapacity.save();
-            return null;
-        }
-        
+        let buildingCapacity = await repository.findByDateAndVehicleType(date, vehicleTypeId);
         buildingCapacity.overallCapacityOccupied += 1;
-        
+        if(buildingCapacity.overallCapacity === buildingCapacity.overallCapacityOccupied) buildingCapacity.isCompleteOverallCapacity = true;
+
         const transaction = await db.sequelize.transaction();
-        
         try {
             buildingCapacity = await buildingCapacity.save({ transaction });
 
-            if( buildingCapacity.isCompleteOverallCapacity ){
+            if( buildingCapacity.overallCapacity < buildingCapacity.overallCapacityOccupied ){
                 await transaction.rollback();
                 return null;
             };
@@ -48,7 +42,23 @@ class BuildingCapacityService {
     };
 
     async validaDateAndType(dataCapacity){
-        return await repository.findByDateAndvehicleType(dataCapacity.date, dataCapacity.vehicleTypeId);
+        return await repository.findByDateAndVehicleType(dataCapacity.date, dataCapacity.vehicleTypeId);
+    };
+
+    async decreaseCapacity(date, vehicleTypeId ){        
+        const buildingCapacity = await repository.findByDateAndVehicleType(date, vehicleTypeId);
+
+        buildingCapacity.overallCapacityOccupied -= 1;
+        if(buildingCapacity.isCompleteOverallCapacity) buildingCapacity.isCompleteOverallCapacity = false;
+        await buildingCapacity.save();
+    };
+
+    async increaseCapacity(){
+        const buildingCapacity = await repository.findByDateAndVehicleType(date, vehicleTypeId);
+
+        buildingCapacity.overallCapacityOccupied += 1;
+        if(buildingCapacity.overallCapacity === buildingCapacity.overallCapacityOccupied) buildingCapacity.isCompleteOverallCapacity = true;
+        await buildingCapacity.save();
     };
 
    
