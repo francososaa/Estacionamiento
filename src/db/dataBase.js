@@ -100,45 +100,8 @@ db.vehicle_type.hasMany(db.vehicle_price, {
 const connectPostgresDB = async () => {
   try {
     await db.sequelize.authenticate();
-<<<<<<< HEAD
-    await db.sequelize.sync();
-
-    await db.role.bulkCreate(
-          [
-              { name: "admin" },
-              { name: "user" },
-              { name: "employee" },
-          ],
-          {
-              ignoreDuplicates: true,
-          }
-      );
-    
-    await db.vehicle_type.bulkCreate(
-        [
-            { description: "auto" },
-            { description: "camioneta" },
-            { description: "moto" },
-        ],
-        {
-            ignoreDuplicates: true,
-        }
-    );
-
-    await db.vehicle_price.bulkCreate(
-      [
-        { vehiclePrice: 700 , vehicleTypeId: 1 },
-        { vehiclePrice: 1800 , vehicleTypeId: 2 },
-        { vehiclePrice: 400 , vehicleTypeId: 3 },
-      ],
-      {
-          ignoreDuplicates: true,
-      }
-    )
-=======
     // await db.sequelize.sync({alter:true});
     await db.sequelize.sync();
->>>>>>> 2bb1a933b253e1ca867b22c80174b1f54791c84f
 
     logger.info('DB Connected');
   } catch (error) {
