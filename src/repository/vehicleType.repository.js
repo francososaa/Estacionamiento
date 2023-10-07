@@ -12,6 +12,11 @@ class VehicleTypeRepository{
         return await db.vehicle_type.create(data);
     };
 
+    async findOne(data){
+        return await db.vehicle_type.findOne({
+            where: { description: data }
+        })
+    }
 }
 
 module.exports = new VehicleTypeRepository();

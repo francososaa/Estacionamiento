@@ -10,6 +10,10 @@ class VehicleTypeRepository{
     async create(data){
         return await vehicleTypeRepository.create(data);
     };
+
+    async findVehicleType(data){
+        return await vehicleTypeRepository.findOne(data);
+    }
 };
 
 module.exports = new VehicleTypeRepository();
