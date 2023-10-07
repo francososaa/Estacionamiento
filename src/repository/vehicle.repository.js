@@ -12,7 +12,12 @@ class VehicleRepository {
 
     async findByLicense(license){
         return await db.vehicle.findOne({
-            where: { isActive: true , license: license }
+            where: { isActive: true , license: license },
+            attributes: ["vehicleId","license","model"] ,
+            include: [
+                { model: db.user, as:"user", attributes: ["firstname","lastname"] },
+                { model: db.vehicle_type, as:"vehicleType", attributes: ["description"]}
+            ]
         });
     };
 

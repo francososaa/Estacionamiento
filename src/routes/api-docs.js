@@ -21,7 +21,7 @@ const swaggerOptions = {
     basePath: "/",
 
     //APIs a documentar
-    apis: ["./src/routes/indexApis.js"]
+    apis: ["./src/routes/reservation"]
 };
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
