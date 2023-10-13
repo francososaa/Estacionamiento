@@ -8,15 +8,21 @@ class VehicleTypeRepository{
         return await db.vehicle_type.findAll({ attributes: ["vehicleTypeId","description"]});
     };
 
-    async create(data){
-        return await db.vehicle_type.create(data);
+    async create(description){
+        return await db.vehicle_type.create(description);
     };
 
-    async findOne(data){
+    async findOne(description){
         return await db.vehicle_type.findOne({
-            where: { description: data }
+            where: { description: description }
         })
-    }
+    };
+
+    async findByVehicleId(id){
+        return await db.vehicle_type.findByPk(id);
+    };
+
+
 }
 
 module.exports = new VehicleTypeRepository();
