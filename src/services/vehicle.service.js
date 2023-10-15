@@ -6,8 +6,8 @@ class ServiceVehicle {
     
     constructor() {};
 
-    async allVehicles(){
-        return await vehicleRepository.findAll();
+    async allVehicles(userId){
+        return await vehicleRepository.findAll(userId);
     };
     
     async create(dataVehicle){
@@ -18,8 +18,8 @@ class ServiceVehicle {
         return await vehicleRepository.findByLicense(license);
     };
 
-    async findVehicleById(vehicleId){
-        const vehicle = await vehicleRepository.findById(vehicleId);
+    async findVehicleById(vehicleId, userId){
+        const vehicle = await vehicleRepository.findById(vehicleId, userId);
 
         if(vehicle.isActive === false ) return null;
         return vehicle;

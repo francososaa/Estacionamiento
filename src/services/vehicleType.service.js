@@ -7,8 +7,8 @@ class VehicleTypeRepository{
         return await vehicleTypeRepository.findAll();
     };
 
-    async create(description){
-        return await vehicleTypeRepository.create(description);
+    async create(data){
+        return await vehicleTypeRepository.create(data);
     };
 
     async findVehicleType(description){
@@ -18,6 +18,15 @@ class VehicleTypeRepository{
     async findById(id){
         return await vehicleTypeRepository.findByVehicleId(id);
     };
+
+    async update(data){
+        await vehicleTypeRepository.update(data);
+    };
+
+    async deleteTypeVehicle(id){
+        await vehicleTypeRepository.destroy(id);
+    };
+
 };
 
 module.exports = new VehicleTypeRepository();

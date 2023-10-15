@@ -8,8 +8,8 @@ class VehicleTypeRepository{
         return await db.vehicle_type.findAll({ attributes: ["vehicleTypeId","description"]});
     };
 
-    async create(description){
-        return await db.vehicle_type.create(description);
+    async create(data){
+        return await db.vehicle_type.create(data);
     };
 
     async findOne(description){
@@ -20,6 +20,14 @@ class VehicleTypeRepository{
 
     async findByVehicleId(id){
         return await db.vehicle_type.findByPk(id);
+    };
+
+    async update(data){
+        await db.vehicle_type.update(data);
+    };
+
+    async destroy(id){
+        await db.vehicle_type.destroy({ where: { vehicleTypeId :id } });
     };
 
 

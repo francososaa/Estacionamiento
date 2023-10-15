@@ -21,13 +21,13 @@ class VehicleRepository {
         });
     };
 
-    async findById(vehicleId){
-        return await db.vehicle.findByPk(vehicleId);
+    async findById(vehicleId, userId){
+        return await db.vehicle.findByPk(vehicleId, { where: { userId: userId} });
     };
 
-    async findAll(){
+    async findAll(userId){
         return await db.vehicle.findAll({
-            where: { isActive: true },
+            where: { isActive: true, userId: userId },
             attributes: ["vehicleId","license","model"],
             include: [
                 { model: db.user, as:"user", attributes: ["firstname","lastname"] },
