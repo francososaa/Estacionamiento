@@ -30,7 +30,6 @@ class VehicleTypeRepository{
         await db.vehicle_type.destroy({ where: { vehicleTypeId :id } });
     };
 
-
 }
 
 module.exports = new VehicleTypeRepository();

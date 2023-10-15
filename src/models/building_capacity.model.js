@@ -11,6 +11,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.DATEONLY,
             allowNull: false,
         },
+        totalVehicles: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
         overallCapacity: {
             type: DataTypes.INTEGER,
             allowNull: false,

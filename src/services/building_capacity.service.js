@@ -28,6 +28,7 @@ class BuildingCapacityService {
 
         let buildingCapacity = await buildingCapacityRepository.findByDateAndVehicleType(date, vehicleTypeId);
         buildingCapacity.overallCapacityOccupied += 1;
+        buildingCapacity.totalVehicles += 1;
         if(buildingCapacity.overallCapacity === buildingCapacity.overallCapacityOccupied) buildingCapacity.isCompleteOverallCapacity = true;
 
         // await this.increaseCapacity(date, vehicleTypeId);
@@ -59,6 +60,7 @@ class BuildingCapacityService {
         const buildingCapacity = await buildingCapacityRepository.findByDateAndVehicleType(date, vehicleTypeId);
 
         buildingCapacity.overallCapacityOccupied -= 1;
+        buildingCapacity.totalVehicles -= 1;
         if(buildingCapacity.isCompleteOverallCapacity) buildingCapacity.isCompleteOverallCapacity = false;
         await buildingCapacity.save();
     };
@@ -67,6 +69,7 @@ class BuildingCapacityService {
         let buildingCapacity = await buildingCapacityRepository.findByDateAndVehicleType(date, vehicleTypeId);
 
         buildingCapacity.overallCapacityOccupied += 1;
+        buildingCapacity.totalVehicles += 1;
         if(buildingCapacity.overallCapacity === buildingCapacity.overallCapacityOccupied) buildingCapacity.isCompleteOverallCapacity = true;
         await buildingCapacity.save();
     };
