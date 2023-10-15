@@ -97,6 +97,7 @@ db.vehicle_type.hasMany(db.vehicle_price, {
   as: "vehiclesPrices",
 });
 
+
 const connectPostgresDB = async () => {
   try {
     await db.sequelize.authenticate();
