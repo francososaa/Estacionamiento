@@ -63,7 +63,6 @@ const cancel = async (req, res) => {
 };
 
 
-
 module.exports = {
     newVehicle,
     getAllVehicle,

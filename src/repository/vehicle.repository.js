@@ -47,8 +47,6 @@ class VehicleRepository {
         );
     };
 
-
-
 };
 
 module.exports = new VehicleRepository();

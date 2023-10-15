@@ -26,7 +26,6 @@ class ReservationService {
         return await reservationRepository.findAllRerservationByPk(vehicleId);
     };
 
-
 };
 
 
