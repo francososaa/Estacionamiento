@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const generarJWT = require('../helpers/generar-jwt');
 // const resendEmail = require('../services/email-service');
 // const { Resend } = require('resend');
-const { db } = require('../db/dataBase');
+const { db } = require('../models');
 const User = db.user;
 
 const login = async (req, res) => {

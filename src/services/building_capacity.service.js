@@ -1,6 +1,5 @@
-const { db } = require('../db/dataBase');
+const { db } = require('../models');
 const buildingCapacityRepository = require('../repository/building_capacity.repository');
-
 
 class BuildingCapacityService {
     

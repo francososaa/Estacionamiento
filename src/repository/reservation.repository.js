@@ -1,6 +1,5 @@
 const { Op } = require('sequelize');
-const { db } = require('../db/dataBase');
-
+const { db } = require('../models');
 
 class ReservationRepository {
     

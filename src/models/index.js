@@ -21,14 +21,14 @@ const db = {}
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-db.building_capacity = require('../models/building_capacity.model')(sequelize, DataTypes);
-db.collection = require('../models/collection.model')(sequelize, DataTypes);
-db.reservation = require('../models/reservation.model')(sequelize, DataTypes);
-db.role = require('../models/role.model')(sequelize, DataTypes);
-db.user = require('../models/user.model')(sequelize, DataTypes);
-db.vehicle = require('../models/vehicle.model')(sequelize, DataTypes);
-db.vehicle_price = require('../models/vehicle_price.model')(sequelize, DataTypes);
-db.vehicle_type = require('../models/vehicle_type.model')(sequelize, DataTypes);
+db.building_capacity = require('./building_capacity.model')(sequelize, DataTypes);
+db.collection = require('./collection.model')(sequelize, DataTypes);
+db.reservation = require('./reservation.model')(sequelize, DataTypes);
+db.role = require('./role.model')(sequelize, DataTypes);
+db.user = require('./user.model')(sequelize, DataTypes);
+db.vehicle = require('./vehicle.model')(sequelize, DataTypes);
+db.vehicle_price = require('./vehicle_price.model')(sequelize, DataTypes);
+db.vehicle_type = require('./vehicle_type.model')(sequelize, DataTypes);
 
 // RELATIONS
 

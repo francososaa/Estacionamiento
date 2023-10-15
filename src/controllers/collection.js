@@ -1,6 +1,5 @@
 const collectionService = require('../services/collection.service');
 
-
 const getAll = async (req, res) => {
     const recaudation = await collectionService.getAll();
     return res.send({ message: "Success", recaudation })

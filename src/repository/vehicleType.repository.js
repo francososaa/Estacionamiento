@@ -1,6 +1,4 @@
-const { db } = require('../db/dataBase');
-
-
+const { db } = require('../models');
 class VehicleTypeRepository{
     constructor(){};
 

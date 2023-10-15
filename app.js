@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const logger = require('./src/utils/logger');
-const { connectPostgresDB } = require('./src/db/dataBase');
+const { connectPostgresDB } = require('./src/models');
 
 // Initializations
 const app = express();
