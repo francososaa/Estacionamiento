@@ -16,7 +16,10 @@ app.use(express.static('public'));
 app.use("/api-docs", require('./src/routes/api-docs'));
 app.use("/api/v1/authenticate", require('./src/routes/authenticate'));
 app.use("/api/v1/building_capacity", require('./src/routes/building_capacity'));
+app.use("/api/v1/collection", require('./src/routes/collection'));
 app.use("/api/v1/vehicle", require('./src/routes/vehicle'));
+app.use("/api/v1/vehicleType", require('./src/routes/vehicleType'));
+app.use("/api/v1/vehiclePrice", require('./src/routes/vehicle_price'));
 app.use("/api/v1/reservation", require('./src/routes/reservation'));
 
 //DB

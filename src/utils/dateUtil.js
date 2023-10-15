@@ -10,6 +10,15 @@ function formatDate(date){
     return [year, month, day].join('-');
 };
 
+function allowedRoles(){
+    return {
+        "admin": 1,
+        "user": 2,
+        "employee": 3
+    }
+};
+
 module.exports = {
     formatDate,
+    allowedRoles
 };

@@ -1,0 +1,12 @@
+const { Router } = require("express");
+const router = Router();
+const Middleware = require("../middlewares/middlewares");
+const vehicleType = require("../controllers/vehicleType");
+
+router.route("/").post( [Middleware.validarJWT, Middleware.checkRoleAdmin], vehicleType.newVehicleType);  
+router.route("/").get( [Middleware.validarJWT, Middleware.checkRoleAdmin], vehicleType.getAllVehicle); 
+router.route("/:id").delete( [Middleware.validarJWT, Middleware.checkRoleAdmin],  vehicleType.destroy); 
+router.route("/:id").put( [Middleware.validarJWT, Middleware.checkRoleAdmin], vehicleType.update); 
+
+
+module.exports = router;

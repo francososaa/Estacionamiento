@@ -15,27 +15,33 @@ const newVehicle = async (req, res) => {
 };
 
 const getAllVehicle = async (req, res) => {
-    const vehicles = await vehicleService.allVehicles();
+    const userId = req.user.userId;
+
+    const vehicles = await vehicleService.allVehicles(userId);
     return res.send({ message: "Success", vehicles });
 };
 
 const getVehicleByLicense = async (req, res) => {
     const license = req.params.license;
+    
     const vehicles = await vehicleService.findVehicleByLicense(license);
     return res.send({ message: "Success", vehicles });
 };
 
 const findByPk = async (req, res) => {
     const vehicleId = req.params.id;
-    const vehicle = await vehicleService.findVehicleById(vehicleId);
+    const userId = req.user.userId;
+
+    const vehicle = await vehicleService.findVehicleById(vehicleId, userId);
     return res.send({ message: "Success", vehicle });
 };
 
 const update = async (req, res) => {
     const vehicleId = req.params.id;
+    const userId = req.user.userId;
     const data = req.body;
 
-    const vehicle = await vehicleService.findVehicleById(vehicleId);
+    const vehicle = await vehicleService.findVehicleById(vehicleId, userId);
     if( !vehicle ) return res.status(500).send({ message: "Vehiculo inexistente" });
 
     const vehicleUpdate = await vehicleService.updateById(data, vehicleId);
@@ -45,8 +51,9 @@ const update = async (req, res) => {
 
 const cancel = async (req, res) => {
     const vehicleId = req.params.id;
+    const userId = req.user.userId;
 
-    const vehicle = await this.findVehicleById(vehicleId);
+    const vehicle = await vehicleService.findVehicleById(vehicleId, userId);
     if( !vehicle ) return res.status(500).send({ message: "Vehiculo inexistente" });
 
     const cancelled = await vehicleService.cancelVehicle(vehicle);
@@ -54,7 +61,6 @@ const cancel = async (req, res) => {
 
     return res.send({ message: "Success" });
 };
-
 
 
 module.exports = {
