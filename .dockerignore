@@ -1,7 +1,9 @@
 **/.env
-**/.node_modules/
+**/.node_modules
 **/.dockerignore
 **/.git
 **/docker-compose*
 **/Dockerfile*
 **/src/logs
+**/.vscode
+README.md

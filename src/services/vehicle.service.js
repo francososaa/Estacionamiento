@@ -1,7 +1,5 @@
 const vehicleRepository = require('../repository/vehicle.repository');
 const reservationService = require('../services/reservation.service');
-
-
 class ServiceVehicle {
     
     constructor() {};
@@ -34,7 +32,6 @@ class ServiceVehicle {
             await vehicleRepository.changeStatus(vehicle.vehicleId);
             const reservations = await reservationService.findAllReservationForVehicle(vehicle.vehicleId);
             await reservationService.cancelAllReservationsByVehicle(reservations, vehicle);
-         
         } catch (error) {
             return error;
         };

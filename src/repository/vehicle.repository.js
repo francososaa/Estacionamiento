@@ -1,45 +1,47 @@
-const { Op } = require('sequelize');
 const { db } = require('../models');
+const { Op } = db.sequelize
+const Vehicle = db.vehicle;
+// const { Op } = require('sequelize');
 class VehicleRepository {
     
     constructor() {};
     
     async create(dataVehicle){
-        return await db.vehicle.create(dataVehicle);
+        return await Vehicle.create(dataVehicle);
     };
 
     async findByLicense(license){
-        return await db.vehicle.findOne({
-            where: { isActive: true , license: license },
+        return await Vehicle.findOne({
+            where: { [Op.and]: [{ isActive: true }, { license: license}] },
             attributes: ["vehicleId","license","model"] ,
             include: [
                 { model: db.user, as:"user", attributes: ["firstname","lastname"] },
-                { model: db.vehicle_type, as:"vehicleType", attributes: ["description"]}
+                { model: Vehicle_type, as:"vehicleType", attributes: ["description"]}
             ]
         });
     };
 
     async findById(vehicleId, userId){
-        return await db.vehicle.findByPk(vehicleId, { where: { userId: userId} });
+        return await Vehicle.findByPk(vehicleId, { where: { userId: userId} });
     };
 
     async findAll(userId){
-        return await db.vehicle.findAll({
-            where: { isActive: true, userId: userId },
+        return await Vehicle.findAll({
+            where: { [Op.and]: [{ isActive: true }, { userId: userId}] },
             attributes: ["vehicleId","license","model"],
             include: [
                 { model: db.user, as:"user", attributes: ["firstname","lastname"] },
-                { model: db.vehicle_type, as:"vehicleType", attributes: ["description"]}
+                { model: Vehicle_type, as:"vehicleType", attributes: ["description"]}
             ]
         });
     };
 
     async updateById(data, id){
-        return await db.vehicle.update(data, { where: { vehicleId: id }});
+        return await Vehicle.update(data, { where: { vehicleId: id }});
     };
 
     async changeStatus(vehicleId){
-        return await db.vehicle.update(
+        return await Vehicle.update(
             { isActive: false },
             { where: { vehicleId: vehicleId } }
         );
