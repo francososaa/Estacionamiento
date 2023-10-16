@@ -31,7 +31,6 @@ db.vehicle_price = require('./vehicle_price.model')(sequelize, DataTypes);
 db.vehicle_type = require('./vehicle_type.model')(sequelize, DataTypes);
 
 // RELATIONS
-
 db.vehicle_type.hasMany(db.vehicle, {
   foreignKey: "vehicleTypeId",
   as: "vehicles",
@@ -101,7 +100,6 @@ db.vehicle_type.hasMany(db.vehicle_price, {
 const connectPostgresDB = async () => {
   try {
     await db.sequelize.authenticate();
-    // await db.sequelize.sync({alter:true});
     await db.sequelize.sync();
 
     logger.info('DB Connected');

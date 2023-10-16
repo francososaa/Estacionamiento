@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         totalVehicles: {
             type: DataTypes.INTEGER,
             allowNull: true,
+            field: "total_vehicles",
         },
         overallCapacity: {
             type: DataTypes.INTEGER,

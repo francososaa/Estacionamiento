@@ -21,8 +21,8 @@ class VehicleTypeRepository{
         return await VehicleType.findByPk(id);
     };
 
-    async update(data){
-        await VehicleType.update(data);
+    async update(data, id){
+        await VehicleType.update(data, { where: { vehicleTypeId : id }});
     };
 
     async destroy(id){

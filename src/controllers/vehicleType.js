@@ -26,7 +26,7 @@ const update = async (req,res) => {
     const vehicleExists = await vehicleTypeService.findById(id);
     if ( !vehicleExists ) return res.status(500).send({ message: "No existe el tipo de vehiculo" });
 
-    await vehicleTypeService.update(data);
+    await vehicleTypeService.update(data, id);
     return res.send({ message: "Success" });
 };
 
@@ -34,7 +34,7 @@ const destroy = async (req,res) => {
     const id = req.params.id;
 
     const vehicle = await vehicleTypeService.findById(id);
-    if( !vehicle ) return res.status(500).send({ message: "Typo de vehiculo inexistente" });
+    if( !vehicle ) return res.status(500).send({ message: "Tipo de vehiculo inexistente" });
 
     await vehicleTypeService.deleteTypeVehicle(id);
     return res.send({ message: "Success" });

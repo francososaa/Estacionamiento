@@ -28,13 +28,9 @@ class ServiceVehicle {
     };
 
     async cancelVehicle(vehicle){
-        try {
-            await vehicleRepository.changeStatus(vehicle.vehicleId);
-            const reservations = await reservationService.findAllReservationForVehicle(vehicle.vehicleId);
-            await reservationService.cancelAllReservationsByVehicle(reservations, vehicle);
-        } catch (error) {
-            return error;
-        };
+        await vehicleRepository.changeStatus(vehicle.vehicleId);
+        const reservations = await reservationService.findAllReservationForVehicle(vehicle.vehicleId);
+        if(reservations.length !== 0) await reservationService.cancelAllReservationsByVehicle(reservations, vehicle);
     };
 
 };

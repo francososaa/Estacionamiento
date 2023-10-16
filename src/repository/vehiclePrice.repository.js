@@ -9,11 +9,15 @@ class VehiclePriceRepository {
     };
 
     async getAll(){
-        return VehiclePrice.findAll({attributes: ["vehiclePrice","vehicleTypeId"]});
+        return VehiclePrice.findAll({ attributes: ["vehiclePrice","vehicleTypeId"] });
     };
 
     async update(data){
-        await VehiclePrice.update(data, { where: {vehicleTypeId : data.vehicleTypeId} });
+        await VehiclePrice.update(data, { where: {vehicleTypeId: data.vehicleTypeId} });
+    };
+
+    async findByPk(id){
+        return await VehiclePrice.findOne({ where: {vehicleTypeId: id} });
     };
 
 };

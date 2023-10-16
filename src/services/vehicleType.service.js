@@ -19,8 +19,8 @@ class VehicleTypeRepository{
         return await vehicleTypeRepository.findByVehicleId(id);
     };
 
-    async update(data){
-        await vehicleTypeRepository.update(data);
+    async update(data, id){
+        await vehicleTypeRepository.update(data, id);
     };
 
     async deleteTypeVehicle(id){
