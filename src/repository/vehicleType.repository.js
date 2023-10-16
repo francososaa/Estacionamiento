@@ -1,31 +1,32 @@
 const { db } = require('../models');
+const VehicleType = db.vehicle_type;
 class VehicleTypeRepository{
     constructor(){};
 
     async findAll(){
-        return await db.vehicle_type.findAll({ attributes: ["vehicleTypeId","description"]});
+        return await VehicleType.findAll({ attributes: ["vehicleTypeId","description"]});
     };
 
     async create(data){
-        return await db.vehicle_type.create(data);
+        return await VehicleType.create(data);
     };
 
     async findOne(description){
-        return await db.vehicle_type.findOne({
+        return await VehicleType.findOne({
             where: { description: description }
-        })
+        });
     };
 
     async findByVehicleId(id){
-        return await db.vehicle_type.findByPk(id);
+        return await VehicleType.findByPk(id);
     };
 
     async update(data){
-        await db.vehicle_type.update(data);
+        await VehicleType.update(data);
     };
 
     async destroy(id){
-        await db.vehicle_type.destroy({ where: { vehicleTypeId :id } });
+        await VehicleType.destroy({ where: { vehicleTypeId :id } });
     };
 
 }

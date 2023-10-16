@@ -8,7 +8,7 @@ class Middlewares{
     async validarJWT( req, res, next ){ 
         const token = req.header('authentication');
        
-        if( !token ) return res.status(401).send({ message: 'You are not an authenticated user to make this request' }); 
+        if( !token ) return res.status(403).send({ message: "Access denied. No token provided" }); 
      
         try {
             const { uid } = jwt.verify( token, process.env.SECRETORPRIVATEKEY );
@@ -26,28 +26,28 @@ class Middlewares{
     async checkRoleAdminAndUser( req, res, next ){ 
         const roleId = req.user.roleId;
     
-        if( roleId === 3 ) return res.status(401).send({ message: 'You do not have access to make this request' }); 
+        if( roleId === 3 ) return res.status(403).send({ message: 'Access restriced' }); 
         next();
     };
 
     async checkRoleAdmin( req, res, next ){ 
         const roleId = req.user.roleId;
     
-        if( roleId !== 1 ) return res.status(401).send({ message: 'You do not have access to make this request' }); 
+        if( roleId !== 1 ) return res.status(403).send({ message: 'Access restriced' }); 
         next();
     };
 
     async checkRoleUser( req, res, next ){ 
         const roleId = req.user.roleId;
     
-        if( roleId !== 2 ) return res.status(401).send({ message: 'You do not have access to make this request' }); 
+        if( roleId !== 2 ) return res.status(403).send({ message: 'Access restriced' }); 
         next();
     };
 
     async checkRoleEmployee( req, res, next ){ 
         const roleId = req.user.roleId;
     
-        if( roleId !== 3 ) return res.status(401).send({ message: 'You do not have access to make this request' }); 
+        if( roleId !== 3 ) return res.status(403).send({ message: 'Access restriced' }); 
         next();
     };
     

@@ -8,16 +8,16 @@ class CollectionService {
         return await collectionRepository.getAll();
     };
 
-    async getCollectionTotalByDate(date){
+    async getRecaudationTotalByDate(date){
         const recaudation = await collectionRepository.getCollectionByDate(date);
-        return this.addCollection(recaudation);
+        return this.addRecaudation(recaudation);
     };
 
-    async getCollectionByDate(date){
+    async getRecaudationByDate(date){
         return await collectionRepository.getCollectionByDate(date);
     };
 
-    async addCollection(recaudation){
+    async addRecaudation(recaudation){
         let total = 0;
         for (let i of recaudation) total += i.moneyGenerated;
         return total;

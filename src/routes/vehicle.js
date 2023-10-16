@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const router = Router();
-const Middlewares = require('../middlewares/middlewares');
+const Middlewares = require('../middlewares/validateMiddlewares');
 const vehicles = require("../controllers/vehicle");
 
 router.route("/").post([Middlewares.validarJWT, Middlewares.checkRoleAdminAndUser], vehicles.newVehicle); 

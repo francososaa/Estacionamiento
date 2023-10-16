@@ -4,15 +4,14 @@ const newVehicleType = async (req,res) => {
     const data = req.body;
 
     const vehicleExists = await vehicleTypeService.findVehicleType(data.description);
-    if ( vehicleExists ) return res.status(500).send({ message: "Ya existe un vehiculo registrado" });
+    if ( vehicleExists ) return res.status(500).send({ message: "Ya existe un vehiculo registrado." });
 
     try{
         const vehicle = await vehicleTypeService.create(data);
         return res.send({ message: "Success", vehicle });
     } catch(error){
         return res.status(400).send({ message: error.original.detail});
-    }
-
+    };
 };
 
 const getAllVehicle = async (req,res) => {

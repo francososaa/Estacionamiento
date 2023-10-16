@@ -15,7 +15,7 @@ function allowedRoles(){
         "admin": 1,
         "user": 2,
         "employee": 3
-    }
+    };
 };
 
 module.exports = {

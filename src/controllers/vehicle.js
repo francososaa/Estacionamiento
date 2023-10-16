@@ -1,17 +1,17 @@
 const vehicleService = require('../services/vehicle.service');
 
 const newVehicle = async (req, res) => {
-
     const dataVehicle = req.body;
+
     const vehicleExists = await vehicleService.findVehicleByLicense(dataVehicle.license);
-    if ( vehicleExists ) return res.status(500).send({ message: "Ya existe un vehiculo registrado con esa patente" });
+    if (vehicleExists) return res.status(500).send({ message: "Ya existe un vehiculo registrado con esa patente" });
 
     try{
         const vehicle = await vehicleService.create(dataVehicle);
         return res.send({ message: "Success", vehicle });
     } catch(error){
         return res.status(400).send({ message: error.original.detail});
-    }
+    };
 };
 
 const getAllVehicle = async (req, res) => {
@@ -45,7 +45,6 @@ const update = async (req, res) => {
     if( !vehicle ) return res.status(500).send({ message: "Vehiculo inexistente" });
 
     const vehicleUpdate = await vehicleService.updateById(data, vehicleId);
-
     return res.send({ message: "Success", vehicle: vehicleUpdate });
 };
 

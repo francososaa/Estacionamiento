@@ -1,5 +1,4 @@
 const { db } = require('../models');
-
 class CollectionRepository {
 
     constructor() {};

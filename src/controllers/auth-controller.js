@@ -1,13 +1,10 @@
 const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const generarJWT = require('../helpers/generar-jwt');
-// const resendEmail = require('../services/email-service');
-// const { Resend } = require('resend');
 const { db } = require('../models');
 const User = db.user;
 
 const login = async (req, res) => {
-
     const { email, password } = req.body;
 
     if (!email | !password) return res.status(400).send({ error: 'Email and password are mandatory' })
@@ -41,12 +38,12 @@ const login = async (req, res) => {
 const logout = async (req, res) => {
     
     const authHeader = req.headers["authentication"];
-    if (!authHeader) return res.send(204);
+    if (!authHeader) return res.status(204).send();
     
     jwt.sign(authHeader, "", { expiresIn: 1 }, (logout, err) => {
         if (logout) return res.status(200).send({ message: 'You have successfully logged out' });
 
-        return res.status(400).send({ msg: 'Error' });
+        return res.status(400).send({ message: 'Error in logout' });
     });
 };
 
@@ -60,21 +57,6 @@ const authRegister = async (req, res) => {
 
         await user.save();
 
-        // const resend = new Resend(process.env.RESEND_API_KEY);
-
-        // await resend.emails.send({
-        //     from: process.env.EMAIL_NOTIFICATION,
-        //     to: user.email,
-        //     subject: 'Registration',
-        //     html: `<p>Hello ${user.firstname}, you have successfully registered!!</p>`
-        // });
-        // await resendEmail(user.email, user.firstname);
-
-        // let mail = new emailService(user.email, user.name);
-        // mail.sendMail().catch();
-
-        // const token = await generarJWT(user.id);
-
         return res.status(201).send({
             message: 'Successfully Registered',
             user
@@ -82,8 +64,8 @@ const authRegister = async (req, res) => {
 
     } catch (error) {
         return res.status(500).send({ error: error.message });
-    }
-}
+    };
+};
 
 module.exports = {
     authRegister,

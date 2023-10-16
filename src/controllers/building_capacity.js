@@ -1,10 +1,10 @@
 const buildingCapacityService = require('../services/building_capacity.service');
 
 const newCapacity = async (req, res) => {
-
     const dataCapacity = req.body;
+
     const validaDate = await buildingCapacityService.validaDateAndType(dataCapacity.date, dataCapacity.vehicleTypeId);
-    if ( validaDate ) return res.status(500).send({ message: "Ya existe la capacidad para esa fecha y vehiculo" });
+    if (validaDate) return res.status(500).send({ message: "Ya existe la capacidad para esa fecha y vehiculo" });
 
     const createCapacity = await buildingCapacityService.create(dataCapacity);
     return res.send({ message: "Success", Building_Capacity: createCapacity });
@@ -28,7 +28,6 @@ const update = async (req, res) => {
 };
 
 const destroyCapacity = async (req, res) => {
-
     const date = req.params.date;
     const vehicleTypeId = req.params.vehicleTypeId;
 
