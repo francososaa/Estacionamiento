@@ -1,7 +1,10 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./openapi.json');
 const logger = require('./src/utils/logger');
+const IndexRouter = require('./src/routes');
 const { connectPostgresDB } = require('./src/models');
 
 // Initializations
@@ -13,14 +16,8 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // Endpoints
-app.use("/api-docs", require('./src/routes/api-docs'));
-app.use("/api/v1/authenticate", require('./src/routes/authenticate'));
-app.use("/api/v1/building_capacity", require('./src/routes/building_capacity'));
-app.use("/api/v1/collection", require('./src/routes/collection'));
-app.use("/api/v1/vehicle", require('./src/routes/vehicle'));
-app.use("/api/v1/vehicleType", require('./src/routes/vehicleType'));
-app.use("/api/v1/vehiclePrice", require('./src/routes/vehicle_price'));
-app.use("/api/v1/reservation", require('./src/routes/reservation'));
+app.use(IndexRouter);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 //DB
 connectPostgresDB();

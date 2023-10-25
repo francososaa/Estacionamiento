@@ -4,17 +4,21 @@ const Reservation = db.reservation;
 class ReservationRepository {
     
     constructor() {};
-    
+
+    async getAll(userId){
+        return await Reservation.findAll({ where: { userId: userId }, order: [["date", "ASC"]] });
+    };
+
+    async getAllAdmin(){
+        return await Reservation.findAll({ order: [["date", "ASC"]] });
+    };
+
     async create(dataReservation){
         return await Reservation.create(dataReservation);
     };
 
     async findByDateAndUserId(date, userId){
-        return await Reservation.findOne({
-            where: {
-                [Op.and]: [ { date: date }, { userId: userId} ]
-            }
-        });
+        return await Reservation.findOne({ where: {[Op.and]: [{ date: date },{ userId: userId}]} });
     };
 
     async findAllRerservationByPk(id){
@@ -30,6 +34,10 @@ class ReservationRepository {
             { state: state },
             { where: { reservationId: reservationId } , transaction }
         );
+    };
+
+    async updateReservationVehicleId(data, date, userId){
+        await Reservation.update( data ,{ where: {[Op.and]: [{ date: date }, { userId: userId }]} });
     };
 
 };

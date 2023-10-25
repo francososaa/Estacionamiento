@@ -1,97 +1,13 @@
-basePath: /
-definitions:
-  Reservation:
-    description: ""
-    properties:
-      reservationId:
-        type: string
-        description: "uuid"
-      state: 
-        type: string
-        description: ""
-      date: 
-       type: string
-       format: date-time
-       description: ""
-      vehicleId: 
-        type: string
-        description: "uuid"
-      reservationPersonDataId:
-        type: string
-        description: "uuid"
-    type: object
-  ReservationRequestInputDto:
-    description: ""
-    properties:
-      vehicleId:
-        type: string
-        description: "uuid"
-      date:
-        type: string
-        format: date
-        description: ""
-      type:
-        type: string
-        description: ""
-      legajo:
-        type: string
-        description: ""
-      reservationPersonData:
-        $ref: '#/definitions/ReservationPersonDataDto'
-      vehicle:
-        $ref: '#/definitions/VehicleDto'
-  ReservationPersonDataDto:
-    description: ""
-    properties:
-      dni:
-        type: string
-        description: ""
-      firstname: 
-        type: string
-        description: ""
-      lastname: 
-       type: string
-       description: ""
-      legajo: 
-        type: string
-        description: ""
-  VehicleDto:
-    description: ""
-    properties:
-      vehicleId:
-        type: string
-        description: "uuid"
-      licence: 
-        type: string
-        description: ""
-      model: 
-       type: string
-       description: ""
-      isActive:
-        type: boolena
-        description: ""
-      vehicleTypeId: 
-        type: integer
-        description: ""
-      userId:
-        type: string
-        description: "uuid"
-    type: object
-    ErrorDto:
-      description: ""
-      properties:
-        code:
-          type: string
-          description: ""
-      type: object
-      required:
-        - code
-        - message
+openapi: 3.0.0
 info:
-  tittle: estacionamiento
+  description: Especificacion de API para proyecto de Estacionamiento
+  tittle: Estacionamiento
   version: 0.0.1
+servers:
+  - url: "http://localhost:8081"
 paths:
-  '/api/v1/authenticate':
+
+  /api/v1/authenticate:
     post:
       operationId: Add Authenticate
       produces:
@@ -114,12 +30,9 @@ paths:
         - Authenticate
       consumes:
         - application/json
-      parameters:
-        - in: body
-          name: ReservationRequestInputDto
-          description: ""
-          schema: '#/definitions/ReservationRequestInputDto'
-  '/api/v1/authenticate/{legajo}':
+
+          
+  /api/v1/authenticate/{legajo}:
     get:
       operationId: Get Parameter
       produces:
@@ -138,13 +51,9 @@ paths:
         - Authenticate
       consumes:
         - application/json
-      parameters:
-        - in: path
-          name: legajo
-          type: string
-          required: true
-          description: ""
-  '/api/v1/vehicleType':
+
+          
+  /api/v1/vehicleType:
     get:
       operationId: Get Vehicle Type
       produces:
@@ -163,7 +72,8 @@ paths:
         - Vehicle Type
       consumes:
         - application/json
-  '/api/v1/buildingCapacity':
+        
+  /api/v1/buildingCapacity:
     get:
       operationId: Get Building Capacity
       produces:
@@ -179,18 +89,12 @@ paths:
             $ref: '#/definitions/Reservation'
         '500':
           description: 'An internal error.'
-          schema:
-            $ref: '#/definitions/ErrorDto'
+
       description: ""
       tags:
         - Building Capacity
       consumes:
         - application/json
-      parameters:
-        - in: body
-          name: ReservationRequestInputDto
-          description: ""
-          schema: '#/definitions/ReservationRequestInputDto'
     put:
       operationId: Add Building Capacity
       produces:
@@ -206,19 +110,12 @@ paths:
             $ref: '#/definitions/Reservation'
         '500':
           description: 'An internal error.'
-          schema:
-            $ref: '#/definitions/ErrorDto'
       description: ""
       tags:
         - Building Capacity
       consumes:
         - application/json
-      parameters:
-        - in: body
-          name: ReservationRequestInputDto
-          description: ""
-          schema: '#/definitions/ReservationRequestInputDto'
-  '/api/v1/reservation/{id}':
+  /api/v1/reservation/{id}:
     get:
       operationId: Get Reservation
       produces:
@@ -230,20 +127,12 @@ paths:
             $ref: '#/definitions/Reservation'
         '500':
           description: 'An internal error in the service.'
-          schema:
-            $ref: '#/definitions/ErrorDto'
       description: ""
       tags:
         - Reservation
       consumes:
         - application/json
-      parameters:
-        - in: path
-          name: id
-          type: string
-          required: true
-          description: "uuid"
-  '/api/v1/reservation/{id}/vehicle/{vehicleId}':
+  /api/v1/reservation/{id}/vehicle/{vehicleId}:
     put:
       operationId: Get Reservation
       produces:
@@ -273,7 +162,8 @@ paths:
           type: string
           required: true
           description: "uuid"
-  '/api/v1/reservation/{id}/cancelled':
+        
+  /api/v1/reservation/{id}/cancelled:
     put:
       operationId: Get Reservation
       produces:
@@ -298,7 +188,8 @@ paths:
           type: string
           required: true
           description: "uuid"
-  '/api/v1/reservation':
+          
+  /api/v1/reservation:
     get:
       operationId: Get Reservation
       produces:
@@ -345,7 +236,8 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/ReservationRequestInputDto'
-  '/api/v1/reservation/list':
+            
+  /api/v1/reservation/list:
     get:
       operationId: Get Reservations
       produces:
@@ -364,7 +256,8 @@ paths:
         - Reservation
       consumes:
         - application/json
-  '/api/v1/reservation/{id}/state':
+        
+  /api/v1/reservation/{id}/state:
     put:
       operationId: Get Reservations
       produces:
@@ -384,12 +277,13 @@ paths:
       consumes:
         - application/json
       parameters:
-        -in: path
-         name: id
-         type: string
-         required: true
-         description: "uuid"
-  '/api/v1/reservation/legajo/{legajo}/availability':
+        in: path
+          - name: id
+          - type: string
+          - required: true
+          - description: "uuid"
+         
+  /api/v1/reservation/legajo/{legajo}/availability:
     get:
       operationId: Get Reservations
       produces:
@@ -414,7 +308,8 @@ paths:
          type: string
          required: true
          description: ""
-  '/api/v1/vehicle':
+         
+  /api/v1/vehicle:
     get:
       operationId: Get Vehicle
       produces:
@@ -461,7 +356,8 @@ paths:
           description: ""
           schema: 
            $ref: '#/definitions/ReservationRequestInputDto'
-  '/api/v1/vehicle/licence/{licence}':
+           
+  /api/v1/vehicle/licence/{licence}:
     get:
       operationId: Get Vehicle by licence
       produces:
@@ -486,7 +382,8 @@ paths:
           type: string
           required: true
           description: ""
-  '/api/v1/vehicle/{id}':
+          
+  /api/v1/vehicle/{id}:
     put:
       operationId: Get Vehicle
       produces:
@@ -535,7 +432,8 @@ paths:
           type: string
           required: true
           description: "uuid"
-  '/api/v1/vehicle/{id}/cancelled':
+          
+  /api/v1/vehicle/{id}/cancelled:
     put:
       operationId: Get Vehicle
       produces:
@@ -560,5 +458,182 @@ paths:
           type: string
           required: true
           description: "uuid"
-swagger: '2.0'
-securityDefinitions: {}
+
+
+
+
+components:
+
+  parameters:
+    sortParam:
+      name: sort
+      in: query
+      description: " ordenacion"
+      example: "+fecha -nombre"
+      schema:
+        type: string
+        
+        
+    limitParam:
+      name: limit
+      in: query
+      description: "número de resultados a obtener"
+      example: 50
+      schema:
+        type: integer    
+    
+    
+    skipParam:
+      name: skip
+      in: query
+      description: "número de resultados desde el que partir"
+      example: 0
+      schema:
+        type: integer    
+
+
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      
+  schemas:    
+ 
+    User:
+      type: object
+      required: 
+        - email
+        - password
+        - roleId
+      properties:
+        userId:
+          type: string
+          format: uuid
+          readOnly: true
+        dni:
+          type: integer
+        firstname:
+          type: string
+        lastname:
+          type: string
+        password:
+          type: string
+          format: password
+        email:
+          type: string
+          format: email
+        isActive: 
+            type: boolean
+        roleId: 
+            type: integer
+    
+    Building_Capacity:
+      type: object
+      properties:
+        buildingCapacityId: 
+          type: integer
+        date: 
+            type: string
+        totalVehicles: 
+            type: integer
+        overallCapacity: 
+            type: integer
+        overallCapacityOccupied: 
+            type: integer
+        isCompleteOverallCapacity: 
+            type: boolean
+        vehicleTypeId: 
+            type: integer
+            
+    Collection_Of_The_Day:
+      type: object
+      properties:
+        collectionOfTheDayId: 
+            type: string
+            format: uuid
+        date: 
+            type: string
+        moneyGenerated: 
+            type: integer
+        vehicleTypeId: 
+            type: integer
+            
+    Reservation:
+      type: object
+      properties:
+        reservationId: 
+          type: string
+          format: uuid
+        state: 
+          type: string
+        date: 
+            type: string
+        vehicleId: 
+          type: string
+          format: uuid
+        userId: 
+            type: string
+            format: uuid
+    
+    Role:
+      type: object
+      properties:
+        roleId:
+          type: string
+          format: uuid
+        name:
+          type: string
+    
+    Vehicle_Price:
+      type: object
+      properties:
+        vehiclePriceId:
+          type: string
+          format: uuid
+        vehiclePrice:
+          type: integer
+        vehicleTypeId:
+          type: integer
+    
+    Vehicle_Type:
+      type: object
+      properties:
+        vehicleTypeId:
+          type: string
+          format: uuid
+        description:
+          type: string
+ 
+    Vehicle:
+      type: object
+      properties:
+        vehicleId:
+          type: string
+          format: uuid
+        license:
+          type: string
+        model:
+          type: string
+        isActive:
+          type: boolean
+        vehicleTypeId:
+          type: integer
+        userId:
+          type: string
+          format: uuid
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            

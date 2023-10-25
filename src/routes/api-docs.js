@@ -1,10 +1,12 @@
+"use strict";
+
 const express = require('express');
 const app = express();
 
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUI = require('swagger-ui-express');
 
-//Swagger documentation
+// Swagger documentation
 const swaggerOptions = {
     swaggerDefinition: {
         info: {
@@ -21,7 +23,7 @@ const swaggerOptions = {
     basePath: "/",
 
     //APIs a documentar
-    apis: ["./src/routes/reservation"]
+    apis: ["./routes/index.js"]
 };
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);

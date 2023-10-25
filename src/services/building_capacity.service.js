@@ -40,8 +40,7 @@ class BuildingCapacityService {
         } catch (err) {
             await transaction.rollback();
             return null;
-        }
-
+        };
     };
 
     async validaDateAndType(date, vehicleTypeId){
@@ -55,6 +54,7 @@ class BuildingCapacityService {
         buildingCapacity.totalVehicles -= 1;
         
         if(buildingCapacity.isCompleteOverallCapacity) buildingCapacity.isCompleteOverallCapacity = false;
+        await buildingCapacity.save();
         return buildingCapacity;
     };
 

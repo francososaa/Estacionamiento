@@ -30,7 +30,7 @@ class BuildingCapacityRepository {
         );
     };
 
-    async destroyForDateAndVehicleType(date, vehicleTypeId){
+    async destroyForDateAndVehicleType(date, id){
         await BuildingCapacity.destroy(
             { where: {[Op.and]: [{ date: date }, { vehicleTypeId: id }]} }
         );
