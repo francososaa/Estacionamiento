@@ -1,7 +1,8 @@
 const { db } = require('../models');
-const { Op } = db.sequelize
+const { Op } = require('sequelize');
 const Vehicle = db.vehicle;
-// const { Op } = require('sequelize');
+const User = db.user;
+const VehicleType = db.vehicle_type;
 class VehicleRepository {
     
     constructor() {};
@@ -15,8 +16,8 @@ class VehicleRepository {
             where: { [Op.and]: [{ isActive: true }, { license: license}] },
             attributes: ["vehicleId","license","model"] ,
             include: [
-                { model: db.user, as:"user", attributes: ["firstname","lastname"] },
-                { model: Vehicle_type, as:"vehicleType", attributes: ["description"]}
+                { model: User, as:"user", attributes: ["firstname","lastname"] },
+                { model: VehicleType, as:"vehicleType", attributes: ["description"]}
             ]
         });
     };
@@ -30,20 +31,20 @@ class VehicleRepository {
             where: { [Op.and]: [{ isActive: true }, { userId: userId}] },
             attributes: ["vehicleId","license","model"],
             include: [
-                { model: db.user, as:"user", attributes: ["firstname","lastname"] },
-                { model: Vehicle_type, as:"vehicleType", attributes: ["description"]}
+                { model: User, as:"user", attributes: ["firstname","lastname"] },
+                { model: VehicleType, as:"vehicleType", attributes: ["description"]}
             ]
         });
     };
 
     async updateById(data, id){
-        return await Vehicle.update(data, { where: { vehicleId: id }});
+        await Vehicle.update(data, { where: { vehicleId: id }});
     };
 
-    async changeStatus(vehicleId){
+    async changeStatus(id){
         return await Vehicle.update(
             { isActive: false },
-            { where: { vehicleId: vehicleId } }
+            { where: { vehicleId: id } }
         );
     };
 

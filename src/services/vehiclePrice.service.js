@@ -16,6 +16,10 @@ class ServiceVehiclePrice {
         await vehiclePriceRepository.update(data);
     };
 
+    async findByVehicleType(vehicleTypeId){
+        return await vehiclePriceRepository.findByPk(vehicleTypeId);
+    };
+
 };
 
 module.exports = new ServiceVehiclePrice();

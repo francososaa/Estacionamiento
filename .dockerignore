@@ -4,6 +4,6 @@
 **/.git
 **/docker-compose*
 **/Dockerfile*
-**/src/logs
+**/logs
 **/.vscode
 README.md

@@ -1,32 +1,32 @@
 const { db } = require('../models');
-const { Op } = db.sequelize;
-// const { Op } = require('sequelize');
+const { Op } = require('sequelize');
+const Reservation = db.reservation;
 class ReservationRepository {
     
     constructor() {};
     
     async create(dataReservation){
-        return await db.reservation.create(dataReservation);
+        return await Reservation.create(dataReservation);
     };
 
     async findByDateAndUserId(date, userId){
-        return await db.reservation.findOne({
+        return await Reservation.findOne({
             where: {
                 [Op.and]: [ { date: date }, { userId: userId} ]
             }
         });
     };
 
-    async findAllRerservationByPk(vehicleId){
-        return await db.reservation.findAll({ where: { vehicleId: vehicleId }});
+    async findAllRerservationByPk(id){
+        return await Reservation.findAll({ where: { vehicleId: id }});
     };
 
-    async deleteReservation(date, vehicleId){
-        return await db.reservation.destroy({ where: {[Op.and]: [{ date: date }, { vehicleId: vehicleId }]} });
+    async deleteReservation(date, id){
+        return await Reservation.destroy({ where: {[Op.and]: [{ date: date }, { vehicleId: id }]} });
     };
 
     async updateReservationState(state, transaction, reservationId){
-        return await db.reservation.update(
+        return await Reservation.update(
             { state: state },
             { where: { reservationId: reservationId } , transaction }
         );

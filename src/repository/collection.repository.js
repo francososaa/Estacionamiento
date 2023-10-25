@@ -1,20 +1,22 @@
 const { db } = require('../models');
+const VehicleType = db.vehicle_type;
+const Collection = db.collection;
 class CollectionRepository {
 
     constructor() {};
     
     async getAll(){
-        return db.collection.findAll({ 
+        return Collection.findAll({ 
             attributes: ["date","moneyGenerated"],
-            include: [{ model: db.vehicle_type, as:"vehicleType", attributes: ["description"]}]
+            include: [{ model: VehicleType, as:"vehicleType", attributes: ["description"]}]
         });
     };
 
     async getCollectionByDate(date){
-        return await db.collection.findAll({ 
+        return await Collection.findAll({ 
             where: { date: date },
             attributes: ["date","moneyGenerated"],
-            include: [{ model: db.vehicle_type, as:"vehicleType", attributes: ["description"]}] 
+            include: [{ model: VehicleType, as:"vehicleType", attributes: ["description"]}] 
         });
     };
 

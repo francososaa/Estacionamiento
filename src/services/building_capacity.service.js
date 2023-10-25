@@ -49,7 +49,7 @@ class BuildingCapacityService {
     };
 
     async decreaseCapacity(date, vehicleTypeId ){        
-        const buildingCapacity = await buildingCapacityRepository.findByDateAndVehicleType(date, vehicleTypeId);
+        let buildingCapacity = await buildingCapacityRepository.findByDateAndVehicleType(date, vehicleTypeId);
 
         buildingCapacity.overallCapacityOccupied -= 1;
         buildingCapacity.totalVehicles -= 1;

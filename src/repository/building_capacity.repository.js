@@ -1,39 +1,38 @@
 const { db } = require('../models');
-const { Op } = db.sequelize;
-// const { Op } = require('sequelize');
+const { Op } = require('sequelize');
+const BuildingCapacity = db.building_capacity;
+const VehicleType = db.vehicle_type;
 class BuildingCapacityRepository {
     
     constructor() {};
     
     async create(dataCapacity){
-        return await db.building_capacity.create(dataCapacity);
+        return await BuildingCapacity.create(dataCapacity);
     };
 
     async findAll(){
-        return await db.building_capacity.findAll({ 
-            attributes: { exclude: ["isCompleteOverallCapacity"] }, 
-            include: [{ model: db.vehicle_type, as:"vehicleType", attributes: ["description"]}]
+        return await BuildingCapacity.findAll({ 
+            attributes: { exclude: ["isCompleteOverallCapacity","createdAt","updatedAt","vehicleTypeId"] }, 
+            include: [{ model: VehicleType, as:"vehicleType", attributes: ["description"]}]
         });
     };
 
-    async findByDateAndVehicleType(date, vehicleTypeId){
-        return await db.building_capacity.findOne({
-            where: { 
-                [Op.and]: [{ date: date }, { vehicleTypeId: vehicleTypeId }]
-            }
+    async findByDateAndVehicleType(date, id){
+        return await BuildingCapacity.findOne({
+            where: {[Op.and]: [{ date: date }, { vehicleTypeId: id }]}
         });
     };
 
-    async updateCapacityForDateAndVehicleType(date, vehicleTypeId, overallCapacity){
-        await db.building_capacity.update(
+    async updateCapacityForDateAndVehicleType(date, id, overallCapacity){
+        await BuildingCapacity.update(
             { overallCapacity: overallCapacity },
-            { where: {[Op.and]: [{ date: date }, { vehicleTypeId: vehicleTypeId }]} }
+            { where: {[Op.and]: [{ date: date }, { vehicleTypeId: id }]} }
         );
     };
 
     async destroyForDateAndVehicleType(date, vehicleTypeId){
-        await db.building_capacity.destroy(
-            { where: {[Op.and]: [{ date: date }, { vehicleTypeId: vehicleTypeId }]} }
+        await BuildingCapacity.destroy(
+            { where: {[Op.and]: [{ date: date }, { vehicleTypeId: id }]} }
         );
     };
 

@@ -41,23 +41,25 @@ const update = async (req, res) => {
     const userId = req.user.userId;
     const data = req.body;
 
-    const vehicle = await vehicleService.findVehicleById(vehicleId, userId);
-    if( !vehicle ) return res.status(500).send({ message: "Vehiculo inexistente" });
-
-    const vehicleUpdate = await vehicleService.updateById(data, vehicleId);
-    return res.send({ message: "Success", vehicle: vehicleUpdate });
-};
+    try{
+        const vehicle = await vehicleService.findVehicleById(vehicleId, userId);
+        if(!vehicle) return res.status(500).send({ message: "Vehiculo inexistente" });
+    
+        await vehicleService.updateById(data, vehicleId);
+        return res.send({ message: "Success"});
+    } catch(error){
+        return res.status(400).send({ message: "No existe el tipo de vehiculo" });
+    };
+}
 
 const cancel = async (req, res) => {
     const vehicleId = req.params.id;
     const userId = req.user.userId;
 
     const vehicle = await vehicleService.findVehicleById(vehicleId, userId);
-    if( !vehicle ) return res.status(500).send({ message: "Vehiculo inexistente" });
+    if(!vehicle) return res.status(500).send({ message: "Vehiculo inexistente" });
 
-    const cancelled = await vehicleService.cancelVehicle(vehicle);
-    if( cancelled === -1 ) return res.status(500).send({ message: "No se pudo cancelar el vehiculo" });
-
+    await vehicleService.cancelVehicle(vehicle);
     return res.send({ message: "Success" });
 };
 
