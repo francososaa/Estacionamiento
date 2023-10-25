@@ -25,6 +25,17 @@ class ReservationRepository {
         return await Reservation.findAll({ where: { vehicleId: id }});
     };
 
+    async findAllByDate(date){
+        return await Reservation.findAll({ 
+            where: { date: date },  
+            attributes: { exclude: ["createdAt","updatedAt","userId", "vehicleId"] },
+            include: [
+                { model: User, as:"user", attributes: ["firstname","lastname"] },
+                { model: Vehicle, as:"vehicle", attributes: ["license"] }
+            ]   
+        });
+    };
+
     async deleteReservation(date, id){
         return await Reservation.destroy({ where: {[Op.and]: [{ date: date }, { vehicleId: id }]} });
     };
@@ -38,6 +49,13 @@ class ReservationRepository {
 
     async updateReservationVehicleId(data, date, userId){
         await Reservation.update( data ,{ where: {[Op.and]: [{ date: date }, { userId: userId }]} });
+    };
+
+    async updateReservationState(date, state, userId){
+        return await Reservation.update(
+            { state: state },
+            { where: { [Op.and]:[{ date: date }, { userId: userId }]}}
+        );
     };
 
 };

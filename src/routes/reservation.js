@@ -10,4 +10,7 @@ router.route("/:date").delete( [Middlewares.validarJWT, Middlewares.checkRoleAdm
 
 router.route("/").get( [Middlewares.validarJWT, Middlewares.checkRoleAdmin], reservation.getAll);
 
+router.route("/employee/:date").get( [Middlewares.validarJWT, Middlewares.checkRoleEmployee], reservation.getReservationByDate);
+router.route("/employee/:date").put( [Middlewares.validarJWT, Middlewares.checkRoleEmployee], reservation.changeStatus);
+
 module.exports = router;

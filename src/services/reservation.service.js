@@ -18,6 +18,10 @@ class ReservationService {
     async getAll(){
         return await reservationRepository.getAllAdmin();
     };
+
+    async getAllReservationsByDate(date){
+        return await reservationRepository.findAllByDate(date);
+    };
     
     async cancelAllReservationsByVehicle(reservations, vehicle){
         const date = formatDate(new Date());
@@ -46,6 +50,10 @@ class ReservationService {
 
     async update(data, reservation){
         await reservationRepository.updateReservationVehicleId(data, reservation.date, reservation.userId);
+    };
+
+    async updateState(date, state, userId){
+        await reservationRepository.updateReservationState(date, state, userId);
     };
 
 };

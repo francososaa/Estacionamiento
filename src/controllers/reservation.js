@@ -67,6 +67,22 @@ const update = async (req,res) => {
     return res.send({ message: "Success" });
 };
 
+const changeStatus = async (req,res) =>{
+    const date = req.params.date;
+    const state = req.body.state;
+    const userId = req.body.userId;
+
+    await reservationService.updateState(date, state, userId);
+    return res.send({ message: "Success" });
+};
+
+const getReservationByDate = async (req,res) => {
+    const date = req.params.date;
+
+    const reservation = await reservationService.getAllReservationsByDate(date);
+    return res.send({ message: "Success", reservation });
+};
+
 const validateInputData = async (reservation) => {
 
     let validationAfterReservation = {
@@ -97,9 +113,11 @@ const validateMoreOneReservationForPerson = async (date, userId) => {
 
 
 module.exports = {
+    changeStatus,
     createReservation,
     getAll,
     getAllReservationForUser,
+    getReservationByDate,
     destoy,
     update,
 };
