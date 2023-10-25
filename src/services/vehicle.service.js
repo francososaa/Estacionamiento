@@ -1,6 +1,6 @@
 const vehicleRepository = require('../repository/vehicle.repository');
 const reservationService = require('../services/reservation.service');
-class ServiceVehicle {
+class VehicleService {
     
     constructor() {};
 
@@ -16,8 +16,8 @@ class ServiceVehicle {
         return await vehicleRepository.findByLicense(license);
     };
 
-    async findVehicleById(vehicleId, userId){
-        const vehicle = await vehicleRepository.findById(vehicleId, userId);
+    async findVehicleById(id){
+        const vehicle = await vehicleRepository.findById(id);
 
         if(vehicle.isActive === false ) return null;
         return vehicle;
@@ -36,4 +36,4 @@ class ServiceVehicle {
 };
 
 
-module.exports = new ServiceVehicle();
+module.exports = new VehicleService();

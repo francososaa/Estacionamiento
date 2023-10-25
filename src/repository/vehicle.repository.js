@@ -22,8 +22,8 @@ class VehicleRepository {
         });
     };
 
-    async findById(vehicleId, userId){
-        return await Vehicle.findByPk(vehicleId, { where: { userId: userId} });
+    async findById(vehicleId){
+        return await Vehicle.findByPk(vehicleId);
     };
 
     async findAll(userId){
