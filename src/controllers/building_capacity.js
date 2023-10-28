@@ -7,7 +7,7 @@ const newCapacity = async (req, res) => {
     if (validaDate) return res.status(500).send({ message: "Ya existe la capacidad para esa fecha y vehiculo" });
 
     const createCapacity = await buildingCapacityService.create(dataCapacity);
-    return res.send({ message: "Success", Building_Capacity: createCapacity });
+    return res.status(201).send({ message: "Success", Building_Capacity: createCapacity });
 };
 
 const getBuildingCapacity = async (req, res) => {

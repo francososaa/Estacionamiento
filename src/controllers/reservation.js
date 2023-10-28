@@ -24,7 +24,7 @@ const createReservation = async (req,res) => {
         reservation.state = "CREATED";
 
         const createReservation = await reservationService.create(reservation);
-        return res.send({  message: "Reserva creada correctamente", reservation: createReservation });
+        return res.status(201).send({  message: "Reserva creada correctamente", reservation: createReservation });
 
     } catch(error){
         logger.error("Error al crear la reserva");

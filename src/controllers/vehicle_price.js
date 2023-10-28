@@ -8,7 +8,7 @@ const newVehiclePrice = async (req, res) => {
         if(existePrice) return res.status(500).send({ message: "Ya existe el precio para ese tipo de vehiculo" });
     
         await vehiclePriceService.create(vehicle_price);
-        return res.send({ message: "Success"}); 
+        return res.status(201).send({ message: "Success"}); 
     } catch(error){
         return res.status(400).send({ message: "No existe el tipo de vehiculo" });
     };

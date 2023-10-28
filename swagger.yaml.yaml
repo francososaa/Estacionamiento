@@ -1,0 +1,784 @@
+openapi: 3.0.1
+info:
+  title: Estacionamiento
+  description: Endpoints de API para proyecto de Estacionamiento
+  version: 1.0.0
+servers:
+  - description: ServidorLocal
+    url: "http://localhost:8081"
+tags:
+  - name: Autenticacion
+  - name: Capacidad
+  - name: Precio del tipo de vehiculo
+  - name: Recaudacion
+  - name: Reservaciones
+  - name: Tipos de vehiculos
+  - name: Vehiculos
+paths:
+  /api/v1/register:
+    post:
+      tags:
+        - Autenticacion
+      summary: Registro de un usuario
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        201:
+          $ref: '#/components/responses/Create'
+        400:
+          $ref: '#/components/responses/BadRequest'
+        500:
+          $ref: '#/components/responses/ServerError'
+  
+  /api/v1/login:
+    post:
+      tags:
+        - Autenticacion
+      summary: Ingreso del usuario
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Login'
+      responses:
+        200:
+          description: ok
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                   type: string
+                   format: uuid
+        400:
+          $ref: '#/components/responses/BadRequest'
+        500:
+          $ref: '#/components/responses/ServerError'
+          
+  /api/v1/logout:
+    get:
+      tags:
+        - Autenticacion
+      summary: Cierre de sesion del usuario
+      responses:
+        200:
+          $ref: '#/components/responses/Ok'
+        400:
+          $ref: '#/components/responses/BadRequest'
+
+  /api/v1/vehicleType:
+    post:
+      tags:
+        - Tipos de vehiculos
+      summary: Creacion del tipo de vehiculo
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                description:
+                  type: string
+      responses:
+        200:
+          $ref: '#/components/responses/Ok'
+        400:
+          $ref: '#/components/responses/BadRequest'
+        500:
+          $ref: '#/components/responses/ServerError'
+  
+    get:
+      tags:
+        - Tipos de vehiculos
+      summary: Obtener todos los tipos de vehiculos
+      security:
+        - bearerAuth: []
+      responses:
+        200:
+          description: Ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vehicle_Type'
+  
+  /api/v1/vehicleType/{id}:
+    put:
+      tags:
+        - Tipos de vehiculos
+      summary: Actualizar un tipo de vehiculo
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                description:
+                  type: string
+      parameters:
+        - $ref: '#/components/parameters/id'
+      responses:
+        200:
+          $ref: '#/components/responses/Ok'
+        500:
+          $ref: '#/components/responses/ServerError'
+  
+    delete:
+      tags:
+        - Tipos de vehiculos
+      summary: Eliminar un tipo de vehiculo
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          $ref: '#/components/responses/Ok'
+        500:
+          $ref: '#/components/responses/ServerError'
+  
+  /api/v1/vehiclePrice:
+    post:
+      tags:
+        - Precio del tipo de vehiculo
+      summary: Creacion del precio para un tipo de vehiculo
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Vehicle_Price'
+      responses:
+        201:
+          $ref: '#/components/responses/Create'
+        400:
+          $ref: '#/components/responses/BadRequest'
+        500:
+          $ref: '#/components/responses/ServerError'
+    
+    get:
+      tags:
+        - Precio del tipo de vehiculo
+      summary: Obtener todos los precios
+      security:
+        - bearerAuth: []
+      responses:
+        200:
+          description: ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vehicle_Price'
+    
+    put:
+      tags:
+        - Precio del tipo de vehiculo
+      summary: Actualiza el precio de un tipo de vehiculo
+      security:
+        - bearerAuth: []
+      responses:
+        200:
+          $ref: '#/components/responses/Ok'
+        500:
+          $ref: '#/components/responses/ServerError'
+  
+  /api/v1/vehicle:
+    post:
+      tags:
+        - Vehiculos
+      summary: Creacion del vehiculo
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Vehicle'
+      responses:
+        201:
+          $ref: '#/components/responses/Create'
+        400:
+          $ref: '#/components/responses/BadRequest'
+        500:
+          $ref: '#/components/responses/ServerError'
+          
+    get:
+      tags:
+        - Vehiculos
+      summary: Obtiene todos los vehiculos
+      security:
+        - bearerAuth: []
+      responses:
+        200:
+          description: ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetVehicle'
+      
+  /api/v1/vehicle/{id}:      
+    put:
+      tags:
+        - Vehiculos
+      summary: Creacion del precio para un tipo de vehiculo
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Vehicle'
+      parameters:
+        - $ref: '#/components/parameters/id'
+      responses:
+        200:
+          description: ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetVehicle'
+        400:
+          $ref: '#/components/responses/BadRequest'
+        500:
+          $ref: '#/components/responses/ServerError'
+          
+    get:
+      tags:
+        - Vehiculos
+      summary: Obtener un vehiculo por ID
+      security:
+        - bearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/id'
+      responses:
+        200:
+          description: ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetVehicle'
+          
+  /api/v1/vehicle/licence/{license}: 
+    get:
+      tags:
+        - Vehiculos
+      summary: Obtiene un vehiculo por su patente
+      security:
+        - bearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/license'
+      responses:
+        200:
+          description: ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetVehicle'
+          
+  /api/v1/vehicle/{id}/cancelled:
+    put:
+      tags:
+        - Vehiculos
+      summary: Actualiza el estado del vehiculo por su ID
+      security:
+        - bearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/id'
+      responses:
+        200:
+          $ref: '#/components/responses/Ok'
+          
+  /api/v1/building_capacity:
+    post:
+      tags:
+        - Capacidad
+      summary: Crea una capacidad
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Building_Capacity'
+      responses:
+        201:
+          description: "Creado correctamente"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Building_Capacity'
+        500:
+          $ref: '#/components/responses/ServerError'
+          
+    get:
+      tags:
+        - Capacidad
+      summary: Obtiene todas las capacidades
+      security:
+        - bearerAuth: []
+      responses:
+        200:
+          description: Ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Building_Capacity'
+          
+  /api/v1/building_capacity/date/{date}/vehicle/{vehicleTypeId}:
+    put:
+      tags:
+        - Capacidad
+      summary: Actualiza la capacidad para una determinada fecha y tipo de vehiculo
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ovetallCapacity:
+                  type: integer
+      parameters:
+        - $ref: '#/components/parameters/date'
+        - $ref: '#/components/parameters/vehicleTypeId'
+      responses:
+        200:
+          $ref: '#/components/responses/Ok'
+        500:
+          $ref: '#/components/responses/ServerError'
+    
+    delete:
+      tags:
+        - Capacidad
+      summary: Elimina la capacidad para una determinada fecha y tipo de vehiculo
+      security:
+        - bearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/date'
+        - $ref: '#/components/parameters/vehicleTypeId'
+      responses:
+        200:
+          $ref: '#/components/responses/Ok'
+        500:
+          $ref: '#/components/responses/ServerError'
+          
+  /api/v1/collection:   
+    get:
+      tags:
+        - Recaudacion
+      summary: Obtiene todas las recaudaciones
+      security:
+        - bearerAuth: []
+      responses:
+        200:
+          description: Ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection_Of_The_Day'
+  
+  /api/v1/collection/date/{date}:
+    get:
+      tags:
+        - Recaudacion
+      summary: Obtiene las recaudaciones para una fecha determinada
+      security:
+        - bearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/date'
+      responses:
+        200:
+          description: Ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection_Of_The_Day'
+  
+  /api/v1/collection/date/{date}/total/:
+    get:
+      tags:
+        - Recaudacion
+      summary: Obtiene el total de las recaudaciones para una fecha determinada
+      security:
+        - bearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/date'
+      responses:
+        200:
+          description: Ok
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  date:
+                   type: string
+                  total:
+                    type: integer 
+  
+  /api/v1/reservation:
+    post:
+      tags:
+        - Reservaciones
+      summary: Creacion de una reserva
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+      responses:
+        201:
+          description: "Creado correctamente"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reservation'
+        400:
+          $ref: '#/components/responses/BadRequest'
+        500:
+          $ref: '#/components/responses/ServerError'
+          
+    get:
+      tags:
+        - Reservaciones
+      summary: Obtiene todas las reservas el administrador
+      security:
+        - bearerAuth: []
+      responses:
+        200:
+          description: Ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reservation'
+                
+  /api/v1/reservation/{date}:
+    put:
+      tags:
+        - Reservaciones
+      summary: Actualiza la capacidad para una determinada fecha y tipo de vehiculo
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                vehicleId:
+                  type: string
+                  format: uuid
+      parameters:
+        - $ref: '#/components/parameters/date'
+      responses:
+        200:
+          $ref: '#/components/responses/Ok'
+        403:
+          $ref: '#/components/responses/NotFound'
+    
+    delete:
+      tags:
+        - Reservaciones
+      summary: Elimina la capacidad para una determinada fecha y tipo de vehiculo
+      security:
+        - bearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/date'
+      responses:
+        200:
+          $ref: '#/components/responses/Ok'
+        403:
+          $ref: '#/components/responses/NotFound'
+          
+  /api/v1/reservation/{userId}:
+    get:
+      tags:
+        - Reservaciones
+      summary: Obtiene todas las reservaciones para un usuario
+      security:
+        - bearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/userId'
+      responses:
+        200:
+          description: Ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reservation'
+  
+  /api/v1/reservation/employee/{date}:
+    get:
+      tags:
+        - Reservaciones
+      summary: Obtiene todas las reservaciones para una fecha. Solo empleado
+      security:
+        - bearerAuth: []
+      parameters:
+        - $ref: '#/components/parameters/date'
+      responses:
+        200:
+          description: Ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReservationByDate'
+    
+    put:
+      tags:
+        - Reservaciones
+      summary: Actualiza el estado de la reserva para una fecha. Solo empleado
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                state:
+                  type: string
+                userId:
+                  type: string
+                  format: uuid
+      parameters:
+        - $ref: '#/components/parameters/date'
+      responses:
+        200:
+          $ref: '#/components/responses/Ok'
+  
+components:
+  parameters:
+    date:
+      name: date
+      in: path
+      required: true
+      schema:
+        type: string
+        format: date
+    
+    vehicleTypeId:
+      name: vehicleTypeId
+      in: path
+      required: true
+      schema:
+        type: integer
+    
+    id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    
+    userId:
+      name: userId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    
+    license:
+      name: license
+      in: path
+      required: true
+      schema:
+        type: string
+
+  responses:
+    Ok:
+      description: Todo salio bien
+    Create:
+      description: Creado correctamente
+    Unauthorized:
+      description: No hay autorizacion
+    NotFound:
+      description: No se encontro la informacion
+    BadRequest:
+      description: Los datos enviados son incorrectos
+    ServerError:
+      description: Error en el servidor
+    
+  schemas:
+    User:
+      type: object
+      required: 
+        - email
+        - password
+        - roleId
+      properties:
+        userId:
+          type: string
+          format: uuid
+          readOnly: true
+        dni:
+          type: integer
+        firstname:
+          type: string
+        lastname:
+          type: string
+        password:
+          type: string
+          format: password
+        email:
+          type: string
+          format: email
+        isActive: 
+            type: boolean
+        roleId: 
+            type: integer
+            
+    Login:  
+      type: object
+      required:
+        - email
+        - password
+      properties:
+        email:
+          type: string
+          format: email
+        password:
+          type: string
+          format: password
+    
+    Building_Capacity:
+      type: object
+      properties:
+        date: 
+            type: string
+            format: date
+        totalVehicles: 
+            type: integer
+        overallCapacity: 
+            type: integer
+        overallCapacityOccupied: 
+            type: integer
+        isCompleteOverallCapacity:
+            type: boolean
+        vehicleTypeId: 
+            type: integer
+            
+    Collection_Of_The_Day:
+      type: object
+      properties:
+        date: 
+            type: string
+            format: date
+        moneyGenerated: 
+            type: integer
+        vehicleTypeId:
+            type: integer
+            
+    Reservation:
+      type: object
+      properties:
+        state: 
+          type: string
+        date: 
+            type: string
+            format: date
+        vehicleId: 
+          type: string
+          format: uuid
+        userId: 
+            type: string
+            format: uuid
+    
+    Vehicle_Price:
+      type: object
+      properties:
+        vehiclePrice:
+          type: integer
+        vehicleTypeId:
+          type: integer
+    
+    Vehicle_Type:
+      type: object
+      properties:
+        vehicleTypeId:
+          type: integer
+        description:
+          type: string
+ 
+    Vehicle:
+      type: object
+      properties:
+        license:
+          type: string
+        model:
+          type: string
+        isActive:
+          type: boolean
+        vehicleTypeId:
+          type: integer
+        userId:
+          type: string
+          format: uuid
+    
+    GetVehicle:
+      type: object
+      properties:
+        vehicleId:
+          type: string
+          format: uuid
+        license:
+          type: string
+        model:
+          type: string
+        
+    ReservationByDate:
+      type: object
+      properties:
+        reservationId:
+          type: string
+          format: uuid
+        state: 
+          type: string
+        date: 
+            type: string
+            format: date
+          
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+security:
+  - bearerAuth: []
+
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            

@@ -5,10 +5,11 @@ const app = express();
 
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUI = require('swagger-ui-express');
+const swaggerDocument = require('../../swagger.json');
 
 // Swagger documentation
-const swaggerOptions = {
-    swaggerDefinition: {
+const options = {
+    definition: {
         info: {
             version: "1.0.0",
             tittle: "Documentacion API",
@@ -20,13 +21,15 @@ const swaggerOptions = {
             servers: ["http://localhost:8081"]
         }
     },
-    basePath: "/",
-
-    //APIs a documentar
-    apis: ["./routes/index.js"]
+    apis: ["src/routes/index.js"]
 };
 
-const swaggerDocs = swaggerJsDoc(swaggerOptions);
-app.use("/", swaggerUI.serve, swaggerUI.setup(swaggerDocs));
+const swaggerDocs = swaggerJsDoc(options);
 
-module.exports = app;
+const swagger = (app) => {
+    // app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerDocs));
+    app.use("/api/docs", swaggerUI.serve, swaggerUI.setup(swaggerDocument));
+};
+
+
+module.exports = { swagger };

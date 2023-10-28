@@ -8,7 +8,7 @@ const newVehicle = async (req, res) => {
 
     try{
         const vehicle = await vehicleService.create(dataVehicle);
-        return res.send({ message: "Success", vehicle });
+        return res.status(201).send({ message: "Success", vehicle });
     } catch(error){
         return res.status(400).send({ message: error.original.detail});
     };
