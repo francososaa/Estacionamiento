@@ -50,20 +50,18 @@ const logout = async (req, res) => {
 const authRegister = async (req, res) => {
     const userData = req.body;
 
-    if (!userData) return res.status(400).json({ error: 'All data is required' });
+    if (!userData) return res.status(400).send({ error: 'All data is required' });
 
     try {
         const user = await User.create(userData);
-
         await user.save();
 
         return res.status(201).send({
-            message: 'Successfully Registered',
-            user
+            message: 'Successfully Registered'
         });
 
     } catch (error) {
-        return res.status(500).send({ error: error.message });
+        return res.status(500).send({ error });
     };
 };
 

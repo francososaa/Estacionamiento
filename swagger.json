@@ -41,15 +41,6 @@
           "Autenticacion"
         ],
         "summary": "Registro de un usuario",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/User"
-              }
-            }
-          }
-        },
         "responses": {
           "201": {
             "$ref": "#/components/responses/Create"
@@ -1038,11 +1029,6 @@
           "roleId"
         ],
         "properties": {
-          "userId": {
-            "type": "string",
-            "format": "uuid",
-            "readOnly": true
-          },
           "dni": {
             "type": "integer"
           },
@@ -1059,9 +1045,6 @@
           "email": {
             "type": "string",
             "format": "email"
-          },
-          "isActive": {
-            "type": "boolean"
           },
           "roleId": {
             "type": "integer"

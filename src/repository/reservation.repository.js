@@ -36,7 +36,7 @@ class ReservationRepository {
         });
     };
 
-    async deleteReservation(date, id){
+    async deleteReservationForDateAndVehicleId(date, id){
         return await Reservation.destroy({ where: {[Op.and]: [{ date: date }, { vehicleId: id }]} });
     };
 

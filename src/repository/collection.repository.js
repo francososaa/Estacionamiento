@@ -12,7 +12,7 @@ class CollectionRepository {
         });
     };
 
-    async getCollectionByDate(date){
+    async getAllCollectionByDate(date){
         return await Collection.findAll({ 
             where: { date: date },
             attributes: ["date","moneyGenerated"],
@@ -20,6 +20,9 @@ class CollectionRepository {
         });
     };
 
+    async destoy(id){
+        await Collection.destroy({ where: { vehicleTypeId: id }})
+    };
 };
 
 module.exports = new CollectionRepository();

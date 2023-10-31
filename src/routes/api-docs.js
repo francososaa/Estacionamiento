@@ -1,8 +1,4 @@
 "use strict";
-
-const express = require('express');
-const app = express();
-
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUI = require('swagger-ui-express');
 const swaggerDocument = require('../../swagger.json');
@@ -24,10 +20,7 @@ const options = {
     apis: ["src/routes/index.js"]
 };
 
-const swaggerDocs = swaggerJsDoc(options);
-
 const swagger = (app) => {
-    // app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerDocs));
     app.use("/api/docs", swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 };
 

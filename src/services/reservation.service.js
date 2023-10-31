@@ -28,7 +28,7 @@ class ReservationService {
         
         for (const reservation of reservations) {
             if( date <= reservation.date ) {
-                await reservationRepository.deleteReservation(reservation.date, reservation.vehicleId);
+                await reservationRepository.deleteReservationForDateAndVehicleId(reservation.date, reservation.vehicleId);
                 await buildingCapacityService.decreaseCapacity(reservation.date, vehicle.vehicleTypeId);
             };
         };
@@ -44,7 +44,7 @@ class ReservationService {
 
     async deleteReservation(reservation){
         const vehicle = await vehicleRepository.findById(reservation.vehicleId);
-        await reservationRepository.deleteReservation(reservation.date, reservation.vehicleId);
+        await reservationRepository.deleteReservationForDateAndVehicleId(reservation.date, reservation.vehicleId);
         await buildingCapacityService.decreaseCapacity(reservation.date, vehicle.vehicleTypeId);
     };
 

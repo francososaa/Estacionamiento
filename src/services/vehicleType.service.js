@@ -1,6 +1,5 @@
 const vehicleTypeRepository = require('../repository/vehicleType.repository');
-
-class VehicleTypeRepository{
+class VehicleTypeService{
     constructor() {};
 
     async getAll(){
@@ -24,9 +23,9 @@ class VehicleTypeRepository{
     };
 
     async deleteTypeVehicle(id){
-        await vehicleTypeRepository.destroy(id);
+        await vehicleTypeRepository.destroy(id); 
     };
 
 };
 
-module.exports = new VehicleTypeRepository();
+module.exports = new VehicleTypeService();

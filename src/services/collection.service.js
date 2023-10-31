@@ -9,7 +9,7 @@ class CollectionService {
     };
 
     async getRecaudationTotalByDate(date){
-        const recaudation = await collectionRepository.getCollectionByDate(date);
+        const recaudation = await collectionRepository.getAllCollectionByDate(date);
         return this.addRecaudation(recaudation);
     };
 
