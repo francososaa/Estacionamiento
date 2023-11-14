@@ -10,14 +10,14 @@ const createReservation = async (req,res) => {
 
     try{
         const reservationVehicle = await vehicleService.findVehicleById(reservation.vehicleId);
-        if(!reservationVehicle) return res.status(500).send({ message: "Vehiculo inexistente"});
+        if( !reservationVehicle ) return res.status(404).send({ message: "Vehiculo inexistente" });
         reservation.vehicle = reservationVehicle;
 
         const inputDataValidation = await validateInputData(reservation);
-        if(!inputDataValidation.isOk) return res.status(400).send({ message: inputDataValidation.message}); 
+        if( !inputDataValidation.isOk ) return res.status(400).send({ message: inputDataValidation.message}); 
 
         const overallCapacity = await buildingCapacityService.isCompleteOverallCapacity(reservation.date, reservation.vehicle.vehicleTypeId);
-        if(overallCapacity) return res.status(400).send({ message: "No hay lugar disponible para la fecha seleccionada." });
+        if( overallCapacity ) return res.status(400).send({ message: "No hay lugar disponible para la fecha seleccionada." });
         
         await buildingCapacityService.updateCapacity(reservation.date, reservation.vehicle.vehicleTypeId);
 
@@ -34,14 +34,14 @@ const createReservation = async (req,res) => {
 
 const getAll = async (req,res) => {
     const reservation = await reservationService.getAll();
-    return res.send({ message: "Success", reservation });
+    return res.status(200).send({ message: "Success", reservation });
 };
 
 const getAllReservationForUser = async (req,res) => {
     const userId = req.params.userId;
 
     const reservation = await reservationService.getAllReservationForUser(userId);
-    return res.send({ message: "Success", reservation });
+    return res.status(200).send({ message: "Success", reservation });
 };
 
 const destoy = async (req,res) => {
@@ -49,10 +49,10 @@ const destoy = async (req,res) => {
     const date = req.params.date;
 
     const reservation = await reservationService.findReservationByDate(date, userId);
-    if(!reservation) return res.status(403).send({ message: "No existe una reserva para esa fecha" });
+    if( !reservation ) return res.status(404).send({ message: "No existe una reserva para esa fecha" });
 
     await reservationService.deleteReservation(reservation);
-    return res.send({ message: "Success" });
+    return res.status(200).send({ message: "Success" });
 };
 
 const update = async (req,res) => {
@@ -61,10 +61,10 @@ const update = async (req,res) => {
     const data = req.body;
 
     const reservation = await reservationService.findReservationByDate(date, userId);
-    if(!reservation) return res.status(403).send({ message: "No existe la reserva" });
+    if( !reservation ) return res.status(404).send({ message: "No existe la reserva" });
 
     await reservationService.update(data, reservation);
-    return res.send({ message: "Success" });
+    return res.status(200).send({ message: "Success" });
 };
 
 const changeStatus = async (req,res) =>{
@@ -73,14 +73,14 @@ const changeStatus = async (req,res) =>{
     const userId = req.body.userId;
 
     await reservationService.updateState(date, state, userId);
-    return res.send({ message: "Success" });
+    return res.status(200).send({ message: "Success" });
 };
 
 const getReservationByDate = async (req,res) => {
     const date = req.params.date;
 
     const reservation = await reservationService.getAllReservationsByDate(date);
-    return res.send({ message: "Success", reservation });
+    return res.status(200).send({ message: "Success", reservation });
 };
 
 const validateInputData = async (reservation) => {
@@ -96,6 +96,7 @@ const validateInputData = async (reservation) => {
     };
 
     const existReservationForPerson = await validateMoreOneReservationForPerson(reservation.date, reservation.userId);
+    
     if(existReservationForPerson) {
         validationAfterReservation.message = "Ya hay una reserva con este usuario para esta fecha.";
         return validationAfterReservation;

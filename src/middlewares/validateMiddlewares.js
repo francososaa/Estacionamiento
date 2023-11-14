@@ -13,7 +13,7 @@ class Middlewares{
         try {
             const { uid } = jwt.verify( token, process.env.SECRETORPRIVATEKEY );
             const user = await User.findByPk( uid );
-            if ( !user ) return res.status(401).send({ message: 'Token invalid - no user exists' }) 
+            if ( !user ) return res.status(404).send({ message: 'Token invalid - no user exists' }) 
             
             req.user = user;
         } catch (error) {

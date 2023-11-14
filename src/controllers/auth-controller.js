@@ -2,6 +2,7 @@ const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const generarJWT = require('../helpers/generar-jwt');
 const { db } = require('../models');
+const  mailService = require('../services/email-service');
 const User = db.user;
 
 const login = async (req, res) => {
@@ -17,14 +18,14 @@ const login = async (req, res) => {
             }
         });
 
-        if (!user) return res.status(400).send({ message: 'User does not exist' });
+        if (!user) return res.status(404).send({ message: 'User does not exist' });
 
         const validPassword = bcryptjs.compareSync(password, user.password);
         if (!validPassword) return res.status(400).send({ message: 'Password is incorrect' });
 
         const token = await generarJWT( user.userId );
 
-        return res.send({
+        return res.status(200).send({
             message: 'Successfully logged in',
             user,
             token
@@ -55,6 +56,9 @@ const authRegister = async (req, res) => {
     try {
         const user = await User.create(userData);
         await user.save();
+
+        let mail = new mailService(user.email, user.firstname);
+        mail.sendMail().catch();
 
         return res.status(201).send({
             message: 'Successfully Registered'
