@@ -8,7 +8,7 @@ class Middlewares{
     async validarJWT( req, res, next ){ 
         const token = req.header('authentication');
        
-        if( !token ) return res.status(403).send({ message: "Access denied. No token provided" }); 
+        if( !token ) return res.status(401).send({ message: "Access denied. No token provided" }); 
      
         try {
             const { uid } = jwt.verify( token, process.env.SECRETORPRIVATEKEY );

@@ -16,7 +16,7 @@ const newVehicleType = async (req,res) => {
 
 const getAllVehicle = async (req,res) => {
     const vehicleType = await vehicleTypeService.getAll();
-    return res.status(200).send({ message: "Success", vehicleType });
+    return res.send({ message: "Success", vehicleType });
 };  
 
 const update = async (req,res) => {
@@ -27,7 +27,7 @@ const update = async (req,res) => {
     if ( !vehicleExists ) return res.status(404).send({ message: "No existe el tipo de vehiculo" });
 
     await vehicleTypeService.update(data, id);
-    return res.status(200).send({ message: "Success" });
+    return res.send({ message: "Success" });
 };
 
 const destroy = async (req,res) => {
@@ -37,7 +37,7 @@ const destroy = async (req,res) => {
     if( !vehicle ) return res.status(404).send({ message: "Tipo de vehiculo inexistente" });
 
     await vehicleTypeService.deleteTypeVehicle(id);
-    return res.status(200).send({ message: "Success" });
+    return res.send({ message: "Success" });
 };
 
 module.exports = {

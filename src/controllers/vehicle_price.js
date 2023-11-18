@@ -10,13 +10,13 @@ const newVehiclePrice = async (req, res) => {
         await vehiclePriceService.create(vehicle_price);
         return res.status(201).send({ message: "Success"}); 
     } catch(error){
-        return res.status(404).send({ message: "No existe el tipo de vehiculo" });
+        return res.status(500).send({ error });
     };
 };
 
 const getAll = async (req, res) => {
     const vehicle_price = await vehiclePriceService.getAll();
-    return res.status(200).send({ mssage: "Success", vehiclePrice: vehicle_price });
+    return res.send({ mssage: "Success", vehiclePrice: vehicle_price });
 };
 
 const update = async (req, res) => {
@@ -26,7 +26,7 @@ const update = async (req, res) => {
     if( !existePrice ) return res.status(404).send({ message: "No existe el tipo de vehiculo" });
 
     await vehiclePriceService.update(data)
-    return res.status(200).send({ mssage: "Success" });
+    return res.send({ mssage: "Success" });
 };
 
 module.exports = {

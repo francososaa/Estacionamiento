@@ -25,7 +25,7 @@ const login = async (req, res) => {
 
         const token = await generarJWT( user.userId );
 
-        return res.status(200).send({
+        return res.send({
             message: 'Successfully logged in',
             user,
             token
@@ -42,7 +42,7 @@ const logout = async (req, res) => {
     if (!authHeader) return res.status(204).send();
     
     jwt.sign(authHeader, "", { expiresIn: 1 }, (logout, err) => {
-        if (logout) return res.status(200).send({ message: 'You have successfully logged out' });
+        if (logout) return res.send({ message: 'You have successfully logged out' });
 
         return res.status(400).send({ message: 'Error in logout' });
     });

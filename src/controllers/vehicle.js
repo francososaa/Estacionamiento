@@ -4,7 +4,7 @@ const newVehicle = async (req, res) => {
     const dataVehicle = req.body;
 
     const vehicleExists = await vehicleService.findVehicleByLicense(dataVehicle.license);
-    if ( vehicleExists ) return res.status(500).send({ message: "Ya existe un vehiculo registrado con esa patente" });
+    if ( vehicleExists ) return res.status(400).send({ message: "Ya existe un vehiculo registrado con esa patente" });
 
     try{
         const vehicle = await vehicleService.create(dataVehicle);
@@ -18,14 +18,14 @@ const getAllVehicle = async (req, res) => {
     const userId = req.user.userId;
 
     const vehicles = await vehicleService.allVehicles(userId);
-    return res.status(200).send({ message: "Success", vehicles });
+    return res.send({ message: "Success", vehicles });
 };
 
 const getVehicleByLicense = async (req, res) => {
     const license = req.params.license;
     
     const vehicles = await vehicleService.findVehicleByLicense(license);
-    return res.status(200).send({ message: "Success", vehicles });
+    return res.send({ message: "Success", vehicles });
 };
 
 const findByPk = async (req, res) => {
@@ -33,7 +33,7 @@ const findByPk = async (req, res) => {
     const userId = req.user.userId;
 
     const vehicle = await vehicleService.findVehicleById(vehicleId, userId);
-    return res.status(200).send({ message: "Success", vehicle });
+    return res.send({ message: "Success", vehicle });
 };
 
 const update = async (req, res) => {
@@ -45,7 +45,7 @@ const update = async (req, res) => {
     if( !vehicle ) return res.status(404).send({ message: "Vehiculo inexistente" });
     
     await vehicleService.updateById(data, vehicleId);
-    return res.status(200).send({ message: "Success"});
+    return res.send({ message: "Success"});
 }
 
 const cancel = async (req, res) => {
@@ -56,7 +56,7 @@ const cancel = async (req, res) => {
     if( !vehicle ) return res.status(404).send({ message: "Vehiculo inexistente" });
 
     await vehicleService.cancelVehicle(vehicle);
-    return res.status(200).send({ message: "Success" });
+    return res.send({ message: "Success" });
 };
 
 
