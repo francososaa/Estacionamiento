@@ -4,7 +4,7 @@
 - JavaScript
 - Node.js
 - Express.js
-- PosgreSQL
+- PostgreSQL
 - Docker
 - Swagger
 
