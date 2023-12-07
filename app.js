@@ -1,8 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const logger = require('./src/utils/logger');
-const IndexRouter = require('./src/routes');
+const Router = require('./src/routes');
 const { connectPostgresDB } = require('./src/models');
 const { swagger } = require('./src/routes/api-docs');
 
@@ -15,14 +14,14 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // Endpoints
-app.use(IndexRouter);
+app.use(Router);
 
 //DB
 connectPostgresDB();
 
-// Starting the server
-app.listen(
-    process.env.PORT, () => logger.info(`Server running on port ${process.env.PORT}`),
-    swagger(app)
-);
+// swagger
+swagger(app)
+
+module.exports = app;
+
 

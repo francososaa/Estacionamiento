@@ -3,8 +3,8 @@ const buildingCapacityService = require('../services/building_capacity.service')
 const newCapacity = async (req, res) => {
     const dataCapacity = req.body;
 
-    const validaDate = await buildingCapacityService.validaDateAndType(dataCapacity.date, dataCapacity.vehicleTypeId);
-    if( validaDate ) return res.status(400).send({ message: "Ya existe la capacidad para esa fecha y vehiculo" });
+    const validate = await buildingCapacityService.validaDateAndType(dataCapacity.date, dataCapacity.vehicleTypeId);
+    if( validate ) return res.status(400).send({ message: "Ya existe la capacidad para esa fecha y vehiculo" });
 
     const createCapacity = await buildingCapacityService.create(dataCapacity);
     return res.status(201).send({ message: "Success", Building_Capacity: createCapacity });
@@ -20,8 +20,8 @@ const update = async (req, res) => {
     const vehicleTypeId = req.params.vehicleTypeId;
     const overallCapacity = req.body.overallCapacity;
 
-    const capacity = await buildingCapacityService.validaDateAndType(date, vehicleTypeId);
-    if( !capacity ) return res.status(400).send({ message: "No se encuentra fecha o tipo de vehiculo" })
+    const validate = await buildingCapacityService.validaDateAndType(date, vehicleTypeId);
+    if( !validate ) return res.status(400).send({ message: "No se encuentra fecha o tipo de vehiculo" })
 
     await buildingCapacityService.updateOverallCapacityForDateAndTypeVehicle(date, vehicleTypeId, overallCapacity);
     return res.send({ message: "Success" });

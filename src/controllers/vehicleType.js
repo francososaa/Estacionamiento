@@ -10,7 +10,7 @@ const newVehicleType = async (req,res) => {
         await vehicleTypeService.create(data);
         return res.status(201).send({ message: "Success" });
     } catch(error){
-        return res.status(500).send({ message: error.original.detail});
+        return res.status(500).send({ message: "Error al crear el tipo de vehiculo" });
     };
 };
 

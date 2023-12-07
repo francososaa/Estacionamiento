@@ -111,8 +111,6 @@ const validateMoreOneReservationForPerson = async (date, userId) => {
     return ( reservation === null) ? false : true;
 };
 
-
-
 module.exports = {
     changeStatus,
     createReservation,

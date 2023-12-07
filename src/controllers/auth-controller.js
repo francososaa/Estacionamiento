@@ -1,32 +1,26 @@
 const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const generarJWT = require('../helpers/generar-jwt');
-const { db } = require('../models');
-const  mailService = require('../services/email-service');
-const User = db.user;
+const  { sendRegistrationEmail } = require('../services/email.service');
+const userService = require("../services/user.service");
 
 const login = async (req, res) => {
     const { email, password } = req.body;
 
-    if (!email | !password) return res.status(400).send({ error: 'Email and password are mandatory' })
+    if ( !email | !password ) return res.status(400).send({ error: "Email and password are mandatory" })
 
     try {
-        const user = await User.findOne({
-            where: {
-                email: email,
-                isActive: true
-            }
-        });
+        const user = await userService.findOne(email)
 
-        if (!user) return res.status(404).send({ message: 'User does not exist' });
+        if ( !user ) return res.status(404).send({ message: "User does not exist" });
 
         const validPassword = bcryptjs.compareSync(password, user.password);
-        if (!validPassword) return res.status(400).send({ message: 'Password is incorrect' });
+        if ( !validPassword ) return res.status(400).send({ message: "Password is incorrect" });
 
         const token = await generarJWT( user.userId );
 
         return res.send({
-            message: 'Successfully logged in',
+            message: "Successfully logged in",
             user,
             token
         });
@@ -37,35 +31,30 @@ const login = async (req, res) => {
 };
 
 const logout = async (req, res) => {
-    
     const authHeader = req.headers["authentication"];
-    if (!authHeader) return res.status(204).send();
+    if ( !authHeader ) return res.status(204).send();
     
     jwt.sign(authHeader, "", { expiresIn: 1 }, (logout, err) => {
-        if (logout) return res.send({ message: 'You have successfully logged out' });
+        if ( logout ) return res.send({ message: "You have successfully logged out" });
 
-        return res.status(400).send({ message: 'Error in logout' });
+        return res.status(400).send({ message: "Error in logout" });
     });
 };
 
 const authRegister = async (req, res) => {
     const userData = req.body;
 
-    if (!userData) return res.status(400).send({ error: 'All data is required' });
+    if ( !userData ) return res.status(400).send({ error: "All data is required" });
 
     try {
-        const user = await User.create(userData);
-        await user.save();
+        const user = await userService.create(userData);
 
-        let mail = new mailService(user.email, user.firstname);
-        mail.sendMail().catch();
+        await sendRegistrationEmail(user.email, user.firstname);
 
-        return res.status(201).send({
-            message: 'Successfully Registered'
-        });
+        return res.status(201).send({ message: "Successfully Registered" });
 
     } catch (error) {
-        return res.status(500).send({ error });
+        return res.status(500).send({ message: "Fallo la registracion" });
     };
 };
 

@@ -1,22 +1,22 @@
 const vehiclePriceService = require('../services/vehiclePrice.service');
 
 const newVehiclePrice = async (req, res) => {
-    const vehicle_price = req.body;
+    const vehiclePrice = req.body;
 
     try {
-        const existePrice = await vehiclePriceService.findByVehicleType(vehicle_price.vehicleTypeId);
+        const existePrice = await vehiclePriceService.findByVehicleType(vehiclePrice.vehicleTypeId);
         if( existePrice ) return res.status(400).send({ message: "Ya existe el precio para ese tipo de vehiculo" });
     
-        await vehiclePriceService.create(vehicle_price);
+        await vehiclePriceService.create(vehiclePrice);
         return res.status(201).send({ message: "Success"}); 
     } catch(error){
-        return res.status(500).send({ error });
+        return res.status(500).send({ message: "No se pudo crear el precio" });
     };
 };
 
 const getAll = async (req, res) => {
-    const vehicle_price = await vehiclePriceService.getAll();
-    return res.send({ mssage: "Success", vehiclePrice: vehicle_price });
+    const vehiclePrice = await vehiclePriceService.getAll();
+    return res.send({ mssage: "Success", vehiclePrice });
 };
 
 const update = async (req, res) => {
