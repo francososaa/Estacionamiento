@@ -1,8 +1,8 @@
 const request = require("supertest");
 const app = require("../../app");
 const server = require("../../server");
-const bcryptjs = require('bcryptjs');
-const jwt = require('jsonwebtoken');
+const bcryptjs = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 const userService = require("../../src/services/user.service");
 const generarToken = require("../../src/helpers/generar-jwt");
 const { register } = require("../mock/auth-controller");
@@ -24,9 +24,9 @@ afterAll(() => {
     server.close();
 });
 
-describe('Authentication', () => {
-    describe('Login', () => {
-        describe('Success', () => {
+describe("Authentication", () => {
+    describe("Login", () => {
+        describe("Success", () => {
             test("Success", async () => {
 
                 jest.spyOn(userService, "findOne").mockImplementation(() => user )
@@ -44,7 +44,7 @@ describe('Authentication', () => {
             });
         });
 
-        describe('Failed', () => {
+        describe("Failed", () => {
             test("Campos faltantes", async () => {
 
                 await request(app)
@@ -100,8 +100,8 @@ describe('Authentication', () => {
         
     });
 
-    describe('Logout', () => {
-        describe('Success', () => {
+    describe("Logout", () => {
+        describe("Success", () => {
             test("Success", async () => {  
 
                 jest.spyOn(jwt, "sign").mockImplementation(() => true )
@@ -114,7 +114,7 @@ describe('Authentication', () => {
             });
         });
 
-        describe('Failed', () => {
+        describe("Failed", () => {
             test("No hay token", async () => {  
 
                 await request(app)
@@ -137,9 +137,9 @@ describe('Authentication', () => {
 
     });
 
-    describe('Register', () => {
-        describe('Success', () => {
-            describe('Success', () => {
+    describe("Register", () => {
+        describe("Success", () => {
+            describe("Success", () => {
                 test("Success", async () => {  
     
                     jest.spyOn(userService, "create").mockImplementation(() => user )
@@ -152,7 +152,7 @@ describe('Authentication', () => {
                 });
             });
 
-            describe('Failed', () => {
+            describe("Failed", () => {
                 test("Faltan datos de entrada", async () => {  
     
                     await request(app)

@@ -37,9 +37,9 @@ afterAll(() => {
     jest.clearAllMocks();
 });
 
-describe('Building Capacity', () => {
-    describe('New', () => {
-        describe('Success', () => {
+describe("Building Capacity", () => {
+    describe("New", () => {
+        describe("Success", () => {
             test("Creacion de la capacidad", async () => {
 
                 jest.spyOn(buildingCapacityService, "validaDateAndType").mockImplementation(() => false )
@@ -51,11 +51,11 @@ describe('Building Capacity', () => {
                     .set("authentication","123456")
                     .send(newCapacity)
                     .expect(201)
-                    .expect({ message: "Success",  Building_Capacity: buildingCapacity })
+                    .expect({ message: "Success", buildingCapacity })
             });
         });
 
-        describe('Failed', () => {
+        describe("Failed", () => {
             test("Ya existe la capacidad", async () => {
 
                 jest.spyOn(buildingCapacityService, "validaDateAndType").mockImplementation(() => true )
@@ -70,7 +70,7 @@ describe('Building Capacity', () => {
         });
     });
 
-    describe('Get building capacity', () => {
+    describe("Get building capacity", () => {
         test("Obtener la capacidad", async () => {
 
             jest.spyOn(buildingCapacityService, "getAll").mockImplementation(() => capacity )
@@ -83,8 +83,8 @@ describe('Building Capacity', () => {
         });
     });
 
-    describe('Update', () => {
-        describe('Success', () => {
+    describe("Update", () => {
+        describe("Success", () => {
             test("Actualizacion de la capacidad", async () => {
 
                 jest.spyOn(buildingCapacityService, "validaDateAndType").mockImplementation(() => true )
@@ -99,7 +99,7 @@ describe('Building Capacity', () => {
             });
         });
 
-        describe('Failed', () => {
+        describe("Failed", () => {
             test("No se encuentra fecha o tipo de vehiculo", async () => {
 
                 jest.spyOn(buildingCapacityService, "validaDateAndType").mockImplementation(() => false )
@@ -113,8 +113,8 @@ describe('Building Capacity', () => {
         });
     });
 
-    describe('Destroy', () => {
-        describe('Success', () => {
+    describe("Destroy", () => {
+        describe("Success", () => {
             test("Eliminacion de la capacidad", async () => {
 
                 jest.spyOn(buildingCapacityService, "validaDateAndType").mockImplementation(() => true )
@@ -129,7 +129,7 @@ describe('Building Capacity', () => {
             });
         });
 
-        describe('Failed', () => {
+        describe("Failed", () => {
             test("No se encuentra fecha o tipo de vehiculo", async () => {
 
                 jest.spyOn(buildingCapacityService, "validaDateAndType").mockImplementation(() => false )

@@ -37,8 +37,8 @@ afterAll(() => {
 });
 
 describe("Vehicle Price", () => {
-    describe('New', () => {
-        describe('Success', () => {
+    describe("New", () => {
+        describe("Success", () => {
             test("New vehicle price ", async () => {
 
                 jest.spyOn(vehiclePriceService, "findByVehicleType").mockImplementation(() => false )
@@ -54,7 +54,7 @@ describe("Vehicle Price", () => {
             });
         });
 
-        describe('Failed', () => {
+        describe("Failed", () => {
             test("Existe el precio para ese tipo de vehiculo ", async () => {
 
                 jest.spyOn(vehiclePriceService, "findByVehicleType").mockImplementation(() => vehiclePrice )
@@ -83,7 +83,7 @@ describe("Vehicle Price", () => {
         });
     });
 
-    describe('Get All', () => {
+    describe("Get All", () => {
         test("Get all vehicle price", async () => {
 
             jest.spyOn(vehiclePriceService, "getAll").mockImplementation(() => allVehiclePrice )
@@ -96,8 +96,8 @@ describe("Vehicle Price", () => {
         });
     });
 
-    describe('Update', () => {
-        describe('Success', () => {
+    describe("Update", () => {
+        describe("Success", () => {
             test("Successful Upgrade", async () => {
 
                 jest.spyOn(vehiclePriceService, "findByVehicleType").mockImplementation(() => vehiclePrice )
@@ -113,7 +113,7 @@ describe("Vehicle Price", () => {
             });
         });
 
-        describe('Failed', () => {
+        describe("Failed", () => {
             test("No existe el precio del vehiculo", async () => {
 
                 jest.spyOn(vehiclePriceService, "findByVehicleType").mockImplementation(() => false )

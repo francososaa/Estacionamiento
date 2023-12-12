@@ -37,6 +37,17 @@ class VehicleRepository {
         });
     };
 
+    async findAllForUser(userId){
+        return await Vehicle.findAll({
+            where: { [Op.and]: [{ isActive: true }, { userId: userId}] },
+            attributes: ["vehicleId","license","model"],
+            include: [
+                { model: User, as:"user", attributes: ["firstname","lastname"] },
+                { model: VehicleType, as:"vehicleType", attributes: ["description"]}
+            ]
+        });
+    };
+
     async updateById(data, id){
         await Vehicle.update(data, { where: { vehicleId: id }});
     };

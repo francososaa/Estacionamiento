@@ -39,8 +39,8 @@ afterAll(() => {
 
 describe("Vehicle Type", () => {
 
-    describe('New', () => {
-        describe('Success', () => {
+    describe("New", () => {
+        describe("Success", () => {
             test("New vehicle type ", async () => {
 
                 jest.spyOn(vehicleTypeService, "findVehicleType").mockImplementation(() => false )
@@ -56,7 +56,7 @@ describe("Vehicle Type", () => {
             });
         });
 
-        describe('Failed', () => {
+        describe("Failed", () => {
             test("Existe el tipo de vehiculo ", async () => {
 
                 jest.spyOn(vehicleTypeService, "findVehicleType").mockImplementation(() => vehicleType )
@@ -85,7 +85,7 @@ describe("Vehicle Type", () => {
         });
     });
 
-    describe('Get All', () => {
+    describe("Get All", () => {
         test("Get all vehicle type", async () => {
 
             jest.spyOn(vehicleTypeService, "getAll").mockImplementation(() => vehicleTypes )
@@ -98,8 +98,8 @@ describe("Vehicle Type", () => {
         });
     });
 
-    describe('Update', () => {
-        describe('Success', () => {
+    describe("Update", () => {
+        describe("Success", () => {
             test("Successful Upgrade", async () => {
 
                 jest.spyOn(vehicleTypeService, "findById").mockImplementation(() => vehicleType )
@@ -115,7 +115,7 @@ describe("Vehicle Type", () => {
             });
         });
 
-        describe('Failed', () => {
+        describe("Failed", () => {
             test("No existe el tipo de vehiculo", async () => {
 
                 jest.spyOn(vehicleTypeService, "findById").mockImplementation(() => false )
@@ -130,8 +130,8 @@ describe("Vehicle Type", () => {
         });
     });
 
-    describe('Destroy', () => {
-        describe('Success', () => {
+    describe("Destroy", () => {
+        describe("Success", () => {
             test("Successful elimination", async () => {
 
                 jest.spyOn(vehicleTypeService, "findById").mockImplementation(() => vehicleType )
@@ -146,7 +146,7 @@ describe("Vehicle Type", () => {
             });
         });
 
-        describe('Failed', () => {
+        describe("Failed", () => {
             test("No existe el tipo de vehiculo", async () => {
 
                 jest.spyOn(vehicleTypeService, "findById").mockImplementation(() => false )

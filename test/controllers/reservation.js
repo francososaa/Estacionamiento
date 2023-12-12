@@ -24,9 +24,9 @@ afterAll(() => {
     server.close();
 });
 
-describe('Reservation', () => {
-    describe('New', () => {
-        describe('Success', () => {
+describe("Reservation", () => {
+    describe("New", () => {
+        describe("Success", () => {
             test("Creacion de la reserva", async () => {
 
                 jest.spyOn(vehicleService, "findVehicleById").mockImplementation(() => true )
@@ -48,7 +48,7 @@ describe('Reservation', () => {
             });
         });
 
-        describe('Failed', () => {
+        describe("Failed", () => {
             test("El vehiculo no existe", async () => {
 
                 jest.spyOn(vehicleService, "findVehicleById").mockImplementation(() => false )
@@ -59,32 +59,6 @@ describe('Reservation', () => {
                     .send(newReservation)
                     .expect(404)
                     .expect({ message: "Vehiculo inexistente" })
-            });
-
-            describe.skip("validate input data", () => {
-                test("Error en la validacion", async () => {
- 
-                    jest.spyOn(reservationController, "validateInputData").mockImplementation(() => false )
-                    
-                    await request(app)
-                        .post("/api/v1/reservation")
-                        .set("authentication","123456")
-                        .send(newReservation)
-                        .expect(400)
-                        .expect({ message: "Revise los campos de entrada." })
-                });
-
-                test("Ya hay una reserva con este usuario para esta fecha", async () => {
- 
-                    jest.spyOn(reservationController, "validateMoreOneReservationForPerson").mockImplementation(() => true )
-                    
-                    await request(app)
-                        .post("/api/v1/reservation")
-                        .set("authentication","123456")
-                        .send(newReservation)
-                        .expect(400)
-                        .expect({ message: "Ya hay una reserva con este usuario para esta fecha."})
-                });
             });
 
             test("No hay lugar disponible para la fecha seleccionada.", async () => {
@@ -129,21 +103,21 @@ describe('Reservation', () => {
         });
     });
 
-    describe.skip('Get all reservation for user', () => {
+    describe("Get all reservation for user", () => {
         test("Obtener todas las reservas para un usuario", async () => {
 
             jest.spyOn(reservationService, "getAllReservationForUser").mockImplementation(() => reservations )
 
             await request(app)
-                .get("/api/v1/reservation")
+                .get("/api/v1/reservation/12345")
                 .set("authentication","123456")
                 .expect(200)
                 .expect({  message: "Success", reservation: reservations })
         });
     });
 
-    describe.skip('Update', () => {
-        describe('Success', () => {
+    describe("Update", () => {
+        describe("Success", () => {
             test("Actualizacion de una reserva", async () => {
 
                 jest.spyOn(reservationService, "findReservationByDate").mockImplementation(() => true )
@@ -151,7 +125,7 @@ describe('Reservation', () => {
                 jest.spyOn(reservationService, "update").mockImplementation(() => true)
     
                 await request(app)
-                    .put("/api/v1/reservation/2023-12-11")
+                    .put("/api/v1/reservation/12345/date/2023-12-11")
                     .set("authentication","123456")
                     .send(update)
                     .expect(200)
@@ -159,13 +133,13 @@ describe('Reservation', () => {
             });
         });
 
-        describe('Failed', () => {
+        describe("Failed", () => {
             test("No existe una reserva para esa fecha", async () => {
 
                 jest.spyOn(reservationService, "findReservationByDate").mockImplementation(() => flase )
 
                 await request(app)
-                    .put("/api/v1/reservation/2023-12-11")
+                    .put("/api/v1/reservation/12345/date/2023-12-11")
                     .set("authentication","123456")
                     .send(update)
                     .expect(404)
@@ -174,8 +148,8 @@ describe('Reservation', () => {
         });
     });
 
-    describe.skip('Destroy', () => {
-        describe('Success', () => {
+    describe("Destroy", () => {
+        describe("Success", () => {
             test("Eliminar una reserva", async () => {
 
                 jest.spyOn(reservationService, "findReservationByDate").mockImplementation(() => true )
@@ -183,20 +157,20 @@ describe('Reservation', () => {
                 jest.spyOn(reservationService, "deleteReservation").mockImplementation(() => true)
     
                 await request(app)
-                    .delete("/api/v1/reservation/2023-12-11")
+                    .delete("/api/v1/reservation/12345/date/2023-12-11")
                     .set("authentication","123456")
                     .expect(200)
                     .expect({  message: "Success" })
             });
         });
 
-        describe('Failed', () => {
+        describe("Failed", () => {
             test("No existe una reserva para esa fecha", async () => {
 
                 jest.spyOn(reservationService, "findReservationByDate").mockImplementation(() => false )
 
                 await request(app)
-                    .delete("/api/v1/reservation/2023-12-11")
+                    .delete("/api/v1/reservation/12345/date/2023-12-11")
                     .set("authentication","123456")
                     .expect(404)
                     .expect({ message: "No existe una reserva para esa fecha" })
@@ -204,7 +178,7 @@ describe('Reservation', () => {
         });
     });
 
-    describe('Get All', () => {
+    describe("Get All", () => {
         test("Obtener todas las reservas para un administrador", async () => {
 
             jest.spyOn(reservationService, "getAll").mockImplementation(() => reservations )
@@ -217,26 +191,26 @@ describe('Reservation', () => {
         });
     });
 
-    describe('Get reservation by date', () => {
+    describe("Get reservation by date", () => {
         test("Obtener todas las reservas para una fecha para el seguridad", async () => {
 
             jest.spyOn(reservationService, "getAllReservationsByDate").mockImplementation(() => reservations )
 
             await request(app)
-                .get("/api/v1/reservation/employee/2023-12-11")
+                .get("/api/v1/reservation/employee/date/2023-12-11")
                 .set("authentication","123456")
                 .expect(200)
                 .expect({  message: "Success", reservation: reservations })
         });
     });
 
-    describe('Change status', () => {
+    describe("Change status", () => {
         test("Cambiar el estado de una reserva. Para el seguridad", async () => {
 
             jest.spyOn(reservationService, "updateState").mockImplementation(() => true )
 
             await request(app)
-                .put("/api/v1/reservation/employee/2023-12-11")
+                .put("/api/v1/reservation/employee/date/2023-12-11")
                 .set("authentication","123456")
                 .send(updateStatus)
                 .expect(200)

@@ -8,6 +8,10 @@ class VehicleService {
         return await vehicleRepository.findAll();
     };
     
+    async allVehicles(userId){
+        return await vehicleRepository.findAllForUser(userId);
+    };
+
     async create(dataVehicle){
         return await vehicleRepository.create(dataVehicle);
     };

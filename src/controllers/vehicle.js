@@ -8,8 +8,8 @@ const newVehicle = async (req, res) => {
     if ( vehicleExists ) return res.status(400).send({ message: "Ya existe un vehiculo registrado con esa patente" });
 
     try{
-        const vehicle = await vehicleService.create(dataVehicle);
-        return res.status(201).send({ message: "Success", vehicle });
+        await vehicleService.create(dataVehicle);
+        return res.status(201).send({ message: "Success" });
     } catch(error){
         return res.status(500).send({ message: "Error al crear el vehiculo" });
     };
