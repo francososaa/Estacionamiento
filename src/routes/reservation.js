@@ -1,16 +1,16 @@
 const { Router } = require("express");
 const router = Router();
-const Middlewares = require("../middlewares/validateMiddlewares");
+const Middleware = require("../middlewares/validateMiddlewares");
 const reservation = require("../controllers/reservation");
 
-router.route("/").post( [Middlewares.validarJWT, Middlewares.checkRoleAdminAndUser], reservation.createReservation); 
-router.route("/:userId").get( [Middlewares.validarJWT, Middlewares.checkRoleAdminAndUser], reservation.getAllReservationForUser);
-router.route("/:date").put( [Middlewares.validarJWT, Middlewares.checkRoleAdminAndUser], reservation.update);
-router.route("/:date").delete( [Middlewares.validarJWT, Middlewares.checkRoleAdminAndUser], reservation.destoy);
+router.route("/").post( [Middleware.validarJWT, Middleware.checkRoleAdminAndUser], reservation.createReservation); 
+router.route("/:userId").get( [Middleware.validarJWT, Middleware.checkRoleAdminAndUser], reservation.getAllReservationForUser);
+router.route("/:date").put( [Middleware.validarJWT, Middleware.checkRoleAdminAndUser], reservation.update);
+router.route("/:date").delete( [Middleware.validarJWT, Middleware.checkRoleAdminAndUser], reservation.destoy);
 
-router.route("/").get( [Middlewares.validarJWT, Middlewares.checkRoleAdmin], reservation.getAll);
+router.route("/").get( [Middleware.validarJWT, Middleware.checkRoleAdmin], reservation.getAll);
 
-router.route("/employee/:date").get( [Middlewares.validarJWT, Middlewares.checkRoleEmployee], reservation.getReservationByDate);
-router.route("/employee/:date").put( [Middlewares.validarJWT, Middlewares.checkRoleEmployee], reservation.changeStatus);
+router.route("/employee/:date").get( [Middleware.validarJWT, Middleware.checkRoleEmployee], reservation.getReservationByDate);
+router.route("/employee/:date").put( [Middleware.validarJWT, Middleware.checkRoleEmployee], reservation.changeStatus);
 
 module.exports = router;

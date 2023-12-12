@@ -1,6 +1,5 @@
 const jwt = require('jsonwebtoken');
-const { db } = require('../models');
-const User = db.user;
+const userService = require("../services/user.service");
 
 class Middlewares{
     constructor() {};
@@ -12,7 +11,8 @@ class Middlewares{
      
         try {
             const { uid } = jwt.verify( token, process.env.SECRETORPRIVATEKEY );
-            const user = await User.findByPk( uid );
+
+            const user = await userService.findByUuid( uid );
             if ( !user ) return res.status(404).send({ message: 'Token invalid - no user exists' }) 
             
             req.user = user;

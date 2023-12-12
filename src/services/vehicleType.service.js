@@ -7,7 +7,7 @@ class VehicleTypeService{
     };
 
     async create(data){
-        return await vehicleTypeRepository.create(data);
+        await vehicleTypeRepository.create(data);
     };
 
     async findVehicleType(description){

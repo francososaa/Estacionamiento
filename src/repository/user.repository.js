@@ -19,6 +19,10 @@ class userRepository {
         });
     };
 
+    async findByUuid(uid){
+        return await User.findByPk(uid);
+    };
+
 };
 
 module.exports = new userRepository();

@@ -8,7 +8,7 @@ const newVehicle = async (req, res) => {
 
     try{
         const vehicle = await vehicleService.create(dataVehicle);
-        return res.status(201).send({ message: "Success", vehicle });
+        return res.status(201).send({ message: "Success"});
     } catch(error){
         return res.status(500).send({ message: "Error al crear el vehiculo" });
     };
@@ -24,8 +24,8 @@ const getAllVehicle = async (req, res) => {
 const getVehicleByLicense = async (req, res) => {
     const license = req.params.license;
     
-    const vehicles = await vehicleService.findVehicleByLicense(license);
-    return res.send({ message: "Success", vehicles });
+    const vehicle = await vehicleService.findVehicleByLicense(license);
+    return res.send({ message: "Success", vehicle });
 };
 
 const findByPk = async (req, res) => {

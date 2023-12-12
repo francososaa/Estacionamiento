@@ -16,7 +16,7 @@ const newVehiclePrice = async (req, res) => {
 
 const getAll = async (req, res) => {
     const vehiclePrice = await vehiclePriceService.getAll();
-    return res.send({ mssage: "Success", vehiclePrice });
+    return res.send({ message: "Success", vehiclePrice });
 };
 
 const update = async (req, res) => {
@@ -26,7 +26,7 @@ const update = async (req, res) => {
     if( !existePrice ) return res.status(404).send({ message: "No existe el tipo de vehiculo" });
 
     await vehiclePriceService.update(data)
-    return res.send({ mssage: "Success" });
+    return res.send({ message: "Success" });
 };
 
 module.exports = {

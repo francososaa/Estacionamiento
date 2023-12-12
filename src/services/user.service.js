@@ -15,6 +15,10 @@ class userService {
     async findByPk(userId){
         return await userRepository.findByPk(userId);
     };
+
+    async findByUuid(uid){
+        return await userRepository.findByUuid(uid);
+    }
 };
 
 

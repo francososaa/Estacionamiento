@@ -14,7 +14,7 @@ class CollectionService {
     };
 
     async getRecaudationByDate(date){
-        return await collectionRepository.getCollectionByDate(date);
+        return await collectionRepository.getAllCollectionByDate(date);
     };
 
     async addRecaudation(recaudation){

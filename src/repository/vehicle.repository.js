@@ -26,9 +26,9 @@ class VehicleRepository {
         return await Vehicle.findByPk(vehicleId);
     };
 
-    async findAll(userId){
+    async findAll(){
         return await Vehicle.findAll({
-            where: { [Op.and]: [{ isActive: true }, { userId: userId}] },
+            where: { [Op.and]: [{ isActive: true }] },
             attributes: ["vehicleId","license","model"],
             include: [
                 { model: User, as:"user", attributes: ["firstname","lastname"] },

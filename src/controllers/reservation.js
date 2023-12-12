@@ -119,4 +119,6 @@ module.exports = {
     getReservationByDate,
     destoy,
     update,
+    validateInputData,
+    validateMoreOneReservationForPerson
 };

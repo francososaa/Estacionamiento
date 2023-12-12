@@ -1,13 +1,13 @@
 const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const generarJWT = require('../helpers/generar-jwt');
+const {generarJWT} = require('../helpers/generar-jwt');
 const  { sendRegistrationEmail } = require('../services/email.service');
 const userService = require("../services/user.service");
 
 const login = async (req, res) => {
     const { email, password } = req.body;
 
-    if ( !email | !password ) return res.status(400).send({ error: "Email and password are mandatory" })
+    if ( !email | !password ) return res.status(400).send({ message: "Email and password are mandatory" })
 
     try {
         const user = await userService.findOne(email)
@@ -26,13 +26,13 @@ const login = async (req, res) => {
         });
 
     } catch (error) {
-        return res.status(500).send({ message: error.message });
+        return res.status(500).send({ message: "Error al iniciar sesion" });
     }
 };
 
 const logout = async (req, res) => {
     const authHeader = req.headers["authentication"];
-    if ( !authHeader ) return res.status(204).send();
+    if ( !authHeader ) return res.status(204).send({ message: "No se envio el token" });
     
     jwt.sign(authHeader, "", { expiresIn: 1 }, (logout, err) => {
         if ( logout ) return res.send({ message: "You have successfully logged out" });
@@ -44,12 +44,12 @@ const logout = async (req, res) => {
 const authRegister = async (req, res) => {
     const userData = req.body;
 
-    if ( !userData ) return res.status(400).send({ error: "All data is required" });
+    if ( !userData ) return res.status(400).send({ message: "All data is required" });
 
     try {
         const user = await userService.create(userData);
 
-        await sendRegistrationEmail(user.email, user.firstname);
+        // await sendRegistrationEmail(user.email, user.firstname);
 
         return res.status(201).send({ message: "Successfully Registered" });
 

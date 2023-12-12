@@ -1,9 +1,8 @@
-require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const Router = require('./src/routes');
-const { connectPostgresDB } = require('./src/models');
 const { swagger } = require('./src/routes/api-docs');
+const { connectPostgresDB } = require('./src/models');
 
 // Initializations
 const app = express();

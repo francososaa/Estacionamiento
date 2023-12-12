@@ -4,8 +4,8 @@ class VehicleService {
     
     constructor() {};
 
-    async allVehicles(userId){
-        return await vehicleRepository.findAll(userId);
+    async allVehiclesAdmin(){
+        return await vehicleRepository.findAll();
     };
     
     async create(dataVehicle){

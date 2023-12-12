@@ -8,7 +8,7 @@ class VehicleTypeRepository{
     };
 
     async create(data){
-        return await VehicleType.create(data);
+        await VehicleType.create(data);
     };
 
     async findOne(description){
