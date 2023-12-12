@@ -33,19 +33,19 @@ const createReservation = async (req,res) => {
 };
 
 const getAll = async (req,res) => {
-    const reservation = await reservationService.getAll();
-    return res.send({ message: "Success", reservation });
+    const reservations = await reservationService.getAll();
+    return res.send({ message: "Success", reservations });
 };
 
 const getAllReservationForUser = async (req,res) => {
     const userId = req.params.userId;
-
+    
     const reservation = await reservationService.getAllReservationForUser(userId);
     return res.send({ message: "Success", reservation });
 };
 
 const destoy = async (req,res) => {
-    const userId = req.user.userId;
+    const userId = req.params.userId;
     const date = req.params.date;
 
     const reservation = await reservationService.findReservationByDate(date, userId);
@@ -56,12 +56,12 @@ const destoy = async (req,res) => {
 };
 
 const update = async (req,res) => {
-    const userId = req.user.userId;
+    const userId = req.params.userId;
     const date = req.params.date;
     const data = req.body;
 
     const reservation = await reservationService.findReservationByDate(date, userId);
-    if( !reservation ) return res.status(404).send({ message: "No existe la reserva" });
+    if( !reservation ) return res.status(404).send({ message: "No existe una reserva para esa fecha" });
 
     await reservationService.update(data, reservation);
     return res.send({ message: "Success" });

@@ -35,7 +35,6 @@ class BuildingCapacityRepository {
             { where: {[Op.and]: [{ date: date }, { vehicleTypeId: id }]} }
         );
     };
-
 };
 
 module.exports = new BuildingCapacityRepository();

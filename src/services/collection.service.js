@@ -25,7 +25,6 @@ class CollectionService {
             total: total
         }
     };
-
 };
 
 module.exports = new CollectionService();

@@ -57,7 +57,6 @@ class ReservationRepository {
             { where: { [Op.and]:[{ date: date }, { userId: userId }]}}
         );
     };
-
 };
 
 module.exports = new ReservationRepository();

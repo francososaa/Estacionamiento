@@ -19,7 +19,6 @@ class VehiclePriceRepository {
     async findByPk(id){
         return await VehiclePrice.findOne({ where: {vehicleTypeId: id} });
     };
-
 };
 
 module.exports = new VehiclePriceRepository();

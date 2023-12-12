@@ -11,9 +11,9 @@ class VehicleRepository {
         return await Vehicle.create(dataVehicle);
     };
 
-    async findByLicense(license){
+    async findByLicense(license, userId){
         return await Vehicle.findOne({
-            where: { [Op.and]: [{ isActive: true }, { license: license}] },
+            where: { [Op.and]: [{ isActive: true }, { license: license }, { userId: userId }] },
             attributes: ["vehicleId","license","model"] ,
             include: [
                 { model: User, as:"user", attributes: ["firstname","lastname"] },
@@ -47,7 +47,6 @@ class VehicleRepository {
             { where: { vehicleId: id } }
         );
     };
-
 };
 
 module.exports = new VehicleRepository();

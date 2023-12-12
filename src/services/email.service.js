@@ -24,6 +24,4 @@ const sendRegistrationEmail = async (email, firstname) => {
   }
 }
 
-module.exports = {
-  sendRegistrationEmail,
-};
+module.exports = { sendRegistrationEmail };

@@ -15,4 +15,4 @@ const generarJWT = ( uid = '' ) => {
     })
 }
 
-module.exports = {generarJWT};
+module.exports = { generarJWT };

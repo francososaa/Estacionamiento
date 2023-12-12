@@ -28,7 +28,6 @@ class VehicleTypeRepository{
     async destroy(id){
         await VehicleType.destroy({ where: { vehicleTypeId :id } });
     };
-
 }
 
 module.exports = new VehicleTypeRepository();

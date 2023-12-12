@@ -18,7 +18,7 @@ class userService {
 
     async findByUuid(uid){
         return await userRepository.findByUuid(uid);
-    }
+    };
 };
 
 

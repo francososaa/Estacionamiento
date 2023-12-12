@@ -55,7 +55,6 @@ class ReservationService {
     async updateState(date, state, userId){
         await reservationRepository.updateReservationState(date, state, userId);
     };
-
 };
 
 

@@ -71,7 +71,6 @@ class BuildingCapacityService {
    async destroyForDateAndVehicleType(date, vehicleTypeId){
         await buildingCapacityRepository.destroyForDateAndVehicleType(date, vehicleTypeId);
     };
-
 };
 
 

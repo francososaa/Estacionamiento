@@ -49,7 +49,7 @@ const authRegister = async (req, res) => {
     try {
         const user = await userService.create(userData);
 
-        // await sendRegistrationEmail(user.email, user.firstname);
+        await sendRegistrationEmail(user.email, user.firstname);
 
         return res.status(201).send({ message: "Successfully Registered" });
 

@@ -23,13 +23,6 @@ class Middlewares{
         next();
     };
 
-    async checkRoleAdminAndUser( req, res, next ){ 
-        const roleId = req.user.roleId;
-    
-        if( roleId === 3 ) return res.status(403).send({ message: 'Access restriced' }); 
-        next();
-    };
-
     async checkRoleAdmin( req, res, next ){ 
         const roleId = req.user.roleId;
     

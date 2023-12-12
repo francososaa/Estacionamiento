@@ -25,7 +25,6 @@ class VehicleTypeService{
     async deleteTypeVehicle(id){
         await vehicleTypeRepository.destroy(id); 
     };
-
 };
 
 module.exports = new VehicleTypeService();

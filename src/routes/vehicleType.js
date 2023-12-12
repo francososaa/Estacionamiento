@@ -1,12 +1,12 @@
 const { Router } = require("express");
 const router = Router();
-const Middleware = require("../middlewares/validateMiddlewares");
+const Middlewares = require("../middlewares/validateMiddlewares");
 const vehicleType = require("../controllers/vehicleType");
 
-router.route("/").post( [Middleware.validarJWT, Middleware.checkRoleAdmin], vehicleType.newVehicleType);  
-router.route("/").get( [Middleware.validarJWT, Middleware.checkRoleAdmin], vehicleType.getAllVehicle); 
-router.route("/:id").put( [Middleware.validarJWT, Middleware.checkRoleAdmin], vehicleType.update); 
-router.route("/:id").delete( [Middleware.validarJWT, Middleware.checkRoleAdmin],  vehicleType.destroy); 
+router.route("/").post( [Middlewares.validarJWT, Middlewares.checkRoleAdmin], vehicleType.newVehicleType);  
+router.route("/").get( [Middlewares.validarJWT, Middlewares.checkRoleAdmin], vehicleType.getAllVehicle); 
+router.route("/:id").put( [Middlewares.validarJWT, Middlewares.checkRoleAdmin], vehicleType.update); 
+router.route("/:id").delete( [Middlewares.validarJWT, Middlewares.checkRoleAdmin],  vehicleType.destroy); 
 
 
 module.exports = router;

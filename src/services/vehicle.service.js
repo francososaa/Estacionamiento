@@ -12,8 +12,8 @@ class VehicleService {
         return await vehicleRepository.create(dataVehicle);
     };
 
-    async findVehicleByLicense(license){
-        return await vehicleRepository.findByLicense(license);
+    async findVehicleByLicense(license, userId){
+        return await vehicleRepository.findByLicense(license, userId);
     };
 
     async findVehicleById(id){
