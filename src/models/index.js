@@ -4,6 +4,7 @@ const logger = require('../utils/logger');
 const Sequelize = require('sequelize');
 const { DataTypes } = require('sequelize');
 
+const inTest = typeof global.it == "function"
 
 const sequelize = new Sequelize(
   process.env.DB_DATABASE,
@@ -96,15 +97,18 @@ db.vehicle_type.hasMany(db.vehicle_price, {
   as: "vehiclesPrices",
 });
 
-
+// logger.info("No se conecto a la DB por estar haciendo los test")
 const connectPostgresDB = async () => {
-  try {
-    await db.sequelize.authenticate();
-    await db.sequelize.sync();
 
-    logger.info('DB Connected');
-  } catch (error) {
-    logger.error(`DB Connection Error: ${error}`);
+  if( inTest ) logger.info("No se conecto a la DB por estar haciendo los test")
+  else {
+    try {
+      await db.sequelize.authenticate();
+      await db.sequelize.sync();
+  
+      logger.info('DB Connected');
+    } catch (error) { logger.error(`DB Connection Error: ${error}`); }
+
   }
 }
 

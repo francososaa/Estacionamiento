@@ -5,7 +5,7 @@ class ServiceVehiclePrice {
     constructor() {};
 
     async create(vehicle_price){
-        await vehiclePriceRepository.create(vehicle_price);
+        return await vehiclePriceRepository.create(vehicle_price);
     };
 
     async getAll(){
@@ -13,7 +13,7 @@ class ServiceVehiclePrice {
     };
 
     async update(data){
-        await vehiclePriceRepository.update(data);
+        return await vehiclePriceRepository.update(data);
     };
 
     async findByVehicleType(vehicleTypeId){

@@ -16,7 +16,7 @@ const newUser = {
     "password" : "sosita03323"
 };
 
-const token = "123456789"
+const token = "1234567890"
 
 module.exports = {
     user,

@@ -7,7 +7,7 @@ class VehicleTypeService{
     };
 
     async create(data){
-        await vehicleTypeRepository.create(data);
+        return await vehicleTypeRepository.create(data);
     };
 
     async findVehicleType(description){
@@ -19,11 +19,11 @@ class VehicleTypeService{
     };
 
     async update(data, id){
-        await vehicleTypeRepository.update(data, id);
+        return await vehicleTypeRepository.update(data, id);
     };
 
     async deleteTypeVehicle(id){
-        await vehicleTypeRepository.destroy(id); 
+        return await vehicleTypeRepository.destroy(id); 
     };
 };
 

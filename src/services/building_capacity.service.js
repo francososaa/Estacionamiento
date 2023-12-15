@@ -25,6 +25,13 @@ class BuildingCapacityService {
     async updateCapacity(date, vehicleTypeId){
         let buildingCapacity = await this.increaseCapacity(date, vehicleTypeId);
         
+        buildingCapacity = await buildingCapacity.save();
+
+        if( buildingCapacity.overallCapacity < buildingCapacity.overallCapacityOccupied ){
+            await transaction.rollback();
+            return null;
+        };
+
         const transaction = await db.sequelize.transaction();
         try {
             buildingCapacity = await buildingCapacity.save({ transaction });

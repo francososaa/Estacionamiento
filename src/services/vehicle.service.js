@@ -3,10 +3,6 @@ const reservationService = require('../services/reservation.service');
 class VehicleService {
     
     constructor() {};
-
-    async allVehiclesAdmin(){
-        return await vehicleRepository.findAll();
-    };
     
     async allVehicles(userId){
         return await vehicleRepository.findAllForUser(userId);
