@@ -8,7 +8,7 @@ class VehicleTypeRepository{
     };
 
     async create(data){
-        await VehicleType.create(data);
+        return await VehicleType.create(data);
     };
 
     async findOne(description){
@@ -22,11 +22,11 @@ class VehicleTypeRepository{
     };
 
     async update(data, id){
-        await VehicleType.update(data, { where: { vehicleTypeId : id }});
+        return await VehicleType.update(data, { where: { vehicleTypeId : id }});
     };
 
     async destroy(id){
-        await VehicleType.destroy({ where: { vehicleTypeId :id } });
+        return await VehicleType.destroy({ where: { vehicleTypeId :id } });
     };
 }
 

@@ -49,7 +49,7 @@ class VehicleRepository {
     };
 
     async updateById(data, id){
-        await Vehicle.update(data, { where: { vehicleId: id }});
+        return await Vehicle.update(data, { where: { vehicleId: id }});
     };
 
     async changeStatus(id){

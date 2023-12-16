@@ -21,7 +21,7 @@ class CollectionRepository {
     };
 
     async destoy(id){
-        await Collection.destroy({ where: { vehicleTypeId: id }})
+        return await Collection.destroy({ where: { vehicleTypeId: id }})
     };
 };
 

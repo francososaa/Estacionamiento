@@ -24,14 +24,14 @@ class BuildingCapacityRepository {
     };
 
     async updateCapacityForDateAndVehicleType(date, id, overallCapacity){
-        await BuildingCapacity.update(
+        return await BuildingCapacity.update(
             { overallCapacity: overallCapacity },
             { where: {[Op.and]: [{ date: date }, { vehicleTypeId: id }]} }
         );
     };
 
     async destroyForDateAndVehicleType(date, id){
-        await BuildingCapacity.destroy(
+        return await BuildingCapacity.destroy(
             { where: {[Op.and]: [{ date: date }, { vehicleTypeId: id }]} }
         );
     };

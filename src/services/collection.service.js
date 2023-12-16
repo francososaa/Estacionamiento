@@ -10,7 +10,7 @@ class CollectionService {
 
     async getRecaudationTotalByDate(date){
         const recaudation = await collectionRepository.getAllCollectionByDate(date);
-        return this.addRecaudation(recaudation);
+        return this.addRecaudation(recaudation)
     };
 
     async getRecaudationByDate(date){
@@ -20,6 +20,7 @@ class CollectionService {
     async addRecaudation(recaudation){
         let total = 0;
         for (let i of recaudation) total += i.moneyGenerated;
+        
         return {
             date: recaudation.date,
             total: total

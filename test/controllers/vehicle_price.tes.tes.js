@@ -4,24 +4,6 @@ const server = require("../../server");
 const vehiclePriceService = require("../../src/services/vehiclePrice.service");
 const { allVehiclePrice ,vehiclePrice } = require("../mock/vehiclePrice");
 
-
-jest.mock("../../src/utils/logger", () => (
-    {
-        ...jest.requireActual("../../src/utils/logger"),
-        logger: {
-            info: jest.fn(),
-            debug: jest.fn()
-        }
-    }
-));
-
-jest.mock("winston", () => (
-    {
-        ...jest.requireActual("winston"),
-        createLogger: jest.fn().mockImplementation(() => ({ debug: jest.fn(), info: jest.fn() }))
-    }
-));
-
 jest.mock("../../src/middlewares/validateMiddlewares", () => (
     {
         ...jest.requireActual("../../src/middlewares/validateMiddlewares"),

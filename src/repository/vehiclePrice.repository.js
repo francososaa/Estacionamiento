@@ -5,7 +5,7 @@ class VehiclePriceRepository {
     constructor() {};
 
     async create(vehicle_price){
-        await VehiclePrice.create(vehicle_price);
+        return await VehiclePrice.create(vehicle_price);
     };
 
     async getAll(){
@@ -13,7 +13,7 @@ class VehiclePriceRepository {
     };
 
     async update(data){
-        await VehiclePrice.update(data, { where: {vehicleTypeId: data.vehicleTypeId} });
+        return await VehiclePrice.update(data, { where: {vehicleTypeId: data.vehicleTypeId} });
     };
 
     async findByPk(id){

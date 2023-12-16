@@ -44,15 +44,15 @@ describe("Reservation Service", () => {
         expect(response).toEqual(reservationsByDate)
     });
 
-    // test("cancelAllReservationsByVehicle", async () => {
-    //     jest.spyOn(dataUtil, "formatDate").mockResolvedValueOnce("2023-12-15")
-    //     jest.spyOn(reservationRepository, "deleteReservationForDateAndVehicleId").mockResolvedValueOnce(true)
-    //     jest.spyOn(buildingCapacityService, "decreaseCapacity").mockResolvedValueOnce(true)
+    test("cancelAllReservationsByVehicle", async () => {
+        jest.spyOn(dataUtil, "formatDate").mockResolvedValueOnce("2023-12-15")
+        jest.spyOn(reservationRepository, "deleteReservationForDateAndVehicleId").mockResolvedValueOnce(true)
+        jest.spyOn(buildingCapacityService, "decreaseCapacity").mockResolvedValueOnce(true)
 
-    //     const response = await reservationService.cancelAllReservationsByVehicle(reservations, vehicle)
+        const response = await reservationService.cancelAllReservationsByVehicle(reservations, vehicle)
 
-    //     expect(response).toEqual(true)
-    // });
+        expect(response).toEqual(true)
+    });
 
     test("findAllReservationForVehicle", async () => {
         jest.spyOn(reservationRepository, "findAllRerservationByPk").mockResolvedValueOnce(reservations)
@@ -70,30 +70,30 @@ describe("Reservation Service", () => {
         expect(response).toEqual(reservation)
     });
 
-    // test("deleteReservation", async () => {
-    //     jest.spyOn(vehicleRepository, "findById").mockResolvedValueOnce(vehicle)
-    //     jest.spyOn(reservationRepository, "deleteReservationForDateAndVehicleId").mockResolvedValueOnce(true)
-    //     jest.spyOn(buildingCapacityService, "decreaseCapacity").mockResolvedValueOnce(true)
+    test("deleteReservation", async () => {
+        jest.spyOn(vehicleRepository, "findById").mockResolvedValueOnce(vehicle)
+        jest.spyOn(reservationRepository, "deleteReservationForDateAndVehicleId").mockResolvedValueOnce(true)
+        jest.spyOn(buildingCapacityService, "decreaseCapacity").mockResolvedValueOnce(true)
 
-    //     const response = await reservationService.deleteReservation(reservation)
+        const response = await reservationService.deleteReservation(reservation)
 
-    //     expect(response).toEqual(true)
-    // });
+        expect(response).toEqual(true)
+    });
 
-    // test("update", async () => {
-    //     jest.spyOn(reservationRepository, "updateReservationVehicleId").mockResolvedValueOnce(reservation)
+    test("update", async () => {
+        jest.spyOn(reservationRepository, "updateReservationVehicleId").mockResolvedValueOnce(true)
 
-    //     const response = await reservationService.update("2023-12-15", reservation)
+        const response = await reservationService.update("2023-12-15", reservation)
 
-    //     expect(response).toEqual(reservation)
-    // });
+        expect(response).toEqual(true)
+    });
 
-    // test("updateState", async () => {
-    //     jest.spyOn(reservationRepository, "updateReservationState").mockResolvedValueOnce(true)
+    test("updateState", async () => {
+        jest.spyOn(reservationRepository, "updateReservationState").mockResolvedValueOnce(true)
 
-    //     const response = await reservationService.updateState("2023-12-15", "CANCELLED", 1)
+        const response = await reservationService.updateState("2023-12-15", "CANCELLED", 1)
 
-    //     expect(response).toEqual(true)
-    // });
+        expect(response).toEqual(true)
+    });
 
 });

@@ -36,7 +36,7 @@ describe("Collection Service", () => {
     test("addRecaudation", async () => {
         jest.spyOn(collectionService, "addRecaudation").mockResolvedValueOnce(recaudacionByDateTotal)
 
-        const response = await collectionService.addRecaudation(recaudacionByDateTotal)
+        const response = await collectionService.addRecaudation(recaudacionByDate)
 
         expect(response).toEqual(recaudacionByDateTotal)
     });

@@ -4,7 +4,6 @@ const server = require("../../server");
 const vehicleTypeService = require("../../src/services/vehicleType.service");
 const { vehicleType, vehicleTypes, vehicleTypeUpdate } = require("../mock/vehicleType");
 
-
 jest.mock("../../src/middlewares/validateMiddlewares", () => (
     {
         ...jest.requireActual("../../src/middlewares/validateMiddlewares"),
@@ -110,7 +109,7 @@ describe("Vehicle Type", () => {
         test("Successful elimination", async () => {
 
             jest.spyOn(vehicleTypeService, "findById").mockResolvedValueOnce(vehicleType)
-            jest.spyOn(vehicleTypeService, "update").mockResolvedValueOnce()
+            jest.spyOn(vehicleTypeService, "deleteTypeVehicle").mockResolvedValueOnce()
     
             await request(app)
                 .delete("/api/v1/vehicleType/1")

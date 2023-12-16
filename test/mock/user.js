@@ -11,6 +11,15 @@ const user = {
     "roleId": 1
 };
 
+const createUser = {
+    "dni": "38669016",
+    "firstname": "franco",
+    "lastname": "sosa",
+    "email": "soosaf22@gmail.com",
+    "password": "$2a$10$xooNr2gaCVn6REvS0uSBzOUOpZ/X9Msi6oRBT.k2J1pFpLIhT4HtS",
+    "roleId": 1
+};
+
 const newUser = {
     "email" : "soosaf22@gmail.com",
     "password" : "sosita03323"
@@ -20,6 +29,7 @@ const token = "1234567890"
 
 module.exports = {
     user,
+    createUser,
     newUser,
     token
 };

@@ -4,25 +4,6 @@ const server = require("../../server");
 const buildingCapacityService = require("../../src/services/building_capacity.service");
 const { buildingCapacity, newCapacity, capacity } = require("../mock/building_capacity");
 
-
-jest.mock("../../src/utils/logger", () => (
-    {
-        ...jest.requireActual("../../src/utils/logger"),
-        logger: {
-            info: jest.fn(),
-            debug: jest.fn(),
-            error: jest.fn()
-        }
-    }
-));
-
-jest.mock("winston", () => (
-    {
-        ...jest.requireActual("winston"),
-        createLogger: jest.fn().mockImplementation(() => ({ debug: jest.fn(), info: jest.fn(), error: jest.fn() }))
-    }
-));
-
 jest.mock("../../src/middlewares/validateMiddlewares", () => (
     {
         ...jest.requireActual("../../src/middlewares/validateMiddlewares"),

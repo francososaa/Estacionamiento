@@ -31,6 +31,8 @@ class VehicleService {
         await vehicleRepository.changeStatus(vehicle.vehicleId);
         const reservations = await reservationService.findAllReservationForVehicle(vehicle.vehicleId);
         if(reservations.length !== 0) await reservationService.cancelAllReservationsByVehicle(reservations, vehicle);
+
+        return true;
     };
 };
 

@@ -22,7 +22,6 @@ jest.mock("../../src/services/email.service", () => (
     }
 ));
 
-
 describe("Authentication", () => {
 
     afterAll(() => {
@@ -98,7 +97,7 @@ describe("Authentication", () => {
         
     });
 
-    describe.skip("Logout", () => {
+    describe("Logout", () => {
      
         test("Success", async () => {  
 
@@ -134,12 +133,14 @@ describe("Authentication", () => {
 
     });
 
-    describe.skip("Register", () => {
+    describe("Register", () => {
         describe("Success", () => {
             
             test("Success", async () => {  
 
                 jest.spyOn(userService, "create").mockResolvedValueOnce(user)
+                jest.spyOn(bcryptjs, "genSaltSync").mockResolvedValueOnce("password")
+                jest.spyOn(bcryptjs, "hashSync").mockResolvedValueOnce(token)
 
                 await request(app)
                     .post("/api/v1/authenticate/register")

@@ -4,7 +4,6 @@ const server = require("../../server");
 const collectionService = require("../../src/services/collection.service");
 const { recaudacionByDate, recaudacionByDateTotal, recaudations  } = require("../mock/collection");
 
-
 jest.mock("../../src/middlewares/validateMiddlewares", () => (
     {
         ...jest.requireActual("../../src/middlewares/validateMiddlewares"),

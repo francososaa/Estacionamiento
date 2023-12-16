@@ -1,6 +1,8 @@
 const { db } = require('../models');
 const { Op } = require('sequelize');
 const Reservation = db.reservation;
+const User = db.user;
+const Vehicle = db.vehicle;
 class ReservationRepository {
     
     constructor() {};
@@ -48,7 +50,7 @@ class ReservationRepository {
     };
 
     async updateReservationVehicleId(data, date, userId){
-        await Reservation.update( data ,{ where: {[Op.and]: [{ date: date }, { userId: userId }]} });
+        return await Reservation.update( data ,{ where: {[Op.and]: [{ date: date }, { userId: userId }]} });
     };
 
     async updateReservationState(date, state, userId){

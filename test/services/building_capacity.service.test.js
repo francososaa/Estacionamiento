@@ -32,13 +32,13 @@ describe("Building Capacity Service", () => {
         expect(response).toEqual(false)
     });
     
-    // test("updateOverallCapacityForDateAndTypeVehicle", async () => {
-    //     jest.spyOn(buildingCapacityRepository, "updateCapacityForDateAndVehicleType").mockResolvedValueOnce(true)
+    test("updateOverallCapacityForDateAndTypeVehicle", async () => {
+        jest.spyOn(buildingCapacityRepository, "updateCapacityForDateAndVehicleType").mockResolvedValueOnce(true)
 
-    //     const response = await buildingCapacityService.updateOverallCapacityForDateAndTypeVehicle("2023-12-15", 1, 200)
+        const response = await buildingCapacityService.updateOverallCapacityForDateAndTypeVehicle("2023-12-15", 1, 200)
 
-    //     expect(response).toEqual(true)
-    // });
+        expect(response).toEqual(true)
+    });
 
     // test("updateCapacity", async () => {
     //     jest.spyOn(buildingCapacityService, "increaseCapacity").mockResolvedValueOnce(true)
@@ -66,10 +66,8 @@ describe("Building Capacity Service", () => {
     });
 
     // test("decreaseCapacity", async () => {
-    //     jest.spyOn(buildingCapacityRepository, "findByDateAndVehicleType").mockResolvedValueOnce({
-    //         buildingCapacity, 
-    //         save: jest.fn(() => Promise.resolve({ dataValues: { ...buildingCapacity, isCompleteOverallCapacity: true }}))
-    //     })
+
+    //    jest.spyOn(buildingCapacityService, "decreaseCapacity").mockImplementation(buildingCapacity)
 
     //     const response = await buildingCapacityService.decreaseCapacity("2023-12-15", 1)
 
@@ -84,11 +82,11 @@ describe("Building Capacity Service", () => {
         expect(response).toEqual(buildingCapacity)
     });
 
-    // test("destroyForDateAndVehicleType", async () => {
-    //     jest.spyOn(buildingCapacityRepository, "destroyForDateAndVehicleType").mockResolvedValueOnce(true)
+    test("destroyForDateAndVehicleType", async () => {
+        jest.spyOn(buildingCapacityRepository, "destroyForDateAndVehicleType").mockResolvedValueOnce(true)
 
-    //     const response = await buildingCapacityService.destroyForDateAndVehicleType("2023-12-15", 1)
+        const response = await buildingCapacityService.destroyForDateAndVehicleType("2023-12-15", 1)
 
-    //     expect(response).toEqual(true)
-    // });
+        expect(response).toEqual(true)
+    });
 });

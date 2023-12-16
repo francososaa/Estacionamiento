@@ -51,12 +51,11 @@ describe("Vehicle Service", () => {
     });
 
     test("cancelVehicle", async () => {
-
-        jest.spyOn(vehicleRepository, "changeStatus").mockResolvedValueOnce()
+        jest.spyOn(vehicleRepository, "changeStatus").mockResolvedValueOnce(true)
         jest.spyOn(reservationService, "findAllReservationForVehicle").mockResolvedValueOnce(reservations)
         jest.spyOn(reservationService, "cancelAllReservationsByVehicle").mockResolvedValueOnce(true)
 
-        const response = await reservationService.cancelAllReservationsByVehicle(reservations,vehicle)
+        const response = await vehicleService.cancelVehicle(vehicle)
 
         expect(response).toEqual(true)
     });

@@ -32,6 +32,8 @@ class ReservationService {
                 await buildingCapacityService.decreaseCapacity(reservation.date, vehicle.vehicleTypeId);
             };
         };
+
+        return true;
     };
 
     async findAllReservationForVehicle(vehicleId){
@@ -46,14 +48,16 @@ class ReservationService {
         const vehicle = await vehicleRepository.findById(reservation.vehicleId);
         await reservationRepository.deleteReservationForDateAndVehicleId(reservation.date, reservation.vehicleId);
         await buildingCapacityService.decreaseCapacity(reservation.date, vehicle.vehicleTypeId);
+
+        return true
     };
 
     async update(data, reservation){
-        await reservationRepository.updateReservationVehicleId(data, reservation.date, reservation.userId);
+        return await reservationRepository.updateReservationVehicleId(data, reservation.date, reservation.userId);
     };
 
     async updateState(date, state, userId){
-        await reservationRepository.updateReservationState(date, state, userId);
+        return await reservationRepository.updateReservationState(date, state, userId);
     };
 };
 

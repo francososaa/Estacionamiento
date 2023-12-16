@@ -7,7 +7,6 @@ const vehicleService = require("../../src/services/vehicle.service");
 const buildingCapacityService = require("../../src/services/building_capacity.service");
 const { newReservation, reservation, reservations, update, updateStatus } = require("../mock/reservation");
 
-// jest.mock("../../src/services/reservation.service");
 
 jest.mock("../../src/middlewares/validateMiddlewares", () => (
     {

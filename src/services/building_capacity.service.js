@@ -19,7 +19,7 @@ class BuildingCapacityService {
     };
 
     async updateOverallCapacityForDateAndTypeVehicle(date, vehicleTypeId, overallCapacity){
-       await buildingCapacityRepository.updateCapacityForDateAndVehicleType(date, vehicleTypeId, overallCapacity);
+       return await buildingCapacityRepository.updateCapacityForDateAndVehicleType(date, vehicleTypeId, overallCapacity);
     };  
 
     async updateCapacity(date, vehicleTypeId){
@@ -76,7 +76,7 @@ class BuildingCapacityService {
     };
 
    async destroyForDateAndVehicleType(date, vehicleTypeId){
-        await buildingCapacityRepository.destroyForDateAndVehicleType(date, vehicleTypeId);
+        return await buildingCapacityRepository.destroyForDateAndVehicleType(date, vehicleTypeId);
     };
 };
 
