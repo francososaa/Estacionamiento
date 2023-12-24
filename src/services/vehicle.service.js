@@ -16,11 +16,8 @@ class VehicleService {
         return await vehicleRepository.findByLicense(license, userId);
     };
 
-    async findVehicleById(id){
-        const vehicle = await vehicleRepository.findById(id);
-
-        if(vehicle.isActive === false ) return null;
-        return vehicle;
+    async findVehicleById(vehicleId){
+        return await vehicleRepository.findById(vehicleId);
     };
 
     async updateById(data, vehicleId){

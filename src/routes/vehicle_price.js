@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const router = Router();
-const Middlewares = require("../middlewares/validateMiddlewares");
+const Middlewares = require("../middlewares/validateMiddlewares2");
 const vehiclePrice = require("../controllers/vehicle_price");
 
 router.route("/").post( [Middlewares.validarJWT, Middlewares.checkRoleAdmin], vehiclePrice.newVehiclePrice);

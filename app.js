@@ -1,11 +1,11 @@
-const express = require('express');
-const cors = require('cors');
-const { swagger } = require('./src/routes/api-docs');
+const express = require("express");
+const cors = require("cors");
+const { swagger } = require("./src/services/api-docs.service");
 const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static("public"));
 
 //Routers
 const BuildingCapacityRouter = require("./src/routes/building_capacity");
@@ -25,7 +25,7 @@ app.use("/api/v1/reservation", ReservationRouter);
 app.use("/api/v1/authenticate", AuthenticateRouter);
 
 // DB
-const { connectPostgresDB } = require('./src/models');
+const { connectPostgresDB } = require("./src/models");
 
 connectPostgresDB();
 

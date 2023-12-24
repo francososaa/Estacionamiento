@@ -8,9 +8,9 @@ const generarToken = require("../../src/helpers/generar-jwt");
 const { register } = require("../mock/auth-controller");
 const { user, newUser, token } = require("../mock/user");
 
-jest.mock("../../src/middlewares/validateMiddlewares", () => (
+jest.mock("../../src/middlewares/validateMiddlewares2", () => (
     {
-        ...jest.requireActual("../../src/middlewares/validateMiddlewares"),
+        ...jest.requireActual("../../src/middlewares/validateMiddlewares2"),
         validarJWT: jest.fn().mockImplementation((req, res, next) => { next() })
     }
 ));
@@ -22,11 +22,14 @@ jest.mock("../../src/services/email.service", () => (
     }
 ));
 
+afterAll(() => {
+    server.close();
+});
+
 describe("Authentication", () => {
 
     afterAll(() => {
         jest.clearAllMocks();
-        server.close();
     });
 
     describe("Login", () => {
@@ -159,7 +162,7 @@ describe("Authentication", () => {
                         .expect({ message: "All data is required" })
                 });
 
-                test("Faltan datos de entrada", async () => {  
+                test("Fallo la registracion", async () => {  
                     
                     jest.spyOn(userService, "create").mockRejectedValue()
 

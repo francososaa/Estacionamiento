@@ -97,19 +97,15 @@ db.vehicle_type.hasMany(db.vehicle_price, {
   as: "vehiclesPrices",
 });
 
-// logger.info("No se conecto a la DB por estar haciendo los test")
 const connectPostgresDB = async () => {
 
-  if( inTest ) logger.info("No se conecto a la DB por estar haciendo los test")
-  else {
+  if( !inTest )
     try {
       await db.sequelize.authenticate();
       await db.sequelize.sync();
   
       logger.info('DB Connected');
     } catch (error) { logger.error(`DB Connection Error: ${error}`); }
-
-  }
 }
 
 module.exports = { db, connectPostgresDB }

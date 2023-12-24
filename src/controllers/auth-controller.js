@@ -1,6 +1,6 @@
 const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const {generarJWT} = require('../helpers/generar-jwt');
+const { generarJWT } = require('../helpers/generar-jwt');
 const  { sendRegistrationEmail } = require('../services/email.service');
 const userService = require("../services/user.service");
 
@@ -44,7 +44,7 @@ const logout = async (req, res) => {
 const authRegister = async (req, res) => {
     const userData = req.body;
 
-    if ( !userData ) return res.status(400).send({ message: "All data is required" });
+    if ( !userData.firstname || !userData.lastname || !userData.email || !userData.password || !userData.dni || !userData.roleId  ) return res.status(400).send({ message: "All data is required" });
 
     try {
         const user = await userService.create(userData);

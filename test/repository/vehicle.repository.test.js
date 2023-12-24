@@ -25,7 +25,7 @@ describe("Vehicle Repository", () => {
     });
 
     test("findById", async () => {
-        jest.spyOn(db.vehicle, "findByPk").mockResolvedValueOnce(vehicle)
+        jest.spyOn(db.vehicle, "findOne").mockResolvedValueOnce(vehicle)
 
         const response = await vehicleRepository.findById(1)
 

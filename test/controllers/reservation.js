@@ -7,10 +7,9 @@ const vehicleService = require("../../src/services/vehicle.service");
 const buildingCapacityService = require("../../src/services/building_capacity.service");
 const { newReservation, reservation, reservations, update, updateStatus } = require("../mock/reservation");
 
-
-jest.mock("../../src/middlewares/validateMiddlewares", () => (
+jest.mock("../../src/middlewares/validateMiddlewares2", () => (
     {
-        ...jest.requireActual("../../src/middlewares/validateMiddlewares"),
+        ...jest.requireActual("../../src/middlewares/validateMiddlewares2"),
         validarJWT: jest.fn().mockImplementation((req, res, next) => { req, res, next() }),
         checkRoleAdminAndUser: jest.fn().mockImplementation((req, res, next) => { req, res, next() }),
         checkRoleAdmin: jest.fn().mockImplementation((req, res, next) => { req, res, next() }),
@@ -18,16 +17,16 @@ jest.mock("../../src/middlewares/validateMiddlewares", () => (
     }
 ));
 
-afterAll(() => {
+beforeEach(() => {
     server.close();
+});
+
+afterEach(() => {
+    jest.clearAllMocks();
 });
 
 describe("Reservation", () => {
 
-    afterAll(() => {
-        jest.clearAllMocks();
-    });
-    
     describe("New", () => {
 
         test("Creacion de la reserva", async () => {
@@ -39,7 +38,7 @@ describe("Reservation", () => {
             jest.spyOn(reservationService, "create").mockImplementation(() => reservation )
     
             await request(app)
-                .post("/api/v1/reservation")
+                .post("/api/v1/reservation/12345")
                 .set("authentication","123456")
                 .send(newReservation)
                 .expect(201)
@@ -53,7 +52,7 @@ describe("Reservation", () => {
                 jest.spyOn(vehicleService, "findVehicleById").mockImplementation(() => false )
                  
                 await request(app)
-                    .post("/api/v1/reservation")
+                    .post("/api/v1/reservation/12345")
                     .set("authentication","123456")
                     .send(newReservation)
                     .expect(404)
@@ -69,7 +68,7 @@ describe("Reservation", () => {
                 jest.spyOn(reservationService, "create").mockImplementation(() => reservation )
         
                 await request(app)
-                    .post("/api/v1/reservation")
+                    .post("/api/v1/reservation/12345")
                     .set("authentication","123456")
                     .send(newReservation)
                     .expect(400)
@@ -85,7 +84,7 @@ describe("Reservation", () => {
                 jest.spyOn(reservationService, "create").mockRejectedValue()
         
                 await request(app)
-                    .post("/api/v1/reservation")
+                    .post("/api/v1/reservation/12345")
                     .set("authentication","123456")
                     .send(newReservation)
                     .expect(500)

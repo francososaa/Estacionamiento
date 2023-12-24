@@ -4,9 +4,9 @@ const server = require("../../server");
 const buildingCapacityService = require("../../src/services/building_capacity.service");
 const { buildingCapacity, newCapacity, capacity } = require("../mock/building_capacity");
 
-jest.mock("../../src/middlewares/validateMiddlewares", () => (
+jest.mock("../../src/middlewares/validateMiddlewares2", () => (
     {
-        ...jest.requireActual("../../src/middlewares/validateMiddlewares"),
+        ...jest.requireActual("../../src/middlewares/validateMiddlewares2"),
         validarJWT: jest.fn().mockImplementation((req, res, next) => { next() }),
         checkRoleAdmin: jest.fn().mockImplementation((req, res, next) => { next() })
     }
@@ -21,7 +21,7 @@ describe("Building Capacity", () => {
     afterAll(() => {
         jest.clearAllMocks();
     });
-    
+
     describe("New", () => {
         test("Creacion de la capacidad", async () => {
 

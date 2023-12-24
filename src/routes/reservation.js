@@ -1,9 +1,9 @@
 const { Router } = require("express");
 const router = Router();
-const Middlewares = require("../middlewares/validateMiddlewares");
+const Middlewares = require("../middlewares/validateMiddlewares2");
 const reservation = require("../controllers/reservation");
 
-router.route("/").post( [Middlewares.validarJWT, Middlewares.checkRoleUser], reservation.createReservation); 
+router.route("/:userId").post( [Middlewares.validarJWT, Middlewares.checkRoleUser], reservation.createReservation); 
 router.route("/:userId").get( [Middlewares.validarJWT, Middlewares.checkRoleUser], reservation.getAllReservationForUser); 
 router.route("/:userId/date/:date").put( [Middlewares.validarJWT, Middlewares.checkRoleUser], reservation.update);
 router.route("/:userId/date/:date").delete( [Middlewares.validarJWT, Middlewares.checkRoleUser], reservation.destoy);

@@ -4,9 +4,9 @@ const server = require("../../server");
 const vehicleService = require("../../src/services/vehicle.service");
 const { allVehicles, newVehicle, vehicle } = require("../mock/vehicle");
 
-jest.mock("../../src/middlewares/validateMiddlewares", () => (
+jest.mock("../../src/middlewares/validateMiddlewares2", () => (
     {
-        ...jest.requireActual("../../src/middlewares/validateMiddlewares"),
+        ...jest.requireActual("../../src/middlewares/validateMiddlewares2"),
         validarJWT: jest.fn().mockImplementation((req, res, next) => { next() }),
         checkRoleUser: jest.fn().mockImplementation((req, res, next) => { next() })
     }
@@ -22,14 +22,6 @@ afterAll(() => {
 
 describe("Vehicle", () => {    
 
-    beforeEach(() => {
-        server.close();
-    });
-    
-    afterEach(() => {
-        jest.clearAllMocks();
-    });
-
     describe("New", () => {
     
         test("New vehicle  ", async () => {
@@ -38,7 +30,7 @@ describe("Vehicle", () => {
             jest.spyOn(vehicleService, "create").mockResolvedValueOnce(vehicle)
     
             await request(app)
-                .post("/api/v1/vehicle")
+                .post("/api/v1/vehicle/12345")
                 .set("authentication","123456")
                 .send(newVehicle)
                 .expect(201)
@@ -52,7 +44,7 @@ describe("Vehicle", () => {
                 jest.spyOn(vehicleService, "findVehicleByLicense").mockResolvedValueOnce(vehicle)
 
                 await request(app)
-                    .post("/api/v1/vehicle")
+                    .post("/api/v1/vehicle/12345")
                     .set("authentication","123456")
                     .send(newVehicle)
                     .expect(400)
@@ -65,7 +57,7 @@ describe("Vehicle", () => {
                 jest.spyOn(vehicleService, "create").mockRejectedValue()
         
                 await request(app)
-                    .post("/api/v1/vehicle")
+                    .post("/api/v1/vehicle/12345")
                     .set("authentication","123456")
                     .send(newVehicle)
                     .expect(500)
@@ -110,6 +102,17 @@ describe("Vehicle", () => {
                 .set("authentication","123456")
                 .expect(200)
                 .expect({ message: "Success", vehicle })
+        });
+
+        test("Vehiculo inexistente", async () => {
+
+            jest.spyOn(vehicleService, "findVehicleById").mockResolvedValueOnce(false)
+
+            await request(app)
+                .get("/api/v1/vehicle/12345/1")
+                .set("authentication","123456")
+                .expect(404)
+                .expect({ message: "Vehiculo inexistente" })
         });
     });
 

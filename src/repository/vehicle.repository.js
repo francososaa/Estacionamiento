@@ -23,7 +23,9 @@ class VehicleRepository {
     };
 
     async findById(vehicleId){
-        return await Vehicle.findByPk(vehicleId);
+        return await Vehicle.findOne({
+            where: { [Op.and]: [{ isActive: true }, { vehicleId: vehicleId } ] }
+        });
     };
 
     async findAll(){

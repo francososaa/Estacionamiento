@@ -4,24 +4,25 @@ const server = require("../../server");
 const vehiclePriceService = require("../../src/services/vehiclePrice.service");
 const { allVehiclePrice ,vehiclePrice } = require("../mock/vehiclePrice");
 
-jest.mock("../../src/middlewares/validateMiddlewares", () => (
+jest.mock("../../src/middlewares/validateMiddlewares2", () => (
     {
-        ...jest.requireActual("../../src/middlewares/validateMiddlewares"),
+        ...jest.requireActual("../../src/middlewares/validateMiddlewares2"),
         validarJWT: jest.fn().mockImplementation((req, res, next) => { next() }),
         checkRoleAdmin: jest.fn().mockResolvedValueOnce((req, res, next) => { next() })
     }
 ));
 
-afterAll(() => {
+beforeEach(() => {
     server.close();
+});
+
+afterEach(() => {
+    jest.clearAllMocks();
 });
 
 describe("Vehicle Price", () => {
 
-    afterAll(() => {
-        jest.clearAllMocks();
-    });
-    
+   
     describe("New", () => {
         test("New vehicle price ", async () => {
 

@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const router = Router();
-const Middlewares = require("../middlewares/validateMiddlewares");
+const Middlewares = require("../middlewares/validateMiddlewares2");
 const recaudation = require("../controllers/collection");
 
 router.route("/").get( [Middlewares.validarJWT, Middlewares.checkRoleAdmin], recaudation.getAll );

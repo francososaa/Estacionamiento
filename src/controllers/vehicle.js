@@ -2,9 +2,8 @@ const vehicleService = require('../services/vehicle.service');
 
 const newVehicle = async (req, res) => {
     const dataVehicle = req.body;
-    const userId = req.params.userId;
 
-    const vehicleExists = await vehicleService.findVehicleByLicense(dataVehicle.license, userId);
+    const vehicleExists = await vehicleService.findVehicleByLicense(dataVehicle.license, dataVehicle.userId);
     if ( vehicleExists ) return res.status(400).send({ message: "Ya existe un vehiculo registrado con esa patente" });
 
     try{
@@ -27,23 +26,25 @@ const getVehicleByLicense = async (req, res) => {
     const userId = req.params.userId;
     
     const vehicle = await vehicleService.findVehicleByLicense(license, userId);
+    if( !vehicle ) return res.status(404).send({ message: "Vehiculo inexistente" });
+    
     return res.send({ message: "Success", vehicle });
 };
 
 const findByPk = async (req, res) => {
     const vehicleId = req.params.id;
-    const userId = req.params.userId;
 
-    const vehicle = await vehicleService.findVehicleById(vehicleId, userId);
+    const vehicle = await vehicleService.findVehicleById(vehicleId);
+    if( !vehicle ) return res.status(404).send({ message: "Vehiculo inexistente" });
+
     return res.send({ message: "Success", vehicle });
 };
 
 const update = async (req, res) => {
     const vehicleId = req.params.id;
-    const userId = req.params.userId;
     const data = req.body;
 
-    const vehicle = await vehicleService.findVehicleById(vehicleId, userId);
+    const vehicle = await vehicleService.findVehicleById(vehicleId);
     if( !vehicle ) return res.status(404).send({ message: "Vehiculo inexistente" });
     
     await vehicleService.updateById(data, vehicleId);
@@ -52,9 +53,8 @@ const update = async (req, res) => {
 
 const cancel = async (req, res) => {
     const vehicleId = req.params.id;
-    const userId = req.params.userId;
 
-    const vehicle = await vehicleService.findVehicleById(vehicleId, userId);
+    const vehicle = await vehicleService.findVehicleById(vehicleId);
     if( !vehicle ) return res.status(404).send({ message: "Vehiculo inexistente" });
 
     await vehicleService.cancelVehicle(vehicle);

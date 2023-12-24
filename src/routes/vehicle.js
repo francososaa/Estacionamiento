@@ -1,9 +1,9 @@
 const { Router } = require("express");
 const router = Router();
-const Middlewares = require('../middlewares/validateMiddlewares');
+const Middlewares = require('../middlewares/validateMiddlewares2');
 const vehicles = require("../controllers/vehicle");
 
-router.route("/").post( [Middlewares.validarJWT, Middlewares.checkRoleUser], vehicles.newVehicle); 
+router.route("/:userId").post( [Middlewares.validarJWT, Middlewares.checkRoleUser], vehicles.newVehicle); 
 router.route("/:userId").get( [Middlewares.validarJWT, Middlewares.checkRoleUser], vehicles.getAllVehicle);  
 router.route("/:userId/:id" ).get( [Middlewares.validarJWT, Middlewares.checkRoleUser], vehicles.findByPk);  
 router.route("/:userId/:id").put( [Middlewares.validarJWT, Middlewares.checkRoleUser], vehicles.update);  
