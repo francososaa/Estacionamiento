@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const router = Router();
-const Middlewares = require('../middlewares/validateMiddlewares2');
+const Middlewares = require('../middlewares/validateMiddlewares');
 const buildingCapacity = require('../controllers/building_capacity');
 
 

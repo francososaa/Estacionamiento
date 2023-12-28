@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const router = Router();
-const Middlewares = require('../middlewares/validateMiddlewares2');
+const Middlewares = require('../middlewares/validateMiddlewares');
 const vehicles = require("../controllers/vehicle");
 
 router.route("/:userId").post( [Middlewares.validarJWT, Middlewares.checkRoleUser], vehicles.newVehicle); 
