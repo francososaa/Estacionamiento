@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "description": "ServidorLocal",
+      "description": "Servidor Local",
       "url": "http://localhost:8081"
     }
   ],
@@ -35,12 +35,21 @@
     }
   ],
   "paths": {
-    "/api/v1/register": {
+    "/api/v1/authenticate/register": {
       "post": {
         "tags": [
           "Autenticacion"
         ],
         "summary": "Registro de un usuario",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            }
+          }
+        },
         "responses": {
           "201": {
             "$ref": "#/components/responses/Create"
@@ -54,7 +63,7 @@
         }
       }
     },
-    "/api/v1/login": {
+    "/api/v1/authenticate/login": {
       "post": {
         "tags": [
           "Autenticacion"
@@ -100,7 +109,7 @@
         }
       }
     },
-    "/api/v1/logout": {
+    "/api/v1/authenticate/logout": {
       "get": {
         "tags": [
           "Autenticacion"
@@ -192,12 +201,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object",
-                "properties": {
-                  "description": {
-                    "type": "string"
-                  }
-                }
+                "$ref": "#/components/schemas/User"
               }
             }
           }
@@ -228,12 +232,7 @@
         ],
         "parameters": [
           {
-            "in": "path",
-            "name": "id",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
+            "$ref": "#/components/parameters/id"
           }
         ],
         "responses": {
@@ -321,7 +320,7 @@
         }
       }
     },
-    "/api/v1/vehicle": {
+    "/api/v1/vehicle/{userId}": {
       "post": {
         "tags": [
           "Vehiculos"
@@ -330,6 +329,11 @@
         "security": [
           {
             "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/userId"
           }
         ],
         "requestBody": {
@@ -363,6 +367,11 @@
             "bearerAuth": []
           }
         ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/userId"
+          }
+        ],
         "responses": {
           "200": {
             "description": "ok",
@@ -377,7 +386,7 @@
         }
       }
     },
-    "/api/v1/vehicle/{id}": {
+    "/api/v1/vehicle/{userId}/{id}": {
       "put": {
         "tags": [
           "Vehiculos"
@@ -400,6 +409,9 @@
         "parameters": [
           {
             "$ref": "#/components/parameters/id"
+          },
+          {
+            "$ref": "#/components/parameters/userId"
           }
         ],
         "responses": {
@@ -434,6 +446,9 @@
         "parameters": [
           {
             "$ref": "#/components/parameters/id"
+          },
+          {
+            "$ref": "#/components/parameters/userId"
           }
         ],
         "responses": {
@@ -450,7 +465,7 @@
         }
       }
     },
-    "/api/v1/vehicle/licence/{license}": {
+    "/api/v1/vehicle/{userId}/licence/{license}": {
       "get": {
         "tags": [
           "Vehiculos"
@@ -464,6 +479,9 @@
         "parameters": [
           {
             "$ref": "#/components/parameters/license"
+          },
+          {
+            "$ref": "#/components/parameters/userId"
           }
         ],
         "responses": {
@@ -480,7 +498,7 @@
         }
       }
     },
-    "/api/v1/vehicle/{id}/cancelled": {
+    "/api/v1/vehicle/{userId}/cancelled/{id}": {
       "put": {
         "tags": [
           "Vehiculos"
@@ -494,6 +512,9 @@
         "parameters": [
           {
             "$ref": "#/components/parameters/id"
+          },
+          {
+            "$ref": "#/components/parameters/userId"
           }
         ],
         "responses": {
@@ -726,7 +747,7 @@
         }
       }
     },
-    "/api/v1/reservation": {
+    "/api/v1/reservation/{userId}": {
       "post": {
         "tags": [
           "Reservaciones"
@@ -735,6 +756,11 @@
         "security": [
           {
             "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/userId"
           }
         ],
         "requestBody": {
@@ -769,10 +795,15 @@
         "tags": [
           "Reservaciones"
         ],
-        "summary": "Obtiene todas las reservas el administrador",
+        "summary": "Obtiene todas las reservas del usuario",
         "security": [
           {
             "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/userId"
           }
         ],
         "responses": {
@@ -789,7 +820,7 @@
         }
       }
     },
-    "/api/v1/reservation/{date}": {
+    "/api/v1/reservation/{userId}/date/{date}": {
       "put": {
         "tags": [
           "Reservaciones"
@@ -818,6 +849,9 @@
         "parameters": [
           {
             "$ref": "#/components/parameters/date"
+          },
+          {
+            "$ref": "#/components/parameters/userId"
           }
         ],
         "responses": {
@@ -842,6 +876,9 @@
         "parameters": [
           {
             "$ref": "#/components/parameters/date"
+          },
+          {
+            "$ref": "#/components/parameters/userId"
           }
         ],
         "responses": {
@@ -854,20 +891,15 @@
         }
       }
     },
-    "/api/v1/reservation/{userId}": {
+    "/api/v1/reservation": {
       "get": {
         "tags": [
           "Reservaciones"
         ],
-        "summary": "Obtiene todas las reservaciones para un usuario",
+        "summary": "Obtiene todas las reservaciones el administrador",
         "security": [
           {
             "bearerAuth": []
-          }
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/userId"
           }
         ],
         "responses": {
@@ -884,7 +916,7 @@
         }
       }
     },
-    "/api/v1/reservation/employee/{date}": {
+    "/api/v1/reservation/employee/date/{date}": {
       "get": {
         "tags": [
           "Reservaciones"
