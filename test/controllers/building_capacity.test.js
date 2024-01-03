@@ -4,9 +4,9 @@ const server = require("../../server");
 const buildingCapacityService = require("../../src/services/building_capacity.service");
 const { buildingCapacity, newCapacity, capacity } = require("../mock/building_capacity");
 
-jest.mock("../../src/middlewares/validateMiddlewares2", () => (
+jest.mock("../../src/middlewares/validateMiddlewares", () => (
     {
-        ...jest.requireActual("../../src/middlewares/validateMiddlewares2"),
+        ...jest.requireActual("../../src/middlewares/validateMiddlewares"),
         validarJWT: jest.fn().mockImplementation((req, res, next) => { next() }),
         checkRoleAdmin: jest.fn().mockImplementation((req, res, next) => { next() })
     }

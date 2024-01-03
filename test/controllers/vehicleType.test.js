@@ -4,9 +4,9 @@ const server = require("../../server");
 const vehicleTypeService = require("../../src/services/vehicleType.service");
 const { vehicleType, vehicleTypes, vehicleTypeUpdate } = require("../mock/vehicleType");
 
-jest.mock("../../src/middlewares/validateMiddlewares2", () => (
+jest.mock("../../src/middlewares/validateMiddlewares", () => (
     {
-        ...jest.requireActual("../../src/middlewares/validateMiddlewares2"),
+        ...jest.requireActual("../../src/middlewares/validateMiddlewares"),
         validarJWT: jest.fn().mockImplementation((req, res, next) => { next() }),
         checkRoleAdmin: jest.fn().mockImplementation((req, res, next) => { next() })
     }

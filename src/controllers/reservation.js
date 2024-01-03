@@ -13,8 +13,11 @@ const createReservation = async (req,res) => {
         if( !reservationVehicle ) return res.status(404).send({ message: "Vehiculo inexistente" });
         reservation.vehicle = reservationVehicle;
 
-        const inputDataValidation = await validateInputData(reservation);
-        if( !inputDataValidation.isOk ) return res.status(400).send({ message: inputDataValidation.message}); 
+        // const inputDataValidation = await validateInputData(reservation);
+        // if( !inputDataValidation.isOk ) return res.status(400).send({ message: inputDataValidation.message}); 
+
+        // const existReservationForPerson = await validateMoreOneReservationForPerson(reservation.date, reservation.userId);
+        // if( existReservationForPerson ) return res.status(400).send({ message: "Ya hay una reserva con este usuario para esta fecha." }); 
 
         const overallCapacity = await buildingCapacityService.isCompleteOverallCapacity(reservation.date, reservation.vehicle.vehicleTypeId);
         if( overallCapacity ) return res.status(400).send({ message: "No hay lugar disponible para la fecha seleccionada." });
