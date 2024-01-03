@@ -23,31 +23,9 @@ class BuildingCapacityService {
     };  
 
     async updateCapacity(date, vehicleTypeId){
-        let buildingCapacity = await this.increaseCapacity(date, vehicleTypeId);
-        
-        buildingCapacity = await buildingCapacity.save();
-
-        if( buildingCapacity.overallCapacity < buildingCapacity.overallCapacityOccupied ){
-            await transaction.rollback();
-            return null;
-        };
-
-        const transaction = await db.sequelize.transaction();
-        try {
-            buildingCapacity = await buildingCapacity.save({ transaction });
-
-            if( buildingCapacity.overallCapacity < buildingCapacity.overallCapacityOccupied ){
-                await transaction.rollback();
-                return null;
-            };
-
-            await transaction.commit();
-            return buildingCapacity;
-
-        } catch (err) {
-            await transaction.rollback();
-            return null;
-        };
+        const buildingCapacity = await this.increaseCapacity(date, vehicleTypeId);
+        await buildingCapacity.save();
+        return buildingCapacity;
     };
 
     async validaDateAndType(date, vehicleTypeId){

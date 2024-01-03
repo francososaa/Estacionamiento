@@ -11,10 +11,10 @@ const createReservation = async (req,res) => {
     try{
         const reservationVehicle = await vehicleService.findVehicleById(reservation.vehicleId);
         if( !reservationVehicle ) return res.status(404).send({ message: "Vehiculo inexistente" });
-        reservation.vehicle = reservationVehicle;
+        reservation.vehicle = reservationVehicle;   
 
-        const inputDataValidation = await validateInputData(reservation);
-        if( !inputDataValidation.isOk ) return res.status(400).send({ message: inputDataValidation.message}); 
+        const existReservationForPerson = await validateMoreOneReservationForPerson(reservation.date, reservation.userId);
+        if( existReservationForPerson ) return res.status(400).send({ message: "Ya hay una reserva con este usuario para esta fecha" }); 
 
         const overallCapacity = await buildingCapacityService.isCompleteOverallCapacity(reservation.date, reservation.vehicle.vehicleTypeId);
         if( overallCapacity ) return res.status(400).send({ message: "No hay lugar disponible para la fecha seleccionada." });
@@ -83,32 +83,11 @@ const getReservationByDate = async (req,res) => {
     return res.send({ message: "Success", reservation });
 };
 
-const validateInputData = async (reservation) => {
-
-    let validationAfterReservation = {
-        isOk: false,
-        message: null,
-    };
-
-    if( !reservation.date || !reservation.vehicleId || !reservation.userId ){
-        validationAfterReservation.message = "Revise los campos de entrada.";
-        return validationAfterReservation;
-    };
-
-    const existReservationForPerson = await validateMoreOneReservationForPerson(reservation.date, reservation.userId);
-    
-    if(existReservationForPerson) {
-        validationAfterReservation.message = "Ya hay una reserva con este usuario para esta fecha.";
-        return validationAfterReservation;
-    };
-
-    validationAfterReservation.isOk = true;
-    return validationAfterReservation;
-};
-
 const validateMoreOneReservationForPerson = async (date, userId) => {
-    const reservation = await reservationDAO.findByDateAndUserId(date, userId);
-    return ( reservation === null) ? false : true;
+
+    const reservation = await reservationService.findReservationByDate(date, userId);
+
+    return ( reservation ) ? true : false;
 };
 
 module.exports = {
@@ -119,6 +98,5 @@ module.exports = {
     getReservationByDate,
     destoy,
     update,
-    validateInputData,
-    validateMoreOneReservationForPerson
+    validateMoreOneReservationForPerson,
 };
