@@ -2,7 +2,6 @@ const logger = require('../utils/logger');
 const reservationService = require('../services/reservation.service');
 const buildingCapacityService = require('../services/building_capacity.service');
 const vehicleService = require('../services/vehicle.service');
-const reservationDAO = require('../repository/reservation.repository');
 
 const createReservation = async (req,res) => {
     
@@ -13,7 +12,7 @@ const createReservation = async (req,res) => {
         if( !reservationVehicle ) return res.status(404).send({ message: "Vehiculo inexistente" });
         reservation.vehicle = reservationVehicle;   
 
-        const existReservationForPerson = await validateMoreOneReservationForPerson(reservation.date, reservation.userId);
+        const existReservationForPerson = await reservationService.findReservationByDate(reservation.date, reservation.userId);
         if( existReservationForPerson ) return res.status(400).send({ message: "Ya hay una reserva con este usuario para esta fecha" }); 
 
         const overallCapacity = await buildingCapacityService.isCompleteOverallCapacity(reservation.date, reservation.vehicle.vehicleTypeId);
@@ -81,13 +80,6 @@ const getReservationByDate = async (req,res) => {
 
     const reservation = await reservationService.getAllReservationsByDate(date);
     return res.send({ message: "Success", reservation });
-};
-
-const validateMoreOneReservationForPerson = async (date, userId) => {
-
-    const reservation = await reservationService.findReservationByDate(date, userId);
-
-    return ( reservation ) ? true : false;
 };
 
 module.exports = {
