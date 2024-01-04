@@ -41,16 +41,11 @@ describe("Building Capacity Service", () => {
     });
 
     // test("updateCapacity", async () => {
-    //     jest.spyOn(buildingCapacityService, "increaseCapacity").mockResolvedValueOnce(true)
+    //     jest.spyOn(buildingCapacityService, "increaseCapacity").mockResolvedValueOnce(buildingCapacity)
 
     //     jest.spyOn(db.sequelize, "transaction").mockResolvedValueOnce({
-    //         save: jest.fn(() => Promise.resolve({
-    //             dataValues: { ...buildingCapacity, isCompleteOverallCapacity: true }
-    //         })),
-            
+    //         save: jest.fn()})  
     //     })
-
-    //     // jest.spyOn(buildingCapacityRepository, "").mockResolvedValueOnce()
 
     //     const response = await buildingCapacityService.updateCapacity("2023-12-15", 1)
 

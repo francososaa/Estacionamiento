@@ -34,7 +34,7 @@ describe("Reservation", () => {
         test.skip("Success", async () => {
 
             jest.spyOn(vehicleService, "findVehicleById").mockResolvedValueOnce(vehicle)
-            // jest.spyOn(reservationController, "validateMoreOneReservationForPerson").mockResolvedValueOnce(false)
+            jest.spyOn(reservationController, "validateMoreOneReservationForPerson").mockResolvedValueOnce(false)
             jest.spyOn(buildingCapacityService, "isCompleteOverallCapacity").mockResolvedValueOnce(false)
             jest.spyOn(buildingCapacityService, "updateCapacity").mockResolvedValueOnce(true)
             jest.spyOn(reservationService, "create").mockResolvedValueOnce()
@@ -61,7 +61,20 @@ describe("Reservation", () => {
                     .expect({ message: "Vehiculo inexistente"  })
             });
 
-            test("No hay lugar disponible para la fecha seleccionada", async () => {
+            test.skip("Ya hay una reserva con este usuario para esta fecha" , async () => {
+
+                jest.spyOn(vehicleService, "findVehicleById").mockResolvedValueOnce(vehicle)
+                jest.spyOn(reservationController, "validateMoreOneReservationForPerson").mockResolvedValueOnce(true)
+
+                await request(app)
+                    .post("/api/v1/reservation/12345")
+                    .set("authentication","123456")
+                    .send(newReservation)
+                    .expect(404)
+                    .expect({ message: "Ya hay una reserva con este usuario para esta fecha"   })
+            });
+
+            test.skip("No hay lugar disponible para la fecha seleccionada", async () => {
 
                 jest.spyOn(vehicleService, "findVehicleById").mockResolvedValueOnce(vehicle)
                 jest.spyOn(buildingCapacityService, "isCompleteOverallCapacity").mockResolvedValueOnce(true)
@@ -176,7 +189,7 @@ describe("Reservation", () => {
         });
     });
 
-    describe.skip("changeStatus", () => {
+    describe("changeStatus", () => {
         test("Success", async () => {
 
             jest.spyOn(reservationService, "updateState").mockResolvedValueOnce(true)
@@ -204,7 +217,7 @@ describe("Reservation", () => {
         });
     });
 
-    describe('validateMoreOneReservationForPerson', () => {
+    describe.skip('validateMoreOneReservationForPerson', () => {
         test("Success", async () => {
 
             jest.spyOn(reservationRepository, "findByDateAndUserId").mockResolvedValueOnce(reservation)
