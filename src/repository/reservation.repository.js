@@ -42,13 +42,6 @@ class ReservationRepository {
         return await Reservation.destroy({ where: {[Op.and]: [{ date: date }, { vehicleId: id }]} });
     };
 
-    async updateReservationState(state, transaction, reservationId){
-        return await Reservation.update(
-            { state: state },
-            { where: { reservationId: reservationId } , transaction }
-        );
-    };
-
     async updateReservationVehicleId(data, date, userId){
         return await Reservation.update( data ,{ where: {[Op.and]: [{ date: date }, { userId: userId }]} });
     };
