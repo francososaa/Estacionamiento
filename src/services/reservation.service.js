@@ -59,6 +59,7 @@ class ReservationService {
     async updateState(date, state, userId){
         return await reservationRepository.updateReservationState(date, state, userId);
     };
+
 };
 
 
