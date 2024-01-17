@@ -1,7 +1,7 @@
 const collectionRepository = require("../../src/repository/collection.repository");
 const collectionService = require("../../src/services/collection.service");
 const { recaudacionByDate, recaudacionByDateTotal, recaudations  } = require("../mock/collection");
-
+const { date } = require("../mock/generalMock");
 describe("Collection Service", () => {
 
     afterAll(() => {
@@ -20,7 +20,7 @@ describe("Collection Service", () => {
         jest.spyOn(collectionRepository, "getAllCollectionByDate").mockResolvedValueOnce(recaudacionByDate)
         jest.spyOn(collectionService, "addRecaudation").mockResolvedValueOnce(recaudacionByDateTotal)
         
-        const response = await collectionService.getRecaudationTotalByDate("2023-12-15")
+        const response = await collectionService.getRecaudationTotalByDate(`${date}`)
 
         expect(response).toEqual(recaudacionByDateTotal)
     });
@@ -28,7 +28,7 @@ describe("Collection Service", () => {
     test("getRecaudationByDate", async () => {
         jest.spyOn(collectionRepository, "getAllCollectionByDate").mockResolvedValueOnce(recaudacionByDate)
 
-        const response = await collectionService.getRecaudationByDate("2023-12-15")
+        const response = await collectionService.getRecaudationByDate(`${date}`)
 
         expect(response).toEqual(recaudacionByDate)
     });

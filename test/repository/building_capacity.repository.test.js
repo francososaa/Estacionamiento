@@ -1,6 +1,7 @@
 const buildingCapacityRepository = require("../../src/repository/building_capacity.repository");
 const { db } = require("../../src/models");
 const { buildingCapacity, capacity, newCapacity } = require("../mock/building_capacity");
+const { date, id } = require("../mock/generalMock");
 
 describe("Building Capacity Repository", () => {
 
@@ -27,7 +28,7 @@ describe("Building Capacity Repository", () => {
     test("findByDateAndVehicleType", async () => {
         jest.spyOn(db.building_capacity, "findOne").mockResolvedValueOnce(capacity)
 
-        const response = await buildingCapacityRepository.findByDateAndVehicleType("2023-12-15", 1)
+        const response = await buildingCapacityRepository.findByDateAndVehicleType(`${date}`, `${id}`)
 
         expect(response).toEqual(capacity)
     });
@@ -35,7 +36,7 @@ describe("Building Capacity Repository", () => {
     test("updateCapacityForDateAndVehicleType", async () => {
         jest.spyOn(db.building_capacity, "update").mockResolvedValueOnce(true)
 
-        const response = await buildingCapacityRepository.updateCapacityForDateAndVehicleType("2023-12-15", 1, 50)
+        const response = await buildingCapacityRepository.updateCapacityForDateAndVehicleType(`${date}`, `${id}`, 50)
 
         expect(response).toEqual(true)
     });
@@ -43,7 +44,7 @@ describe("Building Capacity Repository", () => {
     test("destroyForDateAndVehicleType", async () => {
         jest.spyOn(db.building_capacity, "destroy").mockResolvedValueOnce(true)
 
-        const response = await buildingCapacityRepository.destroyForDateAndVehicleType("2023-12-15", 1)
+        const response = await buildingCapacityRepository.destroyForDateAndVehicleType(`${date}`, `${id}`)
 
         expect(response).toEqual(true)
     });

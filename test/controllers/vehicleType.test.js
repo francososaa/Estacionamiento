@@ -3,6 +3,7 @@ const app = require("../../app");
 const server = require("../../server");
 const vehicleTypeService = require("../../src/services/vehicleType.service");
 const { vehicleType, vehicleTypes, vehicleTypeUpdate } = require("../mock/vehicleType");
+const { date, id, license } = require("../mock/generalMock");
 
 jest.mock("../../src/middlewares/validateMiddlewares", () => (
     {
@@ -85,7 +86,7 @@ describe("Vehicle Type", () => {
             jest.spyOn(vehicleTypeService, "update").mockResolvedValueOnce()
     
             await request(app)
-                .put("/api/v1/vehicleType/1")
+                .put(`/api/v1/vehicleType/${id}`)
                 .set("authentication","123456")
                 .send(vehicleTypeUpdate)
                 .expect(200)
@@ -97,7 +98,7 @@ describe("Vehicle Type", () => {
             jest.spyOn(vehicleTypeService, "findById").mockResolvedValueOnce(false)
     
             await request(app)
-                .put("/api/v1/vehicleType/1")
+                .put(`/api/v1/vehicleType/${id}`)
                 .set("authentication","123456")
                 .send(vehicleTypeUpdate)
                 .expect(404)
@@ -113,7 +114,7 @@ describe("Vehicle Type", () => {
             jest.spyOn(vehicleTypeService, "deleteTypeVehicle").mockResolvedValueOnce()
     
             await request(app)
-                .delete("/api/v1/vehicleType/1")
+                .delete(`/api/v1/vehicleType/${id}`)
                 .set("authentication","123456")
                 .expect(200)
                 .expect({ message: "Success" })
@@ -124,7 +125,7 @@ describe("Vehicle Type", () => {
             jest.spyOn(vehicleTypeService, "findById").mockResolvedValueOnce(false)
     
             await request(app)
-                .delete("/api/v1/vehicleType/1")
+                .delete(`/api/v1/vehicleType/${id}`)
                 .set("authentication","123456")
                 .expect(404)
                 .expect({ message: "Tipo de vehiculo inexistente"  })

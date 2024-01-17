@@ -3,6 +3,7 @@ const app = require("../../app");
 const server = require("../../server");
 const buildingCapacityService = require("../../src/services/building_capacity.service");
 const { buildingCapacity, newCapacity, capacity } = require("../mock/building_capacity");
+const { date, id } = require("../mock/generalMock");
 
 jest.mock("../../src/middlewares/validateMiddlewares", () => (
     {
@@ -72,7 +73,7 @@ describe("Building Capacity", () => {
             jest.spyOn(buildingCapacityService, "updateOverallCapacityForDateAndTypeVehicle").mockResolvedValueOnce(true)
     
             await request(app)
-                .put("/api/v1/building_capacity/date/2023-12-11/vehicle/3ecf034a-76d6-44d3-8620-9bbf68038d30")
+                .put(`/api/v1/building_capacity/date/${date}/vehicle/${id}`)
                 .set("authentication","123456")
                 .expect(200)
                 .expect({ message: "Success" })
@@ -83,7 +84,7 @@ describe("Building Capacity", () => {
             jest.spyOn(buildingCapacityService, "validaDateAndType").mockResolvedValueOnce(false)
 
             await request(app)
-                .put("/api/v1/building_capacity/date/2023-12-11/vehicle/3ecf034a-76d6-44d3-8620-9bbf68038d30")
+                .put(`/api/v1/building_capacity/date/${date}/vehicle/${id}`)
                 .set("authentication","123456")
                 .expect(400)
                 .expect({ message: "No se encuentra fecha o tipo de vehiculo" })
@@ -99,7 +100,7 @@ describe("Building Capacity", () => {
             jest.spyOn(buildingCapacityService, "destroyForDateAndVehicleType").mockResolvedValueOnce(true)
     
             await request(app)
-                .delete("/api/v1/building_capacity/date/2023-12-11/vehicle/3ecf034a-76d6-44d3-8620-9bbf68038d30")
+                .delete(`/api/v1/building_capacity/date/${date}/vehicle/${id}`)
                 .set("authentication","123456")
                 .expect(200)
                 .expect({ message: "Success" })
@@ -110,7 +111,7 @@ describe("Building Capacity", () => {
             jest.spyOn(buildingCapacityService, "validaDateAndType").mockResolvedValueOnce(false)
 
             await request(app)
-                .delete("/api/v1/building_capacity/date/2023-12-11/vehicle/3ecf034a-76d6-44d3-8620-9bbf68038d30")
+                .delete(`/api/v1/building_capacity/date/${date}/vehicle/${id}`)
                 .set("authentication","123456")
                 .expect(400)
                 .expect({ message: "No se encuentra fecha o tipo de vehiculo" })

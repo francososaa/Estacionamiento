@@ -72,7 +72,7 @@ const changeStatus = async (req,res) =>{
     const userId = req.body.userId;
 
     await reservationService.updateState(date, state, userId);
-    return res.send({ message: "Success" });
+    return res.send({ message: "Success", resp });
 };
 
 const getReservationByDate = async (req,res) => {
@@ -89,6 +89,5 @@ module.exports = {
     getAllReservationForUser,
     getReservationByDate,
     destoy,
-    update,
-    validateMoreOneReservationForPerson,
+    update
 };

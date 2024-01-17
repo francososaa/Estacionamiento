@@ -1,6 +1,7 @@
 const userRepository = require("../../src/repository/user.repository");
 const userService = require("../../src/services/user.service");
 const { newUser, user } = require("../mock/user");
+const { id } = require("../mock/generalMock");
 
 describe("UserService", () => {
 
@@ -27,7 +28,7 @@ describe("UserService", () => {
     test("findByPk", async () => {
         jest.spyOn(userRepository, "findById").mockResolvedValueOnce(user)
 
-        const response = await userService.findByPk(1)
+        const response = await userService.findByPk(`${id}`)
 
         expect(response).toEqual(user)
     });
@@ -35,7 +36,7 @@ describe("UserService", () => {
     test("findByUuid", async () => {
         jest.spyOn(userRepository, "findByUuid").mockResolvedValueOnce(user)
 
-        const response = await userService.findByUuid("1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed")
+        const response = await userService.findByUuid(`${id}`)
 
         expect(response).toEqual(user)
     });

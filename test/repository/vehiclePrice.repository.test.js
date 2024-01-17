@@ -1,7 +1,7 @@
 const vehiclePriceRepository = require("../../src/repository/vehiclePrice.repository");
 const { db } = require("../../src/models");
 const { allVehiclePrice, vehiclePrice } = require("../mock/vehiclePrice");
-
+const { id, license } = require("../mock/generalMock");
 describe("Vehicle Price Repository", () => {
 
     afterAll(() => {
@@ -35,7 +35,7 @@ describe("Vehicle Price Repository", () => {
     test("findByPk", async () => {
         jest.spyOn(db.vehicle_price, "findOne").mockResolvedValueOnce(vehiclePrice)
 
-        const response = await vehiclePriceRepository.findByPk(1)
+        const response = await vehiclePriceRepository.findByPk(`${id}`)
 
         expect(response).toEqual(vehiclePrice)
     });
