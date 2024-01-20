@@ -3,7 +3,6 @@ const app = require("../../app");
 const server = require("../../server");
 const collectionService = require("../../src/services/collection.service");
 const { recaudacionByDate, recaudacionByDateTotal, recaudations  } = require("../mock/collection");
-const { date } = require("../mock/generalMock");
 
 jest.mock("../../src/middlewares/validateMiddlewares", () => (
     {
@@ -39,7 +38,7 @@ describe("Collection", () => {
         jest.spyOn(collectionService, "getRecaudationByDate").mockResolvedValueOnce(recaudacionByDate)
 
         await request(app)
-        .get(`/api/v1/collection/date/${date}`)
+        .get("/api/v1/collection/date/2023-12-07")
         .set("authentication","123456")
         .expect(200)
         .expect({ message: "Success", recaudation: recaudacionByDate })
@@ -50,7 +49,7 @@ describe("Collection", () => {
         jest.spyOn(collectionService, "getRecaudationTotalByDate").mockResolvedValueOnce(recaudacionByDateTotal)
 
         await request(app)
-        .get(`/api/v1/collection/date/${date}/total`)
+        .get("/api/v1/collection/date/2023-12-07/total")
         .set("authentication","123456")
         .expect(200)
         .expect({ message: "Success", recaudation: recaudacionByDateTotal })

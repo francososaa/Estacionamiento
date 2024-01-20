@@ -1,7 +1,7 @@
 const vehicleRepository = require("../../src/repository/vehicle.repository");
 const { db } = require("../../src/models");
 const { allVehicles, newVehicle, vehicle } = require("../mock/vehicle");
-const { id, license } = require("../mock/generalMock");
+
 describe("Vehicle Repository", () => {
 
     afterAll(() => {
@@ -19,7 +19,7 @@ describe("Vehicle Repository", () => {
     test("findByLicense", async () => {
         jest.spyOn(db.vehicle, "findOne").mockResolvedValueOnce(vehicle)
 
-        const response = await vehicleRepository.findByLicense(`${license}`,`${id}`)
+        const response = await vehicleRepository.findByLicense("AAA123",1)
 
         expect(response).toEqual(vehicle)
     });
@@ -27,7 +27,7 @@ describe("Vehicle Repository", () => {
     test("findById", async () => {
         jest.spyOn(db.vehicle, "findOne").mockResolvedValueOnce(vehicle)
 
-        const response = await vehicleRepository.findById(`${id}`)
+        const response = await vehicleRepository.findById(1)
 
         expect(response).toEqual(vehicle)
     });
@@ -43,7 +43,7 @@ describe("Vehicle Repository", () => {
     test("findAllForUser", async () => {
         jest.spyOn(db.vehicle, "findAll").mockResolvedValueOnce(allVehicles)
 
-        const response = await vehicleRepository.findAllForUser(`${id}`)
+        const response = await vehicleRepository.findAllForUser(1)
 
         expect(response).toEqual(allVehicles)
     });
@@ -51,7 +51,7 @@ describe("Vehicle Repository", () => {
     test("updateById", async () => {
         jest.spyOn(db.vehicle, "update").mockResolvedValueOnce(true)
 
-        const response = await vehicleRepository.updateById(vehicle, `${id}`)
+        const response = await vehicleRepository.updateById(vehicle, 1)
 
         expect(response).toEqual(true)
     });
@@ -59,7 +59,7 @@ describe("Vehicle Repository", () => {
     test("changeStatus", async () => {
         jest.spyOn(db.vehicle, "update").mockResolvedValueOnce(true)
 
-        const response = await vehicleRepository.changeStatus(`${id}`)
+        const response = await vehicleRepository.changeStatus(1)
 
         expect(response).toEqual(true)
     });
