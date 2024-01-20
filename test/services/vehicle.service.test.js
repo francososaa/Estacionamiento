@@ -3,7 +3,6 @@ const vehicleService = require("../../src/services/vehicle.service");
 const reservationService = require("../../src/services/reservation.service");
 const { allVehicles, newVehicle, vehicle } = require("../mock/vehicle");
 const { reservations } = require("../mock/reservation");
-const { id, license } = require("../mock/generalMock");
 
 describe("Vehicle Service", () => {
 
@@ -14,7 +13,7 @@ describe("Vehicle Service", () => {
     test("allVehicles", async () => {
         jest.spyOn(vehicleRepository, "findAllForUser").mockResolvedValueOnce(allVehicles)
 
-        const response = await vehicleService.allVehicles(`${id}`)
+        const response = await vehicleService.allVehicles(1)
 
         expect(response).toEqual(allVehicles)
     });
@@ -30,7 +29,7 @@ describe("Vehicle Service", () => {
     test("findVehicleByLicense", async () => {
         jest.spyOn(vehicleRepository, "findByLicense").mockResolvedValueOnce(vehicle)
 
-        const response = await vehicleService.findVehicleByLicense(`${license}`,`${id}`)
+        const response = await vehicleService.findVehicleByLicense("OTC015",1)
 
         expect(response).toEqual(vehicle)
     });
@@ -38,7 +37,7 @@ describe("Vehicle Service", () => {
     test("findVehicleById", async () => {
         jest.spyOn(vehicleRepository, "findById").mockResolvedValueOnce(vehicle)
 
-        const response = await vehicleService.findVehicleById(`${id}`)
+        const response = await vehicleService.findVehicleById(1)
 
         expect(response).toEqual(vehicle)
     });
@@ -46,7 +45,7 @@ describe("Vehicle Service", () => {
     test("updateById", async () => {
         jest.spyOn(vehicleRepository, "updateById").mockResolvedValueOnce(vehicle)
 
-        const response = await vehicleService.updateById(newVehicle,`${id}`)
+        const response = await vehicleService.updateById(newVehicle,1)
 
         expect(response).toEqual(vehicle)
     });

@@ -1,7 +1,7 @@
 const userRepository = require("../../src/repository/user.repository");
 const { db } = require("../../src/models");
 const { createUser, user } = require("../mock/user");
-const { id } = require("../mock/generalMock");
+
 describe("User Repository", () => {
 
     afterAll(() => {
@@ -19,7 +19,7 @@ describe("User Repository", () => {
     test("findById", async () => {
         jest.spyOn(db.user, "findByPk").mockResolvedValueOnce(user)
 
-        const response = await userRepository.findById(`${id}`)
+        const response = await userRepository.findById(1)
 
         expect(response).toEqual(user)
     });
@@ -27,7 +27,7 @@ describe("User Repository", () => {
     test("findOne", async () => {
         jest.spyOn(db.user, "findOne").mockResolvedValueOnce(user)
 
-        const response = await userRepository.findOne("test@gmail.com")
+        const response = await userRepository.findOne("franco@gmail.com")
 
         expect(response).toEqual(user)
     });
@@ -35,7 +35,7 @@ describe("User Repository", () => {
     test("findByUuid", async () => {
         jest.spyOn(db.user, "findByPk").mockResolvedValueOnce(user)
 
-        const response = await userRepository.findByUuid(`${id}`)
+        const response = await userRepository.findByUuid("26e56b1c-b73c-47b8-9a92-dfd8e371821a")
 
         expect(response).toEqual(user)
     });
