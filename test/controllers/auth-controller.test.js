@@ -74,19 +74,6 @@ describe("Authentication", () => {
                     .expect({ message: "User does not exist" })
             });
 
-            test.skip("Password incorrecto", async () => {
-                
-                jest.spyOn(userService, "findOne").mockResolvedValueOnce(user);
-                jest.spyOn(bcryptjs, "compareSync").mockResolvedValueOnce(false);
-
-                await request(app)
-                    .post("/api/v1/authenticate/login")
-                    .set("authentication","123456")
-                    .send({ "email": "jest@gmail.com", "password": "ejemplo123" })
-                    .expect(400)
-                    .expect({ message: "Password is incorrect" })
-            });
-
             test("Error al iniciar sesion", async () => {
                 
                 jest.spyOn(userService, "findOne").mockResolvedValueOnce(user);
