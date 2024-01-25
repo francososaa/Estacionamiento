@@ -1,7 +1,7 @@
 const collectionRepository = require("../../src/repository/collection.repository");
 const { db } = require("../../src/models");
 const { recaudations } = require("../mock/collection");
-const { date, id } = require("../mock/generalMock");
+
 describe("Building Capacity Repository", () => {
 
     afterAll(() => {
@@ -19,7 +19,7 @@ describe("Building Capacity Repository", () => {
     test("getAllCollectionByDate", async () => {
         jest.spyOn(db.collection, "findAll").mockResolvedValueOnce(recaudations)
 
-        const response = await collectionRepository.getAllCollectionByDate(`${date}`)
+        const response = await collectionRepository.getAllCollectionByDate("2023-12-15")
 
         expect(response).toEqual(recaudations)
     });
@@ -27,7 +27,7 @@ describe("Building Capacity Repository", () => {
     test("destoy", async () => {
         jest.spyOn(db.collection, "destroy").mockResolvedValueOnce(true)
 
-        const response = await collectionRepository.destoy(`${id}`)
+        const response = await collectionRepository.destoy(1)
 
         expect(response).toEqual(true)
     });

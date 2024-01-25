@@ -1,7 +1,7 @@
 const buildingCapacityRepository = require("../../src/repository/building_capacity.repository");
 const buildingCapacityService = require("../../src/services/building_capacity.service");
 const { buildingCapacity, capacity, newCapacity} = require("../mock/building_capacity");
-const { date, id } = require("../mock/generalMock");
+
 describe("Building Capacity Service", () => {
 
     afterAll(() => {
@@ -27,7 +27,7 @@ describe("Building Capacity Service", () => {
     test("isCompleteOverallCapacity", async () => {
         jest.spyOn(buildingCapacityRepository, "findByDateAndVehicleType").mockResolvedValueOnce(buildingCapacity)
 
-        const response = await buildingCapacityService.isCompleteOverallCapacity(`${date}`)
+        const response = await buildingCapacityService.isCompleteOverallCapacity("2023-12-15")
 
         expect(response).toEqual(false)
     });
@@ -35,7 +35,7 @@ describe("Building Capacity Service", () => {
     test("updateOverallCapacityForDateAndTypeVehicle", async () => {
         jest.spyOn(buildingCapacityRepository, "updateCapacityForDateAndVehicleType").mockResolvedValueOnce(true)
 
-        const response = await buildingCapacityService.updateOverallCapacityForDateAndTypeVehicle(`${date}`, `${id}`, 200)
+        const response = await buildingCapacityService.updateOverallCapacityForDateAndTypeVehicle("2023-12-15", 1, 200)
 
         expect(response).toEqual(true)
     });
@@ -71,7 +71,7 @@ describe("Building Capacity Service", () => {
     test("increaseCapacity", async () => {
         jest.spyOn(buildingCapacityRepository, "findByDateAndVehicleType").mockResolvedValueOnce(buildingCapacity)
 
-        const response = await buildingCapacityService.increaseCapacity(`${date}`, `${id}`)
+        const response = await buildingCapacityService.increaseCapacity("2023-12-15", 1)
 
         expect(response).toEqual(buildingCapacity)
     });
@@ -79,7 +79,7 @@ describe("Building Capacity Service", () => {
     test("destroyForDateAndVehicleType", async () => {
         jest.spyOn(buildingCapacityRepository, "destroyForDateAndVehicleType").mockResolvedValueOnce(true)
 
-        const response = await buildingCapacityService.destroyForDateAndVehicleType(`${date}`, `${id}`)
+        const response = await buildingCapacityService.destroyForDateAndVehicleType("2023-12-15", 1)
 
         expect(response).toEqual(true)
     });

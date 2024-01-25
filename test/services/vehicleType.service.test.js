@@ -1,7 +1,7 @@
 const vehicleTypeRepository = require("../../src/repository/vehicleType.repository");
 const vehicleTypeService = require("../../src/services/vehicleType.service");
 const { vehicleType, vehicleTypes, vehicleTypeUpdate } = require("../mock/vehicleType");
-const { id } = require("../mock/generalMock");
+
 describe("Vehicle Type Service", () => {
 
     afterAll(() => {
@@ -35,7 +35,7 @@ describe("Vehicle Type Service", () => {
     test("findById", async () => {
         jest.spyOn(vehicleTypeRepository, "findByVehicleId").mockResolvedValueOnce(vehicleType)
 
-        const response = await vehicleTypeService.findById(`${id}`)
+        const response = await vehicleTypeService.findById(1)
 
         expect(response).toEqual(vehicleType)
     });
@@ -43,7 +43,7 @@ describe("Vehicle Type Service", () => {
     test("update", async () => {
         jest.spyOn(vehicleTypeRepository, "update").mockResolvedValueOnce(vehicleType)
 
-        const response = await vehicleTypeService.update(vehicleTypeUpdate, `${id}`)
+        const response = await vehicleTypeService.update(vehicleTypeUpdate, 1)
 
         expect(response).toEqual(vehicleType)
     });
@@ -51,7 +51,7 @@ describe("Vehicle Type Service", () => {
     test("deleteTypeVehicle", async () => {
         jest.spyOn(vehicleTypeRepository, "destroy").mockResolvedValueOnce(vehicleType)
 
-        const response = await vehicleTypeService.deleteTypeVehicle(`${id}`)
+        const response = await vehicleTypeService.deleteTypeVehicle(1)
 
         expect(response).toEqual(vehicleType)
     });

@@ -1,7 +1,7 @@
 const reservationRepository = require("../../src/repository/reservation.repository");
 const { db } = require("../../src/models");
 const { newReservation, reservation, reservations, reservationsByDate, update, updateStatus } = require("../mock/reservation");
-const { date, id } = require("../mock/generalMock");
+
 describe("Reservation Repository", () => {
 
     afterAll(() => {
@@ -11,7 +11,7 @@ describe("Reservation Repository", () => {
     test("getAll", async () => {
         jest.spyOn(db.reservation, "findAll").mockResolvedValueOnce(reservations)
 
-        const response = await reservationRepository.getAll(`${id}`)
+        const response = await reservationRepository.getAll(1)
 
         expect(response).toEqual(reservations)
     });
@@ -35,7 +35,7 @@ describe("Reservation Repository", () => {
     test("findByDateAndUserId", async () => {
         jest.spyOn(db.reservation, "findOne").mockResolvedValueOnce(reservationsByDate)
 
-        const response = await reservationRepository.findByDateAndUserId(`${date}`, `${id}`)
+        const response = await reservationRepository.findByDateAndUserId("2023-12-15", 1)
 
         expect(response).toEqual(reservationsByDate)
     });
@@ -43,7 +43,7 @@ describe("Reservation Repository", () => {
     test("findAllRerservationByPk", async () => {
         jest.spyOn(db.reservation, "findAll").mockResolvedValueOnce(reservations)
 
-        const response = await reservationRepository.findAllRerservationByPk(`${id}`)
+        const response = await reservationRepository.findAllRerservationByPk(1)
 
         expect(response).toEqual(reservations)
     });
@@ -51,7 +51,7 @@ describe("Reservation Repository", () => {
     test("findAllByDate", async () => {
         jest.spyOn(db.reservation, "findAll").mockResolvedValueOnce(reservationsByDate)
 
-        const response = await reservationRepository.findAllByDate(`${date}`)
+        const response = await reservationRepository.findAllByDate("2023-12-15")
 
         expect(response).toEqual(reservationsByDate)
     });
@@ -59,7 +59,7 @@ describe("Reservation Repository", () => {
     test("deleteReservationForDateAndVehicleId", async () => {
         jest.spyOn(db.reservation, "destroy").mockResolvedValueOnce(true)
 
-        const response = await reservationRepository.deleteReservationForDateAndVehicleId(`${date}`, `${id}`)
+        const response = await reservationRepository.deleteReservationForDateAndVehicleId("2023-12-15", 1)
 
         expect(response).toEqual(true)
     });
@@ -67,7 +67,7 @@ describe("Reservation Repository", () => {
     test("updateReservationState", async () => {
         jest.spyOn(db.reservation, "update").mockResolvedValueOnce(true)
 
-        const response = await reservationRepository.updateReservationState("IN PROGRESS", "transaction", `${id}`)
+        const response = await reservationRepository.updateReservationState("IN PROGRESS", "transaction", 1)
 
         expect(response).toEqual(true)
     });
@@ -75,7 +75,7 @@ describe("Reservation Repository", () => {
     test("updateReservationVehicleId", async () => {
         jest.spyOn(db.reservation, "update").mockResolvedValueOnce(true)
 
-        const response = await reservationRepository.updateReservationVehicleId(update, `${date}`, `${id}`)
+        const response = await reservationRepository.updateReservationVehicleId(update, "2023-12-15", 1)
 
         expect(response).toEqual(true)
     });
@@ -83,7 +83,7 @@ describe("Reservation Repository", () => {
     test("updateReservationState", async () => {
         jest.spyOn(db.reservation, "update").mockResolvedValueOnce(true)
 
-        const response = await reservationRepository.updateReservationState(update, "IN PROGRESS" , `${id}`)
+        const response = await reservationRepository.updateReservationState(update, "IN PROGRESS" , 1)
 
         expect(response).toEqual(true)
     });
