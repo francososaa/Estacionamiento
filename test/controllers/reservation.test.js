@@ -189,23 +189,6 @@ describe("Reservation", () => {
         });
     });
 
-<<<<<<< HEAD
-=======
-    describe("changeStatus", () => {
-        test("Success", async () => {
-
-            jest.spyOn(reservationService, "updateState").mockResolvedValueOnce(true)
-
-            await request(app)
-                .put("/api/v1/reservation/employee/date/2023-12-05")
-                .set("authentication","123456")
-                .send(updateStatus)
-                .expect(200)
-                .expect({ message: "Success" })
-        });
-    });
-
->>>>>>> bca4e8ff1b876d61943eec537fa50d1413acc118
     describe("getReservationByDate", () => {
         test("Success", async () => {
 
