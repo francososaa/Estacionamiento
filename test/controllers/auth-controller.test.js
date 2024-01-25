@@ -2,6 +2,7 @@ const request = require("supertest");
 const app = require("../../app");
 const server = require("../../server");
 const bcryptjs = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 const userService = require("../../src/services/user.service");
 const helpers = require("../../src/helpers/generar-jwt");
 const { register } = require("../mock/auth-controller");
